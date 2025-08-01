@@ -1,0 +1,76 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/textarea/textarea.vue?vue&type=style&index=0&lang=scss& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-textarea {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 32rpx 32rpx;
+  background-color: var(--cy-textarea-background-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-textarea__label:not(:empty) {
+  font-size: var(--cy-font-size-base, 28rpx);
+  color: var(--cy-textarea-label-color, var(--cy-text-color-primary, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9))));
+  flex-shrink: 0;
+  line-height: 44rpx;
+  padding-bottom: var(--cy-spacer, 16rpx);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cy-textarea__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+.cy-textarea__wrapper-inner {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  width: inherit;
+  min-width: 0;
+  min-height: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  resize: none;
+  font-size: var(--cy-font-size-m, 32rpx);
+  color: var(--cy-textarea-text-color, var(--cy-text-color-primary, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9))));
+  line-height: 48rpx;
+}
+.cy-textarea__placeholder {
+  color: var(--cy-textarea-placeholder-color, var(--cy-text-color-placeholder, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4))));
+  font-size: var(--cy-font-size-m, 32rpx);
+}
+.cy-textarea__indicator:not(:empty) {
+  flex-shrink: 0;
+  color: var(--cy-textarea-indicator-text-color, var(--cy-text-color-placeholder, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4))));
+  font-size: var(--cy-spacer-1, 24rpx);
+  text-align: right;
+  line-height: 40rpx;
+  padding-top: var(--cy-spacer, 16rpx);
+}
+.cy-textarea--border {
+  border-radius: var(--cy-textarea-border-radius, var(--cy-radius-default, 12rpx));
+  border: 2rpx solid var(--cy-textarea-border-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-textarea .is-disabled {
+  color: var(--cy-textarea-disabled-text-color, var(--cy-text-color-disabled, var(--cy-font-gray-4, rgba(0, 0, 0, 0.2))));
+}

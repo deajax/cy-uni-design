@@ -1,0 +1,28 @@
+@import '../common/variables.scss';
+
+$fab-shadow              : var(--cy-fab-shadow, $shadow-2);
+$fab-z-index             : var(--cy-fab-z-index, 900);
+$fab-gap                 : var(--cy-fab-gap, 8px);
+$fab-direction           : var(--cy-fab-direction, column);
+$fab-align-items         : var(--cy-fab-align-items, center);
+$fab-backtop-color       : var(--cy-fab-backtop-color, #fff);
+$fab-backtop-bg-color    : var(--cy-fab-backtop-bg-color, $font-gray-2);
+$fab-backtop-border-color: var(--cy-fab-backtop-border-color, transparent);
+
+.cy-fab {
+    position      : fixed;
+    z-index       : $fab-z-index;
+    display       : flex;
+    flex-direction: $fab-direction;
+    align-items   : $fab-align-items;
+    row-gap       : $fab-gap;
+
+    &--backtop {
+        box-shadow     : $fab-shadow;
+        backdrop-filter: blur(4px);
+
+        --cy-button-default-color       : #{$fab-backtop-color};
+        --cy-button-default-bg-color    : #{$fab-backtop-bg-color};
+        --cy-button-default-border-color: #{$fab-backtop-border-color};
+    }
+}

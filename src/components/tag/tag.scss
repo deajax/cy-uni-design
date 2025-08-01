@@ -1,0 +1,331 @@
+@import '../common/variables.scss';
+
+// themes
+$tag-display            : var(--cy-tag-display, inline-flex);
+$tag-default-color      : var(--cy-tag-default-color, $bg-color-component);
+$tag-default-light-color: var(--cy-tag-default-light-color, $bg-color-secondarycontainer);
+$tag-primary-color      : var(--cy-tag-primary-color, $brand-color);
+$tag-primary-light-color: var(--cy-tag-primary-light-color, $brand-color-light);
+$tag-success-color      : var(--cy-tag-success-color, $success-color-active);
+$tag-success-light-color: var(--cy-tag-success-light-color, $success-color-light);
+$tag-warning-color      : var(--cy-tag-warning-color, $warning-color);
+$tag-warning-light-color: var(--cy-tag-warning-light-color, $warning-color-light);
+$tag-danger-color       : var(--cy-tag-danger-color, $error-color);
+$tag-danger-light-color : var(--cy-tag-danger-light-color, $error-color-light);
+
+// variant
+$tag-outline-bg-color  : var(--cy-tag-outline-bg-color, $bg-color-container);
+$tag-default-font-color: var(--cy-tag-default-font-color, $font-gray-1);
+
+// status
+$tag-disabled-color           : var(--cy-tag-disabled-color, $font-gray-4);
+$tag-disabled-background-color: var(--cy-tag-disabled-background-color, $bg-color-component-disabled);
+$tag-disabled-border-color    : var(--cy-tag-disabled-border-color, $component-border);
+
+// size
+$tag-small-padding      : var(--cy-tag-small-padding, 12rpx);
+$tag-medium-padding     : var(--cy-tag-medium-padding, 14rpx);
+$tag-large-padding      : var(--cy-tag-large-padding, 14rpx);
+$tag-extra-large-padding: var(--cy-tag-extra-large-padding, 32rpx);
+
+$tag-small-font-size      : var(--cy-tag-small-font-size, $font-size);
+$tag-medium-font-size     : var(--cy-tag-medium-font-size, $font-size-s);
+$tag-large-font-size      : var(--cy-tag-large-font-size, $font-size-base);
+$tag-extra-large-font-size: var(--cy-tag-extra-large-font-size, $font-size-base);
+
+$tag-small-icon-size      : var(--cy-tag-small-icon-size, 24rpx);
+$tag-medium-icon-size     : var(--cy-tag-medium-icon-size, 28rpx);
+$tag-large-icon-size      : var(--cy-tag-large-icon-size, 32rpx);
+$tag-extra-large-icon-size: var(--cy-tag-extra-large-icon-size, 32rpx);
+
+$tag-small-height      : var(--cy-tag-small-height, 40rpx);
+$tag-medium-height     : var(--cy-tag-medium-height, 48rpx);
+$tag-large-height      : var(--cy-tag-large-height, 56rpx);
+$tag-extra-large-height: var(--cy-tag-extra-large-height, 80rpx);
+
+$tag-square-border-radius: var(--cy-tag-square-border-radius, 8rpx);
+$tag-round-border-radius : var(--cy-tag-round-border-radius, 999px);
+$tag-mark-border-radius  : var(--cy-tag-mark-border-radius, $tag-round-border-radius);
+
+$tag-close-icon-color: var(--cy-tag-close-icon-color, $font-gray-3);
+
+.cy-tag {
+    display       : $tag-display;
+    align-items   : center;
+    border        : 2rpx solid transparent;
+    box-sizing    : border-box;
+    border-radius : $tag-square-border-radius;
+    font-size     : $tag-medium-font-size;
+    user-select   : none;
+    vertical-align: middle;
+
+    &__text {
+        &.ellipsis {
+            word-wrap    : normal;
+            white-space  : nowrap;
+            overflow     : hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__icon,
+    &__icon-close {
+        display    : flex;
+        align-items: center;
+    }
+
+    &__icon-close {
+        color: $tag-close-icon-color;
+    }
+
+    &__icon:not(:empty)+.cy-tag__text:not(:empty),
+    &__text:not(:empty)+.cy-tag__icon-close:not(:empty) {
+        margin-left: 8rpx;
+    }
+
+    &.cy-tag--closable.cy-tag--disabled {
+        cursor          : not-allowed;
+        color           : $tag-disabled-color;
+        background-color: $tag-disabled-color;
+        border-color    : $tag-disabled-border-color;
+    }
+
+    &.cy-tag--small {
+        height     : $tag-small-height;
+        line-height: $tag-small-height;
+        padding    : 0 $tag-small-padding;
+        font-size  : $tag-small-font-size;
+
+        /* #ifdef MP-WEIXIN */
+        .cy-icon {
+            .cy-icon-base {
+                vertical-align: -.15em;
+            }
+        }
+
+        /* #endif */
+
+        .cy-icon,
+        .cy-icon-close {
+            font-size: $tag-small-icon-size;
+        }
+
+        .cy-tag__icon:not(:empty)+.cy-tag__text:not(:empty),
+        .cy-tag__text:not(:empty)+.cy-tag__icon-close:not(:empty) {
+            margin-left: 4rpx;
+        }
+    }
+
+    &.cy-tag--medium {
+        height     : $tag-medium-height;
+        line-height: $tag-medium-height;
+        padding    : 0 $tag-medium-padding;
+        font-size  : $tag-medium-font-size;
+
+        .cy-icon,
+        .cy-icon-close {
+            font-size: $tag-medium-icon-size;
+        }
+    }
+
+    &.cy-tag--large {
+        height     : $tag-large-height;
+        line-height: $tag-large-height;
+        padding    : 0 $tag-large-padding;
+        font-size  : $tag-large-font-size;
+
+        .cy-icon,
+        .cy-icon-close {
+            font-size: $tag-large-icon-size;
+        }
+    }
+
+    &.cy-tag--extra-large {
+        height     : $tag-extra-large-height;
+        line-height: $tag-extra-large-height;
+        padding    : 0 $tag-extra-large-padding;
+        font-size  : $tag-extra-large-font-size;
+
+        .cy-icon,
+        .cy-icon-close {
+            font-size: $tag-extra-large-icon-size;
+        }
+    }
+
+    &.cy-tag--square {
+        border-radius: $tag-square-border-radius;
+    }
+
+    &.cy-tag--round {
+        border-radius: $tag-round-border-radius;
+    }
+
+    &.cy-tag--mark {
+        border-radius: 0 $tag-mark-border-radius $tag-mark-border-radius 0;
+    }
+}
+
+.cy-tag--dark {
+    &.cy-tag--default {
+        color           : $font-white-1;
+        border-color    : $tag-default-color;
+        background-color: $tag-default-color;
+    }
+
+    &.cy-tag--primary {
+        color           : $font-white-1;
+        border-color    : $tag-primary-color;
+        background-color: $tag-primary-color;
+    }
+
+    &.cy-tag--success {
+        color           : $font-white-1;
+        border-color    : $tag-success-color;
+        background-color: $tag-success-color;
+    }
+
+    &.cy-tag--warning {
+        color           : $font-white-1;
+        border-color    : $tag-warning-color;
+        background-color: $tag-warning-color;
+    }
+
+    &.cy-tag--danger {
+        color           : $font-white-1;
+        border-color    : $tag-danger-color;
+        background-color: $tag-danger-color;
+    }
+
+    &.cy-tag--default {
+        color: $tag-default-font-color;
+    }
+}
+
+.cy-tag--outline {
+    &.cy-tag--default {
+        color           : $tag-default-color;
+        border-color    : $tag-default-color;
+        background-color: $tag-default-light-color;
+    }
+
+    &.cy-tag--primary {
+        color           : $tag-primary-color;
+        border-color    : $tag-primary-color;
+        background-color: $tag-primary-light-color;
+    }
+
+    &.cy-tag--success {
+        color           : $tag-success-color;
+        border-color    : $tag-success-color;
+        background-color: $tag-success-light-color;
+    }
+
+    &.cy-tag--warning {
+        color           : $tag-warning-color;
+        border-color    : $tag-warning-color;
+        background-color: $tag-warning-light-color;
+    }
+
+    &.cy-tag--danger {
+        color           : $tag-danger-color;
+        border-color    : $tag-danger-color;
+        background-color: $tag-danger-light-color;
+    }
+
+    &.cy-tag--default {
+        color: $tag-default-font-color;
+    }
+
+    &.cy-tag--default {
+        background-color: $tag-outline-bg-color;
+    }
+
+    &.cy-tag--primary {
+        background-color: $tag-outline-bg-color;
+    }
+
+    &.cy-tag--success {
+        background-color: $tag-outline-bg-color;
+    }
+
+    &.cy-tag--warning {
+        background-color: $tag-outline-bg-color;
+    }
+
+    &.cy-tag--danger {
+        background-color: $tag-outline-bg-color;
+    }
+}
+
+.cy-tag--light {
+    &.cy-tag--default {
+        color           : $tag-default-color;
+        border-color    : $tag-default-light-color;
+        background-color: $tag-default-light-color;
+    }
+
+    &.cy-tag--primary {
+        color           : $tag-primary-color;
+        border-color    : $tag-primary-light-color;
+        background-color: $tag-primary-light-color;
+    }
+
+    &.cy-tag--success {
+        color           : $tag-success-color;
+        border-color    : $tag-success-light-color;
+        background-color: $tag-success-light-color;
+    }
+
+    &.cy-tag--warning {
+        color           : $tag-warning-color;
+        border-color    : $tag-warning-light-color;
+        background-color: $tag-warning-light-color;
+    }
+
+    &.cy-tag--danger {
+        color           : $tag-danger-color;
+        border-color    : $tag-danger-light-color;
+        background-color: $tag-danger-light-color;
+    }
+
+    &.cy-tag--default {
+        color: $tag-default-font-color;
+    }
+}
+
+.cy-tag--light-outline {
+    &.cy-tag--default {
+        color           : $tag-default-color;
+        border-color    : $tag-default-color;
+        background-color: $tag-default-light-color;
+    }
+
+    &.cy-tag--primary {
+        color           : $tag-primary-color;
+        border-color    : $tag-primary-color;
+        background-color: $tag-primary-light-color;
+    }
+
+    &.cy-tag--success {
+        color           : $tag-success-color;
+        border-color    : $tag-success-color;
+        background-color: $tag-success-light-color;
+    }
+
+    &.cy-tag--warning {
+        color           : $tag-warning-color;
+        border-color    : $tag-warning-color;
+        background-color: $tag-warning-light-color;
+    }
+
+    &.cy-tag--danger {
+        color           : $tag-danger-color;
+        border-color    : $tag-danger-color;
+        background-color: $tag-danger-light-color;
+    }
+
+    &.cy-tag--default {
+        color       : $tag-default-font-color;
+        border-color: $component-border;
+    }
+}

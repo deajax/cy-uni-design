@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cy-icon": "/components/icon/icon",
+    "cy-button": "/components/button/button",
+    "upload-image": "/components/upload/upload-image",
+    "upload-file": "/components/upload/upload-file"
+  }
+}

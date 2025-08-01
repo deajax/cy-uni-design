@@ -1,0 +1,246 @@
+@import '../common/variables.scss';
+@import '../common/mixins/_ellipsis';
+@import '../common/mixins/_hairline';
+
+$goods-item-background: var(--cy-goods-item-background, $white-color);
+$goods-item-round: var(--cy-goods-item-round, $radius-default);
+$goods-item-overflow: var(--cy-goods-item-overflow, hidden);
+$goods-item-horizontal-padding: var(--cy-goods-item-horizontal-padding, $spacer-2);
+$goods-item-border-left-space: var(--cy-goods-item-border-left-space, 32rpx);
+$goods-item-horizontal-image-size: var(--cy-goods-item-horizontal-image-size, 176rpx);
+$goods-item-horizontal-image-round: var(--cy-goods-item-horizontal-image-round, $radius-default);
+$goods-item-vertical-round: var(--cy-goods-item-vertical-round, $radius-default);
+$goods-item-vertical-content-padding: var(--cy-goods-item-vertical-content-padding, $spacer-1);
+$goods-item-vertical-title-font-size: var(--cy-goods-item-vertical-title-font-size, $font-size-base);
+$goods-item-vertical-image-round: var(--cy-goods-item-vertical-image-round, 0);
+$goods-item-title-font-size: var(--cy-goods-item-title-font-size, $font-size-m);
+$goods-item-description-font-size: var(--cy-goods-item-description-font-size, $font-size-s);
+$goods-item-description-color: var(--cy-goods-item-description-color, $font-gray-3);
+$goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, $font-size-s);
+
+.cy-goods-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    background: $goods-item-background;
+    overflow: $goods-item-overflow;
+
+    &--wrapper {
+        position: relative;
+
+        &::after {
+            @extend .hairline-bottom;
+            left: $goods-item-border-left-space;
+        }
+
+        &:last-child::after,
+        &.cy-goods-item--borderless::after {
+            display: none;
+        }
+    }
+
+    &--hover {
+        background: rgba($color: $white-color, $alpha: 0.55);
+    }
+
+    &--round {
+        border-radius: $goods-item-round;
+    }
+
+    // layout
+    &--horizontal {
+        flex-direction: row;
+        padding: $goods-item-horizontal-padding;
+
+        .cy-goods-item {
+            &__image {
+                width: $goods-item-horizontal-image-size;
+                height: $goods-item-horizontal-image-size;
+                margin-right: $spacer-1;
+                border-radius: $goods-item-horizontal-image-round;
+
+                &::after {
+                    border-radius: calc(#{$goods-item-horizontal-image-round} * 2);
+                }
+            }
+        }
+    }
+
+    &--vertical {
+        flex-direction: column;
+
+        .cy-goods-item {
+            &::after {
+                display: none !important;
+            }
+
+            &__image {
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+                border-radius: $goods-item-vertical-image-round;
+
+                &-image {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                }
+                
+                &::after {
+                    border-radius: calc(#{$goods-item-vertical-image-round} * 2);
+                }
+            }
+
+            &__content {
+                width: 100%;
+                padding: $goods-item-vertical-content-padding;
+
+                &--title {
+                    &-text {
+                        font-size: $goods-item-vertical-title-font-size;
+                    }
+                }
+            }
+        }
+    }
+
+    &--small {
+        &.cy-goods-item--vertical {
+            border-radius: 0;
+
+            .cy-goods-item__image {
+                border-radius: $goods-item-round;
+                margin-bottom: 16rpx;
+            }
+
+            .cy-goods-item__content {
+                padding: 0;
+            }
+
+            .cy-goods-item__content--title {
+                &-text {
+                    -webkit-line-clamp: 1;
+                    font-weight: 400;
+                }
+            }
+
+            .cy-goods-item__content--note {
+                padding-top: 8rpx;
+            }
+        }
+    }
+
+    // prefix
+    &__prefix {
+        display: flex;
+        align-items: center;
+        align-self: center;
+
+        .cy-checkbox {
+            padding: 0;
+        }
+    }
+
+    // image
+    &__image {
+        position: relative;
+        overflow: hidden;
+        background: $gray-color-3;
+
+        &-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &::after {
+            @extend .hairline-surround;
+            z-index: 1;
+        }
+    }
+
+    &__sellout {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        transform: scale(0.5);
+        width: 100%;
+        height: 100%;
+        background: url(https://cy-static-resources.oss-cn-beijing.aliyuncs.com/miniProgram/unmanned/sellout.png) no-repeat center;
+        background-size: 100%;
+    }
+
+    // content
+    &__content {
+        flex: 1;
+        width: 0;
+        box-sizing: border-box;
+        // overflow: hidden;
+
+        &--title {
+            &-text {
+                line-height: 40rpx;
+                color: $font-gray-1;
+                font-weight: 600;
+                font-size: $goods-item-title-font-size;
+            }
+        }
+
+        &--description {
+            @extend .cy-ellipsis;
+
+            margin-top: calc(#{$spacer} / 4);
+            font-size: $goods-item-description-font-size;
+            color: $goods-item-description-color;
+        }
+
+        &--note {
+            padding-top: 12rpx;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__price {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        &--unit {
+            display: inline-flex;
+            align-items: center;
+            margin-left: calc(#{$spacer} / 2);
+            font-size: $font-size-base;
+            color: $gray-color-6;
+            line-height: 1;
+
+            // &::before {
+            //     content    : '';
+            //     width      : 0;
+            //     height     : 24rpx;
+            //     margin     : 0 calc(#{$spacer} / 2);
+            //     border-left: 2rpx solid $goods-item-description-color;
+            //     transform  : rotate(20deg);
+            // }
+        }
+    }
+
+    &__origin-price {
+        font-size: $font-size-s;
+        color: $gray-color-6;
+        text-decoration: line-through;
+        line-height: 32rpx;
+    }
+
+    &__action {
+        margin-left: auto;
+    }
+
+    .u-number-box__plus,
+    .u-number-box__minus {
+        width: 24px !important;
+    }
+}

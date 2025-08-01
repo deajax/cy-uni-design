@@ -1,0 +1,43 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/empty/empty.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-empty {
+  padding: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cy-empty__thumb--image {
+  width: var(--cy-empty-image-size, 280rpx);
+}
+.cy-empty__thumb--icon {
+  font-size: var(--cy-empty-icon-font-size, 192rpx);
+  color: var(--cy-empty-icon-color, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4)));
+}
+.cy-empty__thumb + .cy-empty__description:not(:empty) {
+  margin-top: var(--cy-empty-description-margin-top, var(--cy-spacer-2, 32rpx));
+}
+.cy-empty__description {
+  text-align: center;
+  color: var(--cy-empty-description-color, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4)));
+  font-size: var(--cy-empty-description-font-size, var(--cy-font-size-base, 28rpx));
+  line-height: var(--cy-empty-description-line-height, 44rpx);
+  white-space: pre-wrap;
+}
+.cy-empty__description + .cy-empty__actions:not(:empty) {
+  margin-top: var(--cy-empty-action-margin-top, var(--cy-spacer-4, 64rpx));
+}

@@ -1,0 +1,138 @@
+@import '../common/variables.scss';
+
+$upload-add-color         : var(--cy-upload-add-color, $text-color-placeholder);
+$upload-add-bg-color      : var(--cy-upload-add-bg-color, $gray-color-3);
+$upload-add-icon-font-size: var(--cy-upload-add-icon-font-size, 56rpx);
+$upload-radius            : var(--cy-upload-radius, $radius-default);
+
+.cy-upload {
+    &__title {
+        margin-bottom: $spacer-2;
+        color        : $upload-add-color;
+    }
+
+    &__grid {
+        width: 100%;
+    }
+
+    &__wrapper {
+        position        : relative;
+        width           : 100%;
+        height          : 0;
+        padding-bottom  : 100%;
+        overflow        : hidden;
+        border-radius   : $radius-default;
+        background-color: $gray-color-3;
+    }
+
+    &__thumbnail {
+        position: absolute;
+        width   : 100%;
+        height  : 100%;
+        top     : 0;
+        left    : 0;
+        right   : 0;
+        bottom  : 0;
+    }
+
+    &__progress {
+        &-mask {
+            position       : absolute;
+            width          : 100%;
+            height         : 100%;
+            top            : 0;
+            left           : 0;
+            right          : 0;
+            bottom         : 0;
+            background     : $font-gray-2;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            color          : $font-white-1;
+
+            &--inner {
+                display        : flex;
+                flex-direction : column;
+                align-items    : center;
+                justify-content: center;
+            }
+        }
+
+        &-loading {
+            .cy-loading__text {
+                color      : $font-white-1;
+                line-height: 1;
+                margin-top : 16rpx;
+            }
+        }
+
+        &-icon {
+            font-size: 48rpx;
+        }
+
+        &-text {
+            margin-top : calc(#{$spacer} / 2);
+            font-size  : $font-size-s;
+            line-height: 1;
+        }
+    }
+
+    &__close-btn {
+        position                 : absolute;
+        z-index                  : 2;
+        top                      : 0;
+        right                    : 0;
+        display                  : flex;
+        align-items              : center;
+        justify-content          : center;
+        width                    : 40rpx;
+        height                   : 40rpx;
+        border-top-right-radius  : $upload-radius;
+        border-bottom-left-radius: $upload-radius;
+        background-color         : $font-gray-3;
+    }
+
+    &__add-icon {
+        position        : absolute;
+        width           : 100%;
+        height          : 100%;
+        top             : 0;
+        left            : 0;
+        right           : 0;
+        bottom          : 0;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        font-size       : $upload-add-icon-font-size;
+        background-color: $upload-add-bg-color;
+        color           : $upload-add-color;
+    }
+
+    &__files {
+        &--list {
+            margin-top   : $spacer-2;
+            border-radius: $upload-radius;
+            overflow     : hidden;
+            border       : 2rpx dashed $border-color;
+
+            .cy-cell {
+                &::after {
+                    border-bottom-style: dashed;
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
+            }
+        }
+
+        &--progress {
+            color: $error-color;
+        }
+
+        &--close-btn {
+            display    : flex;
+            align-items: center;
+        }
+    }
+}

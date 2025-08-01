@@ -1,0 +1,62 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/search/search.vue?vue&type=style&index=0&lang=scss& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--cy-search-background, var(--cy-white-color, #fff));
+  padding: var(--cy-search-padding, 20rpx 32rpx);
+}
+.cy-search__content {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: var(--cy-search-content-background, var(--cy-gray-color-1, #f3f3f3));
+  border-radius: var(--cy-search-content-radius, var(--cy-radius-default, 12rpx));
+  padding: var(--cy-search-content-padding, 0 0 0 24rpx);
+  min-height: 80rpx;
+}
+.cy-search__content--icon {
+  margin-right: 12rpx;
+}
+.cy-search__content--input {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: var(--cy-search-input-height, 48rpx);
+  line-height: var(--cy-search-input-height, 48rpx);
+  padding: var(--cy-search-input-padding, 16rpx 0);
+  font-size: 32rpx;
+  background: none;
+}
+.cy-search__content--clearable {
+  flex: 0 0 auto;
+  padding: var(--cy-search-clearable-padding, var(--cy-spacer-1, 24rpx));
+}
+.cy-search__content--clearable-hover {
+  opacity: 0.5;
+}
+.cy-search__action {
+  padding-left: 32rpx;
+}
+.cy-search--round {
+  border-radius: 80rpx;
+}

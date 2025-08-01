@@ -1,0 +1,1 @@
+<view class="{{(((('cy-gap')+' '+('cy-gap--'+layout))+' '+(wrap?'cy-gap--wrap':'cy-gap--nowrap'))+' '+customClass)}}" style="{{$root.s0}}"><slot></slot></view>

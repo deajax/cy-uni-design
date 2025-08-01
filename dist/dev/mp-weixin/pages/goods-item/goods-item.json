@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "GoodsItem 商品",
+  "usingComponents": {
+    "cy-goods-item": "/components/goods-item/goods-item",
+    "cy-button": "/components/button/button",
+    "cy-tag": "/components/tag/tag",
+    "cy-checkbox": "/components/checkbox/checkbox"
+  }
+}

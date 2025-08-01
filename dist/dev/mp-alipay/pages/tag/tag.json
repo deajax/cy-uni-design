@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Tag 标签",
+  "usingComponents": {
+    "cy-tag": "/components/tag/tag"
+  }
+}

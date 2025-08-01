@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Input 输入框",
+  "usingComponents": {
+    "cy-input": "/components/input/input",
+    "cy-button": "/components/button/button",
+    "cy-divider": "/components/divider/divider"
+  }
+}

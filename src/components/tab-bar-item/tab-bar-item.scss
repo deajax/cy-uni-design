@@ -1,0 +1,69 @@
+@import '../common/variables.scss';
+@import '../common/mixins/hairline';
+
+$tab-bar-height             : var(--cy-tab-bar-height, 80rpx);
+$tab-bar-color              : var(--cy-tab-bar-color, $text-color-primary);
+$tab-bar-bg-color           : var(--cy-tab-bar-bg-color, $bg-color-container);
+$tab-bar-border-color       : var(--cy-tab-bar-border-color, $border-color);
+$tab-bar-hover-bg-color     : var(--cy-tab-bar-hover-bg-color, rgba(0, 0, 0, 0.05));
+$tab-bar-active-color       : var(--cy-tab-bar-active-color, $brand-color);
+$tab-bar-active-bg          : var(--cy-tab-bar-active-bg, $brand-color-light);
+$tab-bar-spread-shadow      : var(--cy-tab-bar-spread-shadow, $shadow-3);
+$tab-bar-spread-border-color: var(--cy-tab-bar-spread-border-color, $border-color);
+
+:host {
+    flex: 1;
+}
+
+.cy-tab-bar-item {
+    flex            : 1;
+    height          : $tab-bar-height;
+    box-sizing      : border-box;
+    user-select     : none;
+    position        : relative;
+    margin          : 16rpx 0;
+    background-color: $tab-bar-bg-color;
+    padding         : 0 24rpx;
+
+    &--text-only {
+        font-size: 32rpx;
+    }
+
+    &--split {
+        &+&::before {
+            @extend .hairline-left;
+            top   : 16rpx;
+            bottom: 16rpx;
+        }
+    }
+
+    &__content {
+        width          : 100%;
+        height         : 100%;
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        border-radius  : 16rpx;
+        color          : $tab-bar-color;
+
+        &--checked {
+            color: $tab-bar-active-color;
+        }
+    }
+
+    &__icon {
+        line-height: 1.15;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__text {
+        display    : flex;
+        align-items: center;
+        font-size  : 24rpx;
+        line-height: 32rpx;
+    }
+}

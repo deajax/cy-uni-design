@@ -1,0 +1,4 @@
+<view class="navbar"><view class="example"><cy-navbar vue-id="411e3e00-1" title="标题文字标题文字标题文字" bind:__l="__l"></cy-navbar></view><view class="title">带返回按钮</view><view class="example"><cy-navbar vue-id="411e3e00-2" title="标题文字" left-arrow="{{true}}" fixed="{{false}}" bind:__l="__l"></cy-navbar></view><view class="title">自定义</view><view class="example"><cy-navbar vue-id="411e3e00-3" fixed="{{false}}" bind:__l="__l" vue-slots="{{['left','title']}}"><view slot="left">left</view><view slot="title">自定义插槽</view></cy-navbar></view><view class="title">自定义颜色</view><view class="example"><cy-navbar vue-id="411e3e00-4" title="标题文字" left-arrow="{{true}}" custom-class="custom-navbar" fixed="{{false}}" bind:__l="__l"></cy-navbar><view class="code"><view>.custom-navbar {
+				--cy-navbar-color: #fff;
+				--cy-navbar-bg-color: #0052d9;
+				}</view></view></view></view>

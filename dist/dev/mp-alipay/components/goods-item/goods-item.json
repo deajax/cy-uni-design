@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cy-price": "/components/price/price"
+  },
+  "component": true,
+  "styleIsolation": "shared"
+}

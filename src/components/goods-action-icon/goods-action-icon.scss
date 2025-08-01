@@ -1,0 +1,37 @@
+@import '../common/variables.scss';
+
+$goods-action-icon-padding  : var(--cy-goods-action-icon-padding, 0 $spacer);
+$goods-action-icon-font-size: var(--cy-goods-action-icon-font-size, $font-size);
+
+.cy-goods-action-icon {
+    margin     : 0;
+    padding    : $goods-action-icon-padding;
+    font-size  : $goods-action-icon-font-size;
+    text-align : center;
+    color      : $font-gray-1;
+    border     : none;
+    height     : auto;
+    line-height: 1.5;
+    background : none;
+    overflow   : visible;
+
+    &::after {
+        display: none;
+    }
+
+    .cy-icon {
+        line-height: 1.25;
+    }
+
+    text {
+        display: block;
+    }
+
+    &--hover {
+        color: $font-gray-3;
+    }
+
+    &--disabled {
+        background: none !important
+    }
+}

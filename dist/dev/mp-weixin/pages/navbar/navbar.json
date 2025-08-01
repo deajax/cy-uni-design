@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Navbar 导航栏",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cy-navbar": "/components/navbar/navbar"
+  }
+}

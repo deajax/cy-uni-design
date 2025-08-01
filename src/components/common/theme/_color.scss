@@ -1,0 +1,106 @@
+page {
+    // color
+    --primary-color-1 : #dbeafe;
+    --primary-color-2 : #bfdbfe;
+    --primary-color-3 : #93c5fd;
+    --primary-color-4 : #60a5fa;
+    --primary-color-5 : #3b82f6;
+    --primary-color-6 : #2563eb;
+    --primary-color-7 : #1d4ed8;
+    --primary-color-8 : #1e40af;
+    --primary-color-9 : #1e3a8a;
+    --primary-color-10: #172554;
+
+    --error-color-1 : #FFF4F3;
+    --error-color-2 : #FDB5AF;
+    --error-color-3 : #FD8B81;
+    --error-color-4 : #FB4B3B;
+    --error-color-5 : #FA2C19;
+    --error-color-6 : #D52515;
+    --error-color-7 : #A31D10;
+    --error-color-8 : #8A180E;
+    --error-color-9 : #570F09;
+    --error-color-10: #380905;
+
+    --warning-color-1 : #fffbeb;
+    --warning-color-2 : #fde68a;
+    --warning-color-3 : #fcd34d;
+    --warning-color-4 : #fbbf24;
+    --warning-color-5 : #f59e0b;
+    --warning-color-6 : #d97706;
+    --warning-color-7 : #b45309;
+    --warning-color-8 : #92400e;
+    --warning-color-9 : #78350f;
+    --warning-color-10: #451a03;
+
+    --success-color-1 : #f0fdf4;
+    --success-color-2 : #bbf7d0;
+    --success-color-3 : #86efac;
+    --success-color-4 : #4ade80;
+    --success-color-5 : #22c55e;
+    --success-color-6 : #16a34a;
+    --success-color-7 : #15803d;
+    --success-color-8 : #166534;
+    --success-color-9 : #14532d;
+    --success-color-10: #052e16;
+
+    // function
+    --cy-primary-color: var(--primary-color-6, #2563eb);
+    --cy-error-color  : var(--error-color-5, #FA2C19);
+    --cy-warning-color: var(--warning-color-5, #f59e0b);
+    --cy-success-color: var(--success-color-5, #22c55e);
+
+    // gray
+    --cy-white-color  : #fff;
+    --cy-gray-color-1 : #f3f3f3;
+    --cy-gray-color-2 : #eee;
+    --cy-gray-color-3 : #e8e8e8;
+    --cy-gray-color-4 : #ddd;
+    --cy-gray-color-5 : #c6c6c6;
+    --cy-gray-color-6 : #a6a6a6;
+    --cy-gray-color-7 : #8b8b8b;
+    --cy-gray-color-8 : #777777;
+    --cy-gray-color-9 : #5e5e5e;
+    --cy-gray-color-10: #4b4b4b;
+    --cy-gray-color-11: #393939;
+    --cy-gray-color-12: #2c2c2c;
+    --cy-gray-color-13: #242424;
+    --cy-gray-color-14: #181818;
+
+    // font
+    --cy-font-gray-1: rgba(0, 0, 0, 0.9);
+    --cy-font-gray-2: rgba(0, 0, 0, 0.6);
+    --cy-font-gray-3: rgba(0, 0, 0, 0.4);
+    --cy-font-gray-4: rgba(0, 0, 0, 0.2);
+
+    --cy-font-white-1: rgba(255, 255, 255, 1);
+    --cy-font-white-2: rgba(255, 255, 255, 0.55);
+    --cy-font-white-3: rgba(255, 255, 255, 0.35);
+    --cy-font-white-4: rgba(255, 255, 255, 0.22);
+
+    // theme
+    --brand-color             : var(--cy-brand-color, var(--primary-color-6));
+    --brand-color-active      : var(--cy-brand-color-active, var(--primary-color-7));
+    --brand-color-disabled    : var(--cy-brand-color-disabled, var(--primary-color-3));
+    --brand-color-focus       : var(--cy-brand-color-focus, var(--primary-color-1));
+    --brand-color-light       : var(--cy-brand-color-light, var(--primary-color-1));
+    --brand-color-light-active: var(--cy-brand-color-light-active, var(--primary-color-2));
+
+    --error-color         : var(--cy-error-color, var(--error-color-5));
+    --error-color-active  : var(--cy-error-color-active, var(--error-color-6));
+    --error-color-disabled: var(--cy-error-color-disabled, var(--error-color-3));
+    --error-color-focus   : var(--cy-error-color-focus, var(--error-color-2));
+    --error-color-light   : var(--cy-error-color-light, var(--error-color-1));
+
+    --warning-color         : var(--cy-warning-color, var(--warning-color-5));
+    --warning-color-active  : var(--cy-warning-color-active, var(--warning-color-6));
+    --warning-color-disabled: var(--cy-warning-color-disabled, var(--warning-color-3));
+    --warning-color-focus   : var(--cy-warning-color-focus, var(--warning-color-2));
+    --warning-color-light   : var(--cy-warning-color-light, var(--warning-color-1));
+
+    --success-color         : var(--cy-success-color, var(--success-color-5));
+    --success-color-active  : var(--cy-success-color-active, var(--success-color-6));
+    --success-color-disabled: var(--cy-success-color-disabled, var(--success-color-3));
+    --success-color-focus   : var(--cy-success-color-focus, var(--success-color-2));
+    --success-color-light   : var(--cy-success-color-light, var(--success-color-1));
+}

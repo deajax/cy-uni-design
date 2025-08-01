@@ -1,0 +1,55 @@
+@import '../common/variables.scss';
+@import '../avatar/avatar.scss';
+
+.cy-avatar-group {
+    display    : inline-flex;
+    align-items: center;
+
+    &-offset-left-up {
+        &-small {
+            padding-left           : var(--cy-avatar-group-padding-left-small, 8px);
+            --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-small, -8px); // ‘small’尺寸组合头像偏移间距
+        }
+
+        &-medium {
+            padding-left           : var(--cy-avatar-group-padding-left-medium, 16px);
+            --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-medium, -16px); // ‘medium’尺寸组合头像偏移间距
+        }
+
+        &-large {
+            padding-left           : var(--cy-avatar-group-padding-left-large, 32px);
+            --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-large, -32px); // ‘large’尺寸组合头像偏移间距
+        }
+    }
+
+    &-offset-right-up {
+        &-small {
+            padding-left           : var(--cy-avatar-group-padding-left-small, 8px);
+            --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-small, -8px);
+        }
+
+        &-medium {
+            padding-left           : var(--cy-avatar-group-padding-left-medium, 16px);
+            --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-medium, -16px);
+        }
+
+        &-large {
+            padding-left           : var(--cy-avatar-group-padding-left-large, 32px);
+            --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-large, -32px);
+        }
+    }
+
+    &__collapse--slot {
+        float: left;
+    }
+
+    &__collapse--slot:not(:empty)+&__collapse--default {
+        display: none;
+        float  : left;
+    }
+
+    &__collapse--slot:empty+&__collapse--default {
+        display: block;
+        float  : left;
+    }
+}

@@ -1,0 +1,153 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/text/text.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-text--small .cy-text__content {
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.cy-text--small .cy-text__prefix-icon,
+.cy-text--small .cy-text__suffix-icon {
+  font-size: 28rpx;
+}
+.cy-text--medium .cy-text__content {
+  font-size: 28rpx;
+  line-height: 44rpx;
+}
+.cy-text--medium .cy-text__prefix-icon,
+.cy-text--medium .cy-text__suffix-icon {
+  font-size: 32rpx;
+}
+.cy-text--large .cy-text__content {
+  font-size: 32rpx;
+  line-height: 48rpx;
+}
+.cy-text--large .cy-text__prefix-icon,
+.cy-text--large .cy-text__suffix-icon {
+  font-size: 36rpx;
+}
+.cy-text--primary {
+  color: var(--cy-text-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-text--primary.cy-text--underline::after {
+  border-color: var(--cy-text-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-text--primary.cy-text--disabled {
+  color: var(--cy-text-primary-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-text--primary.cy-text--hover {
+  color: var(--cy-text-primary-active-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-text--primary.cy-text--hover.cy-text--underline::after {
+  border-color: var(--cy-text-primary-active-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-text--success {
+  color: var(--cy-text-success-color, var(--cy-success-color, var(--cy-success-color-5, #22c55e)));
+}
+.cy-text--success.cy-text--underline::after {
+  border-color: var(--cy-text-success-color, var(--cy-success-color, var(--cy-success-color-5, #22c55e)));
+}
+.cy-text--success.cy-text--disabled {
+  color: var(--cy-text-success-disabled-color, var(--cy-success-color-disabled, var(--cy-success-color-3, #86efac)));
+}
+.cy-text--success.cy-text--hover {
+  color: var(--cy-text-success-active-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+}
+.cy-text--success.cy-text--hover.cy-text--underline::after {
+  border-color: var(--cy-text-success-active-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+}
+.cy-text--warning {
+  color: var(--cy-text-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+}
+.cy-text--warning.cy-text--underline::after {
+  border-color: var(--cy-text-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+}
+.cy-text--warning.cy-text--disabled {
+  color: var(--cy-text-warning-disabled-color, var(--cy-warning-color-disabled, var(--cy-warning-color-3, #fcd34d)));
+}
+.cy-text--warning.cy-text--hover {
+  color: var(--cy-text-warning-active-color, var(--cy-warning-color-active, var(--cy-warning-color-6, #d97706)));
+}
+.cy-text--warning.cy-text--hover.cy-text--underline::after {
+  border-color: var(--cy-text-warning-active-color, var(--cy-warning-color-active, var(--cy-warning-color-6, #d97706)));
+}
+.cy-text--default {
+  color: var(--cy-text-default-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+}
+.cy-text--default.cy-text--underline::after {
+  border-color: var(--cy-text-default-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+}
+.cy-text--default.cy-text--disabled {
+  color: var(--cy-text-default-disabled-color, var(--cy-text-color-disabled, var(--cy-font-gray-4, rgba(0, 0, 0, 0.2))));
+}
+.cy-text--default.cy-text--hover {
+  color: var(--cy-text-default-active-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-text--default.cy-text--hover.cy-text--underline::after {
+  border-color: var(--cy-text-default-active-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-text--danger {
+  color: var(--cy-text-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-text--danger.cy-text--underline::after {
+  border-color: var(--cy-text-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-text--danger.cy-text--disabled {
+  color: var(--cy-text-danger-disabled-color, var(--cy-error-color-disabled, var(--cy-error-color-3, #fecaca)));
+}
+.cy-text--danger.cy-text--hover {
+  color: var(--cy-text-danger-active-color, var(--cy-error-color-active, var(--cy-error-color-7, #dc2626)));
+}
+.cy-text--danger.cy-text--hover.cy-text--underline::after {
+  border-color: var(--cy-text-danger-active-color, var(--cy-error-color-active, var(--cy-error-color-7, #dc2626)));
+}
+.cy-text--white {
+  color: var(--cy-text-white-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+}
+.cy-text--white.cy-text--underline::after {
+  border-color: var(--cy-text-white-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+}
+.cy-text--white.cy-text--disabled {
+  color: var(--cy-text-white-disabled-color, var(--cy-font-white-3, rgba(255, 255, 255, 0.35)));
+}
+.cy-text--white.cy-text--hover {
+  color: var(--cy-text-white-active-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+}
+.cy-text--white.cy-text--hover.cy-text--underline::after {
+  border-color: var(--cy-text-white-active-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+}
+.cy-text {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: content-box;
+}
+.cy-text--underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  bottom: 0;
+  opacity: 1;
+  border-bottom: 2rpx solid #cd0be7;
+}
+.cy-text__prefix-icon:not(:empty) + .cy-text__content:not(:empty) {
+  padding-left: 8rpx;
+}
+.cy-text__content:not(:empty) + .cy-text__suffix-icon:not(:empty) {
+  padding-left: 4rpx;
+}

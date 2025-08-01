@@ -1,0 +1,230 @@
+@import '../common/variables.scss';
+
+// 状态色 - 默认色
+$text-default-color         : var(--cy-text-default-color, $font-gray-1); // default 主题默认态颜色
+$text-default-active-color  : var(--cy-text-default-active-color, $brand-color-active); // default 主题激活态颜色
+$text-default-disabled-color: var(--cy-text-default-disabled-color, $text-color-disabled); // default 主题禁用态颜色
+
+// 状态色 - 主色
+$text-primary-color         : var(--cy-text-primary-color, $brand-color); // primary 主题默认态颜色
+$text-primary-active-color  : var(--cy-text-primary-active-color, $brand-color-active); // primary 主题激活态颜色
+$text-primary-disabled-color: var(--cy-text-primary-disabled-color, $brand-color-disabled); // primary 主题禁用态颜色
+
+// 状态色 - 成功
+$text-success-color         : var(--cy-text-success-color, $success-color); // success 主题默认态颜色
+$text-success-active-color  : var(--cy-text-success-active-color, $success-color-active); // success 主题激活态颜色
+$text-success-disabled-color: var(--cy-text-success-disabled-color, $success-color-disabled); // success 主题禁用态颜色
+
+// 状态色 - 警告
+$text-warning-color         : var(--cy-text-warning-color, $warning-color); // warning 主题默认态颜色
+$text-warning-active-color  : var(--cy-text-warning-active-color, $warning-color-active); // warning 主题激活态颜色
+$text-warning-disabled-color: var(--cy-text-warning-disabled-color, $warning-color-disabled); // warning 主题禁用态颜色
+
+// 状态色 - 危险
+$text-danger-color         : var(--cy-text-danger-color, $error-color); // danger 主题默认态颜色
+$text-danger-active-color  : var(--cy-text-danger-active-color, $error-color-active); // danger 主题激活态颜色
+$text-danger-disabled-color: var(--cy-text-danger-disabled-color, $error-color-disabled); // danger 主题禁用态颜色
+
+// 状态色 - 反白
+$text-white-color         : var(--cy-text-white-color, $font-white-1); // white主题默认态颜色
+$text-white-active-color  : var(--cy-text-white-active-color, $font-white-1); // white主题激活态颜色
+$text-white-disabled-color: var(--cy-text-white-disabled-color, $font-white-3); // white主题禁用态颜色
+
+// 字号
+$text-content-small-font-size  : var(--cy-text-content-small-font-size, 24rpx);
+$text-content-small-line-height: var(--cy-text-content-small-line-height, 40rpx);
+$text-icon-small-font-size     : var(--cy-text-icon-small-font-size, 28rpx);
+
+$text-content-medium-font-size  : var(--cy-text-content-medium-font-size, 28rpx);
+$text-content-medium-line-height: var(--cy-text-content-medium-line-height, 44rpx);
+$text-icon-medium-font-size     : var(--cy-text-icon-medium-font-size, 32rpx);
+
+$text-content-large-font-size  : var(--cy-text-content-large-font-size, 32rpx);
+$text-content-large-line-height: var(--cy-text-content-large-line-height, 48rpx);
+$text-icon-large-font-size     : var(--cy-text-icon-large-font-size, 36rpx);
+
+.cy-text {
+    &--small {
+        .cy-text__content {
+            font-size  : $text-content-small-font-size;
+            line-height: $text-content-small-line-height;
+        }
+
+        .cy-text__prefix-icon,
+        .cy-text__suffix-icon {
+            font-size: $text-icon-small-font-size;
+        }
+    }
+
+    &--medium {
+        .cy-text__content {
+            font-size  : $text-content-medium-font-size;
+            line-height: $text-content-medium-line-height;
+        }
+
+        .cy-text__prefix-icon,
+        .cy-text__suffix-icon {
+            font-size: $text-icon-medium-font-size;
+        }
+    }
+
+    &--large {
+        .cy-text__content {
+            font-size  : $text-content-large-font-size;
+            line-height: $text-content-large-line-height;
+        }
+
+        .cy-text__prefix-icon,
+        .cy-text__suffix-icon {
+            font-size: $text-icon-large-font-size;
+        }
+    }
+}
+
+.cy-text {
+    &--primary {
+        color: $text-primary-color;
+
+        &.cy-text--underline::after {
+            border-color: $text-primary-color;
+        }
+
+        &.cy-text--disabled {
+            color: $text-primary-disabled-color;
+        }
+
+        &.cy-text--hover {
+            color: $text-primary-active-color;
+
+            &.cy-text--underline::after {
+                border-color: $text-primary-active-color;
+            }
+        }
+    }
+
+    &--success {
+        color: $text-success-color;
+
+        &.cy-text--underline::after {
+            border-color: $text-success-color;
+        }
+
+        &.cy-text--disabled {
+            color: $text-success-disabled-color;
+        }
+
+        &.cy-text--hover {
+            color: $text-success-active-color;
+
+            &.cy-text--underline::after {
+                border-color: $text-success-active-color;
+            }
+        }
+    }
+
+    &--warning {
+        color: $text-warning-color;
+
+        &.cy-text--underline::after {
+            border-color: $text-warning-color;
+        }
+
+        &.cy-text--disabled {
+            color: $text-warning-disabled-color;
+        }
+
+        &.cy-text--hover {
+            color: $text-warning-active-color;
+
+            &.cy-text--underline::after {
+                border-color: $text-warning-active-color;
+            }
+        }
+    }
+
+    &--default {
+        color: $text-default-color;
+
+        &.cy-text--underline::after {
+            border-color: $text-default-color;
+        }
+
+        &.cy-text--disabled {
+            color: $text-default-disabled-color;
+        }
+
+        &.cy-text--hover {
+            color: $text-default-active-color;
+
+            &.cy-text--underline::after {
+                border-color: $text-default-active-color;
+            }
+        }
+    }
+
+    &--danger {
+        color: $text-danger-color;
+
+        &.cy-text--underline::after {
+            border-color: $text-danger-color;
+        }
+
+        &.cy-text--disabled {
+            color: $text-danger-disabled-color;
+        }
+
+        &.cy-text--hover {
+            color: $text-danger-active-color;
+
+            &.cy-text--underline::after {
+                border-color: $text-danger-active-color;
+            }
+        }
+    }
+
+    &--white {
+        color: $text-white-color;
+
+        &.cy-text--underline::after {
+            border-color: $text-white-color;
+        }
+
+        &.cy-text--disabled {
+            color: $text-white-disabled-color;
+        }
+
+        &.cy-text--hover {
+            color: $text-white-active-color;
+
+            &.cy-text--underline::after {
+                border-color: $text-white-active-color;
+            }
+        }
+    }
+}
+
+.cy-text {
+    position   : relative;
+    display    : inline-flex;
+    align-items: center;
+    box-sizing : content-box;
+}
+
+.cy-text--underline::after {
+    content      : '';
+    position     : absolute;
+    left         : 0;
+    right        : 0;
+    height       : 0;
+    bottom       : 0;
+    opacity      : 1;
+    border-bottom: 2rpx solid #cd0be7;
+}
+
+.cy-text__prefix-icon:not(:empty)+.cy-text__content:not(:empty) {
+    padding-left: 8rpx;
+}
+
+.cy-text__content:not(:empty)+.cy-text__suffix-icon:not(:empty) {
+    padding-left: 4rpx;
+}

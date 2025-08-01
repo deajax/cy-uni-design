@@ -1,0 +1,75 @@
+@import '../common/variables.scss';
+
+$badge-background: var(--cy-badge-background, $brand-color);
+$badge-font-size: var(--cy-badge-font-size, $font-size-xs);
+$badge-text-color: var(--cy-badge-text-color, $white-color);
+$badge-box-shadow: var(--cy-badge-box-shadow, 0 0 0 1px #fff);
+$badge-basic-width: var(--cy-badge-basic-width, 32rpx);
+$badge-basic-height: var(--cy-badge-basic-height, 32rpx);
+$badge-font-weight: var(--cy-badge-font-weight, 600);
+$badge-basic-padding: var(--cy-badge-basic-padding, 8rpx);
+$badge-dot-size: var(--cy-badge-dot-size, 16rpx);
+
+$badge-font-size-large: var(--cy-badge-font-size, $font-size-s);
+$badge-basic-width-large: var(--cy-badge-basic-width, 40rpx);
+$badge-basic-height-large: var(--cy-badge-basic-height, 40rpx);
+$badge-basic-padding-large: var(--cy-badge-basic-padding, 10rpx);
+
+.cy-badge {
+    position: relative;
+
+    &__count {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+
+        &-dot {
+            background: $badge-background;
+            border-radius: calc(#{$badge-basic-height} / 2);
+            width: $badge-dot-size;
+            height: $badge-dot-size;
+            box-shadow: $badge-box-shadow;
+        }
+
+        &-text {
+            background: $badge-background;
+            color: $badge-text-color;
+            font-weight: $badge-font-weight;
+            white-space: nowrap;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: $badge-box-shadow;
+        }
+
+        &.cy-badge--empty {
+            position: static;
+            transform: none;
+        }
+    }
+
+    &--medium {
+        .cy-badge__count-text {
+            font-size: $badge-font-size;
+            height: $badge-basic-height;
+            line-height: calc($badge-basic-height + 2rpx);
+            min-width: $badge-basic-width;
+            padding: 0 $badge-basic-padding;
+            border-radius: calc(#{$badge-basic-height} / 2);
+        }
+    }
+
+    &--large {
+        .cy-badge__count-text {
+            font-size: $badge-font-size-large;
+            height: $badge-basic-height-large;
+            line-height: $badge-basic-height-large;
+            min-width: $badge-basic-width-large;
+            padding: 0 $badge-basic-padding-large;
+            border-radius: calc(#{$badge-basic-height-large} / 2);
+        }
+    }
+}

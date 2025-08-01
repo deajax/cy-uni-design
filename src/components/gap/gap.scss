@@ -1,0 +1,16 @@
+.cy-gap {
+    display: inline-flex;
+    align-items: center;
+
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--wrap {
+        flex-wrap: wrap;
+    }
+    &--nowrap {
+        flex-wrap: nowrap;
+    }
+}

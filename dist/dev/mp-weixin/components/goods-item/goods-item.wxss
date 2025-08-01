@@ -1,0 +1,310 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/goods-item/goods-item.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-ellipsis, .cy-goods-item__content--description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cy-ellipsis-1 {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical !important;
+}
+.cy-ellipsis-2 {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical !important;
+}
+.cy-ellipsis-3 {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical !important;
+}
+.hairline-base, .cy-hairline-right::after, .cy-hairline-left::after, .cy-hairline-bottom::after, .cy-hairline-top::after, .cy-hairline-surround::after, .hairline-right, .hairline-left, .hairline-bottom, .cy-goods-item--wrapper::after, .hairline-top, .hairline-surround, .cy-goods-item__image::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+}
+.hairline-surround, .cy-goods-item__image::after {
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.hairline-top {
+  right: 0;
+  left: 0;
+  top: 0;
+  border-top: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.hairline-bottom, .cy-goods-item--wrapper::after {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.hairline-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.hairline-right {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-hairline-surround {
+  position: relative;
+}
+.cy-hairline-surround::after {
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.cy-hairline-top {
+  position: relative;
+}
+.cy-hairline-top::after {
+  right: 0;
+  left: 0;
+  top: 0;
+  border-top: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.cy-hairline-bottom {
+  position: relative;
+}
+.cy-hairline-bottom::after {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.cy-hairline-left {
+  position: relative;
+}
+.cy-hairline-left::after {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-hairline-right {
+  position: relative;
+}
+.cy-hairline-right::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-goods-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  background: var(--cy-goods-item-background, var(--cy-white-color, #fff));
+  overflow: var(--cy-goods-item-overflow, hidden);
+}
+.cy-goods-item--wrapper {
+  position: relative;
+}
+.cy-goods-item--wrapper::after {
+  left: var(--cy-goods-item-border-left-space, 32rpx);
+}
+.cy-goods-item--wrapper:last-child::after, .cy-goods-item--wrapper.cy-goods-item--borderless::after {
+  display: none;
+}
+.cy-goods-item--hover {
+  background: rgba(var(--cy-white-color, #fff), 0.55);
+}
+.cy-goods-item--round {
+  border-radius: var(--cy-goods-item-round, var(--cy-radius-default, 12rpx));
+}
+.cy-goods-item--horizontal {
+  flex-direction: row;
+  padding: var(--cy-goods-item-horizontal-padding, var(--cy-spacer-2, 32rpx));
+}
+.cy-goods-item--horizontal .cy-goods-item__image {
+  width: var(--cy-goods-item-horizontal-image-size, 176rpx);
+  height: var(--cy-goods-item-horizontal-image-size, 176rpx);
+  margin-right: var(--cy-spacer-1, 24rpx);
+  border-radius: var(--cy-goods-item-horizontal-image-round, var(--cy-radius-default, 12rpx));
+}
+.cy-goods-item--horizontal .cy-goods-item__image::after {
+  border-radius: calc(var(--cy-goods-item-horizontal-image-round, var(--cy-radius-default, 12rpx)) * 2);
+}
+.cy-goods-item--vertical {
+  flex-direction: column;
+}
+.cy-goods-item--vertical .cy-goods-item::after {
+  display: none !important;
+}
+.cy-goods-item--vertical .cy-goods-item__image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: var(--cy-goods-item-vertical-image-round, 0);
+}
+.cy-goods-item--vertical .cy-goods-item__image-image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.cy-goods-item--vertical .cy-goods-item__image::after {
+  border-radius: calc(var(--cy-goods-item-vertical-image-round, 0) * 2);
+}
+.cy-goods-item--vertical .cy-goods-item__content {
+  width: 100%;
+  padding: var(--cy-goods-item-vertical-content-padding, var(--cy-spacer-1, 24rpx));
+}
+.cy-goods-item--vertical .cy-goods-item__content--title-text {
+  font-size: var(--cy-goods-item-vertical-title-font-size, var(--cy-font-size-base, 28rpx));
+}
+.cy-goods-item--small.cy-goods-item--vertical {
+  border-radius: 0;
+}
+.cy-goods-item--small.cy-goods-item--vertical .cy-goods-item__image {
+  border-radius: var(--cy-goods-item-round, var(--cy-radius-default, 12rpx));
+  margin-bottom: 16rpx;
+}
+.cy-goods-item--small.cy-goods-item--vertical .cy-goods-item__content {
+  padding: 0;
+}
+.cy-goods-item--small.cy-goods-item--vertical .cy-goods-item__content--title-text {
+  -webkit-line-clamp: 1;
+  font-weight: 400;
+}
+.cy-goods-item--small.cy-goods-item--vertical .cy-goods-item__content--note {
+  padding-top: 8rpx;
+}
+.cy-goods-item__prefix {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.cy-goods-item__prefix .cy-checkbox {
+  padding: 0;
+}
+.cy-goods-item__image {
+  position: relative;
+  overflow: hidden;
+  background: var(--cy-gray-color-3, #e8e8e8);
+}
+.cy-goods-item__image-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cy-goods-item__image::after {
+  z-index: 1;
+}
+.cy-goods-item__sellout {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  width: 100%;
+  height: 100%;
+  background: url(https://cy-static-resources.oss-cn-beijing.aliyuncs.com/miniProgram/unmanned/sellout.png) no-repeat center;
+  background-size: 100%;
+}
+.cy-goods-item__content {
+  flex: 1;
+  width: 0;
+  box-sizing: border-box;
+}
+.cy-goods-item__content--title-text {
+  line-height: 40rpx;
+  color: var(--cy-font-gray-1, rgba(0, 0, 0, 0.9));
+  font-weight: 600;
+  font-size: var(--cy-goods-item-title-font-size, var(--cy-font-size-m, 32rpx));
+}
+.cy-goods-item__content--description {
+  margin-top: calc(var(--cy-spacer, 16rpx) / 4);
+  font-size: var(--cy-goods-item-description-font-size, var(--cy-font-size-s, 24rpx));
+  color: var(--cy-goods-item-description-color, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4)));
+}
+.cy-goods-item__content--note {
+  padding-top: 12rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.cy-goods-item__price {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.cy-goods-item__price--unit {
+  display: inline-flex;
+  align-items: center;
+  margin-left: calc(var(--cy-spacer, 16rpx) / 2);
+  font-size: var(--cy-font-size-base, 28rpx);
+  color: var(--cy-gray-color-6, #a6a6a6);
+  line-height: 1;
+}
+.cy-goods-item__origin-price {
+  font-size: var(--cy-font-size-s, 24rpx);
+  color: var(--cy-gray-color-6, #a6a6a6);
+  text-decoration: line-through;
+  line-height: 32rpx;
+}
+.cy-goods-item__action {
+  margin-left: auto;
+}
+.cy-goods-item .u-number-box__plus,
+.cy-goods-item .u-number-box__minus {
+  width: 24px !important;
+}

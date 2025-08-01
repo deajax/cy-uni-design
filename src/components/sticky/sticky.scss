@@ -1,0 +1,7 @@
+.cy-sticky {
+    /* #ifndef APP-PLUS-NVUE */
+    position: -webkit-sticky;
+    /* #endif */
+    position: sticky;
+    top     : var(--window-top);
+}

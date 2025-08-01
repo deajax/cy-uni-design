@@ -1,0 +1,11 @@
+@import '../common/variables.scss';
+
+.cy-waterfall-item {
+    overflow      : hidden;
+    break-inside  : avoid;
+    padding-bottom: 24rpx;
+	
+	.cy-goods-item__image::after {
+		display: none;
+	}
+}

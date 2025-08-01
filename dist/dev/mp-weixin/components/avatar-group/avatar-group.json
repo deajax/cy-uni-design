@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cy-avatar": "/components/avatar/avatar"
+  },
+  "component": true
+}

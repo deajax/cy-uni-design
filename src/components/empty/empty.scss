@@ -1,0 +1,45 @@
+@import '../common/variables.scss';
+
+$empty-icon-font-size: var(--cy-empty-icon-font-size, 192rpx);
+$empty-image-size: var(--cy-empty-image-size, 280rpx);
+
+$empty-description-color: var(--cy-empty-description-color, $font-gray-3);
+$empty-icon-color: var(--cy-empty-icon-color, $font-gray-3);
+$empty-description-font-size: var(--cy-empty-description-font-size, $font-size-base);
+$empty-description-line-height: var(--cy-empty-description-line-height, 44rpx);
+$empty-description-margin-top: var(--cy-empty-description-margin-top, $spacer-2);
+$empty-action-margin-top: var(--cy-empty-action-margin-top, $spacer-4);
+
+.cy-empty {
+    padding: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__thumb {
+        &--image {
+            width: $empty-image-size;
+        }
+
+        &--icon {
+            font-size: $empty-icon-font-size;
+            color: $empty-icon-color;
+        }
+    }
+
+    &__thumb + &__description:not(:empty) {
+        margin-top: $empty-description-margin-top;
+    }
+
+    &__description {
+        text-align: center;
+        color: $empty-description-color;
+        font-size: $empty-description-font-size;
+        line-height: $empty-description-line-height;
+        white-space: pre-wrap;
+    }
+
+    &__description + &__actions:not(:empty) {
+        margin-top: $empty-action-margin-top;
+    }
+}

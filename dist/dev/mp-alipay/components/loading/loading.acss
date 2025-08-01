@@ -1,0 +1,103 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/loading/loading.vue?vue&type=style&index=0&lang=scss& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-loading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.cy-loading__spinner {
+  position: relative;
+  box-sizing: border-box;
+  width: 40rpx;
+  height: 40rpx;
+  -webkit-animation: rotate 0.8s linear infinite;
+          animation: rotate 0.8s linear infinite;
+  color: var(--cy-loading-color, var(--cy-gray-color-4, #ddd));
+}
+.cy-loading__spinner.reverse {
+  -webkit-animation-name: rotateReverse;
+          animation-name: rotateReverse;
+}
+.cy-loading__spinner--circular .cy-loading__circular {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, rgba(255, 255, 255, 0) 60deg, currentColor 330deg, rgba(255, 255, 255, 0) 360deg);
+  mask: radial-gradient(transparent calc(50% - 1rpx), #fff 50%);
+  /* stylelint-disable-next-line */
+  -webkit-mask: radial-gradient(transparent calc(50% - 1rpx), #fff 50%);
+}
+.cy-loading__text {
+  color: var(--cy-loading-text-color, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4)));
+  font-size: var(--cy-loading-text-font-size, 24rpx);
+  line-height: var(--cy-loading-text-line-height, 40rpx);
+}
+.cy-loading__text--vertical:not(:first-child):not(:empty) {
+  margin-top: 12rpx;
+}
+.cy-loading__text--horizontal:not(:first-child):not(:empty) {
+  margin-left: 16rpx;
+}
+.cy-loading--vertical {
+  flex-direction: column;
+}
+.cy-loading--horizontal {
+  flex-direction: row;
+  vertical-align: top;
+}
+@-webkit-keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+@keyframes rotate {
+from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+@-webkit-keyframes rotateReverse {
+from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+}
+@keyframes rotateReverse {
+from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+}

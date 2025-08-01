@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Text 文本",
+  "usingComponents": {
+    "cy-text": "/components/text/text"
+  }
+}

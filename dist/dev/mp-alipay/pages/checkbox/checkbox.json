@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "CheckBox 多选框",
+  "usingComponents": {
+    "cy-checkbox": "/components/checkbox/checkbox",
+    "cy-checkbox-group": "/components/checkbox-group/checkbox-group"
+  }
+}

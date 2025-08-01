@@ -1,0 +1,768 @@
+@import '../common/variables.scss';
+
+/* #ifdef MP-ALIPAY */
+$button-border-width : var(--cy-button-border-width, 3rpx);
+/* #endif */
+/* #ifndef MP-ALIPAY */
+$button-border-width : var(--cy-button-border-width, 4rpx);
+/* #endif */
+$button-border-radius: var(--cy-button-border-radius, $radius-default);
+$button-font-weight  : var(--cy-button-font-weight, 600);
+
+$button-extra-small-font-size: var(--cy-button-extra-small-font-size, $font-size-base);
+$button-small-font-size      : var(--cy-button-small-font-size, $font-size-base);
+$button-medium-font-size     : var(--cy-button-medium-font-size, $font-size-m);
+$button-large-font-size      : var(--cy-button-large-font-size, $font-size-m);
+
+$button-extra-small-height: var(--cy-button-extra-small-height, 48rpx);
+$button-small-height      : var(--cy-button-small-height, 64rpx);
+$button-medium-height     : var(--cy-button-medium-height, 80rpx);
+$button-large-height      : var(--cy-button-large-height, 96rpx);
+
+// button icon
+$button-icon-spacer       : var(--cy-button-icon-spacer, $spacer);
+$button-icon-border-radius: var(--cy-button-icon-border-radius, 8rpx);
+
+// padding
+$button-extra-small-padding-horizontal: var(--cy-button-extra-small-padding-horizontal, 16rpx);
+$button-small-padding-horizontal      : var(--cy-button-small-padding-horizontal, 24rpx);
+$button-medium-padding-horizontal     : var(--cy-button-medium-padding-horizontal, 32rpx);
+$button-large-padding-horizontal      : var(--cy-button-large-padding-horizontal, 40rpx);
+
+// 图标大小
+$button-extra-small-icon-font-size: var(--cy-button-extra-small-icon-font-size, 32rpx);
+$button-small-icon-font-size      : var(--cy-button-small-icon-font-size, 32rpx);
+$button-medium-icon-font-size     : var(--cy-button-medium-icon-font-size, 36rpx);
+$button-large-icon-font-size      : var(--cy-button-large-icon-font-size, 40rpx);
+
+// default
+$button-default-color                 : var(--cy-button-default-color, $font-gray-1);
+$button-default-bg-color              : var(--cy-button-default-bg-color, $bg-color-component);
+$button-default-border-color          : var(--cy-button-default-border-color, $bg-color-component);
+$button-default-disabled-color        : var(--cy-button-default-disabled-color, $font-gray-4);
+$button-default-disabled-bg           : var(--cy-button-default-disabled-bg, $bg-color-component-disabled);
+$button-default-disabled-border-color : var(--cy-button-default-disabled-border-color, $bg-color-component-disabled);
+// primary
+$button-primary-color                 : var(--cy-button-primary-color, $font-white-1);
+$button-primary-border-color          : var(--cy-button-primary-border-color, $brand-color);
+$button-primary-bg-color              : var(--cy-button-primary-bg-color, $brand-color);
+$button-primary-disabled-color        : var(--cy-button-primary-disabled-color, $font-white-1);
+$button-primary-disabled-bg           : var(--cy-button-primary-disabled-bg, $brand-color-disabled);
+$button-primary-disabled-border-color : var(--cy-button-primary-disabled-border-color, $brand-color-disabled);
+// light
+$button-light-color                   : var(--cy-button-light-color, $brand-color);
+$button-light-border-color            : var(--cy-button-light-border-color, $brand-color-light);
+$button-light-bg-color                : var(--cy-button-light-bg-color, $brand-color-light);
+$button-light-disabled-color          : var(--cy-button-light-disabled-color, $brand-color-disabled);
+$button-light-disabled-bg             : var(--cy-button-light-disabled-bg, $brand-color-light);
+$button-light-disabled-border-color   : var(--cy-button-light-disabled-border-color, $brand-color-light);
+// danger
+$button-danger-color                  : var(--cy-button-danger-color, $font-white-1);
+$button-danger-border-color           : var(--cy-button-danger-border-color, $error-color);
+$button-danger-bg-color               : var(--cy-button-danger-bg-color, $error-color);
+$button-danger-disabled-color         : var(--cy-button-danger-disabled-color, $font-white-1);
+$button-danger-disabled-bg            : var(--cy-button-danger-disabled-bg, $error-color-3);
+$button-danger-disabled-border-color  : var(--cy-button-danger-disabled-border-color, $error-color-3);
+// default + outline
+$button-default-outline-color         : var(--cy-button-default-outline-color, $font-gray-1);
+$button-default-outline-border-color  : var(--cy-button-default-outline-border-color, $component-border);
+$button-default-outline-disabled-color: var(--cy-button-default-outline-disabled-color, $component-border);
+// primary + outline
+$button-primary-outline-color         : var(--cy-button-primary-outline-color, $brand-color);
+$button-primary-outline-border-color  : var(--cy-button-primary-outline-border-color, $button-primary-outline-color);
+$button-primary-outline-disabled-color: var(--cy-button-primary-outline-disabled-color, $brand-color-disabled);
+// danger + outline
+$button-danger-outline-color          : var(--cy-button-danger-outline-color, $error-color);
+$button-danger-outline-border-color   : var(--cy-button-danger-outline-border-color, $button-danger-outline-color);
+$button-danger-outline-disabled-color : var(--cy-button-danger-outline-disabled-color, $error-color-3);
+// light + outline
+$button-light-outline-color           : var(--cy-button-light-outline-color, $brand-color);
+$button-light-outline-border-color    : var(--cy-button-light-outline-border-color, $button-light-outline-color);
+$button-light-outline-bg-color        : var(--cy-button-light-outline-bg-color, $brand-color-light);
+$button-light-outline-disabled-color  : var(--cy-button-light-outline-disabled-color, $brand-color-disabled);
+// primary + dashed
+$button-primary-dashed-color          : var(--cy-button-primary-dashed-color, $brand-color);
+$button-primary-dashed-border-color   : var(--cy-button-primary-dashed-border-color, $button-primary-dashed-color);
+$button-primary-dashed-disabled-color : var(--cy-button-primary-dashed-disabled-color, $brand-color-disabled);
+// danger + dashed
+$button-danger-dashed-color           : var(--cy-button-danger-dashed-color, $error-color);
+$button-danger-dashed-border-color    : var(--cy-button-danger-dashed-border-color, $button-danger-dashed-color);
+$button-danger-dashed-disabled-color  : var(--cy-button-danger-dashed-disabled-color, $button-danger-disabled-color);
+// primary + text
+$button-primary-text-color            : var(--cy-button-primary-text-color, $brand-color);
+$button-primary-text-disabled-color   : var(--cy-button-primary-text-disabled-color, $brand-color-disabled);
+// danger + text
+$button-danger-text-color             : var(--cy-button-danger-text-color, $error-color);
+$button-danger-text-disabled-color    : var(--cy-button-danger-text-disabled-color, $button-danger-disabled-color);
+// light + text
+$button-light-text-color              : var(--cy-button-light-text-color, $brand-color);
+// ghost 优先级高于 theme，固定透明背景，白色边框，白色字体
+$button-ghost-color                   : var(--cy-button-ghost-color, $bg-color-container);
+$button-ghost-border-color            : var(--cy-button-ghost-border-color, $button-ghost-color);
+$button-ghost-disabled-color          : var(--cy-button-ghost-disabled-color, rgba(255, 255, 255, 0.35));
+$button-ghost-primary-color           : var(--cy-button-ghost-primary-color, $brand-color);
+$button-ghost-primary-border-color    : var(--cy-button-ghost-primary-border-color, $brand-color);
+$button-ghost-danger-color            : var(--cy-button-ghost-danger-color, $error-color);
+$button-ghost-danger-border-color     : var(--cy-button-ghost-danger-border-color, $error-color);
+
+// 激活态背景和边框色
+$button-default-active-bg-color            : var(--cy-button-default-active-bg-color, $bg-color-component-active);
+$button-default-active-border-color        : var(--cy-button-default-active-border-color, $bg-color-component-active);
+$button-light-active-bg-color              : var(--cy-button-light-active-bg-color, $brand-color-light-active);
+$button-light-active-border-color          : var(--cy-button-light-active-border-color, $brand-color-light-active);
+$button-primary-active-bg-color            : var(--cy-button-primary-active-bg-color, $brand-color-active);
+$button-primary-active-border-color        : var(--cy-button-primary-active-border-color, $brand-color-active);
+$button-danger-active-bg-color             : var(--cy-button-danger-active-bg-color, $error-color-7);
+$button-danger-active-border-color         : var(--cy-button-danger-active-border-color, $error-color-7);
+$button-default-outline-active-bg-color    : var(--cy-button-default-outline-active-bg-color, $bg-color-container-active);
+$button-default-outline-active-border-color: var(--cy-button-default-outline-active-border-color, $component-border);
+$button-primary-outline-active-bg-color    : var(--cy-button-primary-outline-active-bg-color, $bg-color-container-active);
+$button-primary-outline-active-border-color: var(--cy-button-primary-outline-active-border-color, $brand-color-active);
+$button-danger-outline-active-bg-color     : var(--cy-button-danger-outline-active-bg-color, $bg-color-container-active);
+$button-danger-outline-active-border-color : var(--cy-button-danger-outline-active-border-color, $error-color-7);
+$button-light-outline-active-bg-color      : var(--cy-button-light-outline-active-bg-color, $brand-color-light-active);
+$button-light-outline-active-border-color  : var(--cy-button-light-outline-active-border-color, $brand-color-active);
+$button-default-text-active-bg-color       : var(--cy-button-default-text-active-bg-color, $bg-color-container-active);
+$button-primary-text-active-bg-color       : var(--cy-button-primary-text-active-bg-color, $bg-color-container-active);
+$button-danger-text-active-bg-color        : var(--cy-button-danger-text-active-bg-color, $bg-color-container-active);
+$button-light-text-active-bg-color         : var(--cy-button-light-text-active-bg-color, $bg-color-container-active);
+
+
+.cy-button {
+	display                    : inline-flex;
+	align-items                : center;
+	justify-content            : center;
+	position                   : relative;
+	white-space                : nowrap;
+	text-align                 : center;
+	background-image           : none;
+	transition                 : all 0.3s;
+	touch-action               : manipulation;
+	border-radius              : $button-border-radius;
+	outline                    : none;
+	font-family                : PingFang SC, Microsoft YaHei, Arial Regular;
+	font-weight                : $button-font-weight;
+	vertical-align             : top;
+	margin                     : 0;
+	cursor                     : pointer;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select        : none;
+	user-select                : none;
+	/* stylelint-disable-next-line */
+	-webkit-appearance         : none;
+
+	&::after {
+		border-radius: calc(#{$button-border-radius} * 2);
+	}
+
+	&--size {
+		&-extra-small {
+			font-size    : $button-extra-small-font-size;
+			padding-left : $button-extra-small-padding-horizontal;
+			padding-right: $button-extra-small-padding-horizontal;
+			height       : $button-extra-small-height;
+			line-height  : $button-extra-small-height;
+
+			.cy-button__icon {
+				font-size: $button-extra-small-icon-font-size;
+			}
+		}
+
+		&-small {
+			font-size    : $button-small-font-size;
+			padding-left : $button-small-padding-horizontal;
+			padding-right: $button-small-padding-horizontal;
+			height       : $button-small-height;
+			line-height  : $button-small-height;
+
+			.cy-button__icon {
+				font-size: $button-small-icon-font-size;
+			}
+		}
+
+		&-medium {
+			font-size    : $button-medium-font-size;
+			padding-left : $button-medium-padding-horizontal;
+			padding-right: $button-medium-padding-horizontal;
+			height       : $button-medium-height;
+			line-height  : $button-medium-height;
+
+			.cy-button__icon {
+				font-size: $button-medium-icon-font-size;
+			}
+		}
+
+		&-large {
+			font-size    : $button-large-font-size;
+			padding-left : $button-large-padding-horizontal;
+			padding-right: $button-large-padding-horizontal;
+			height       : $button-large-height;
+			line-height  : $button-large-height;
+
+			.cy-button__icon {
+				font-size: $button-large-icon-font-size;
+			}
+		}
+	}
+
+	&--default {
+		color       : $button-default-color;
+		background  : $button-default-bg-color;
+		/* #ifdef MP-ALIPAY */
+		border-width: $button-border-width;
+		border-color: $button-default-border-color;
+		/* #endif */
+
+		&::after {
+			border-width: $button-border-width;
+			border-color: $button-default-border-color;
+		}
+
+		&.cy-button--hover {
+			z-index     : 0;
+			/* #ifdef MP-ALIPAY */
+			background  : $button-default-active-bg-color;
+			border-color: $button-default-active-border-color;
+			/* #endif */
+
+			&::after {
+				background  : $button-default-active-bg-color;
+				border-color: $button-default-active-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			color       : $button-default-disabled-color;
+			background  : $button-default-disabled-bg;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-default-disabled-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-default-disabled-border-color;
+			}
+		}
+	}
+
+	&--primary {
+		color       : $button-primary-color;
+		background  : $button-primary-bg-color;
+		/* #ifdef MP-ALIPAY */
+		border-width: $button-border-width;
+		border-color: $button-primary-border-color;
+		/* #endif */
+
+		&::after {
+			border-width: $button-border-width;
+			border-color: $button-primary-border-color;
+		}
+
+		&.cy-button--hover {
+			z-index     : 0;
+			/* #ifdef MP-ALIPAY */
+			background  : $button-primary-active-bg-color;
+			border-color: $button-primary-active-border-color;
+			/* #endif */
+
+			&::after {
+				background  : $button-primary-active-bg-color;
+				border-color: $button-primary-active-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			color       : $button-primary-disabled-color;
+			background  : $button-primary-disabled-bg;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-primary-disabled-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-primary-disabled-border-color;
+			}
+		}
+	}
+
+	&--light {
+		color       : $button-light-color;
+		background  : $button-light-bg-color;
+		/* #ifdef MP-ALIPAY */
+		border-width: $button-border-width;
+		border-color: $button-light-border-color;
+		/* #endif */
+
+		&::after {
+			border-width: $button-border-width;
+			border-color: $button-light-border-color;
+		}
+
+		&.cy-button--hover {
+			z-index     : 0;
+			/* #ifdef MP-ALIPAY */
+			background  : $button-light-active-bg-color;
+			border-color: $button-light-active-border-color;
+			/* #endif */
+
+			&::after {
+				background  : $button-light-active-bg-color;
+				border-color: $button-light-active-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			color       : $button-light-disabled-color;
+			background  : $button-light-disabled-bg;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-light-disabled-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-light-disabled-border-color;
+			}
+		}
+	}
+
+	&--danger {
+		color       : $button-danger-color;
+		background  : $button-danger-bg-color;
+		/* #ifdef MP-ALIPAY */
+		border-width: $button-border-width;
+		border-color: $button-danger-border-color;
+		/* #endif */
+
+		&::after {
+			border-width: $button-border-width;
+			border-color: $button-danger-border-color;
+		}
+
+		&.cy-button--hover {
+			z-index     : 0;
+			/* #ifdef MP-ALIPAY */
+			background  : $button-danger-active-bg-color;
+			border-color: $button-danger-active-border-color;
+			/* #endif */
+
+			&::after {
+				background  : $button-danger-active-bg-color;
+				border-color: $button-danger-active-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			color       : $button-danger-disabled-color;
+			background  : $button-danger-disabled-bg;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-danger-disabled-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-danger-disabled-border-color;
+			}
+		}
+	}
+
+	&--text {
+		color     : $button-default-color;
+		background: none;
+		/* #ifdef MP-ALIPAY */
+		border    : 0;
+		/* #endif */
+
+		&::after {
+			border: 0;
+		}
+
+		&.cy-button--hover::after {
+			background: $button-default-text-active-bg-color;
+		}
+
+		&.cy-button--primary {
+			color     : $button-primary-text-color;
+			background: none;
+
+			&.cy-button--hover::after {
+				background: $button-primary-text-active-bg-color;
+			}
+
+			&.cy-button--disabled {
+				color     : $button-primary-text-disabled-color;
+				background: none;
+			}
+		}
+
+		&.cy-button--danger {
+			color     : $button-danger-text-color;
+			background: none;
+
+			&.cy-button--hover::after {
+				background: $button-danger-text-active-bg-color;
+			}
+
+			&.cy-button--disabled {
+				color     : $button-danger-text-disabled-color;
+				background: none;
+			}
+		}
+
+		&.cy-button--light {
+			color     : $button-light-text-color;
+			background: none;
+
+			&.cy-button--hover::after {
+				background: $button-light-text-active-bg-color;
+			}
+
+			&.cy-button--disabled {
+				color: $button-default-disabled-color;
+			}
+		}
+	}
+
+	&--ghost {
+		background  : transparent;
+		color       : $button-ghost-color;
+		/* #ifdef MP-ALIPAY */
+		border-color: $button-ghost-border-color;
+		/* #endif */
+
+		&::after {
+			border-color: $button-ghost-border-color;
+		}
+
+		&.cy-button--hover::after {
+			background: none;
+		}
+
+		&.cy-button--primary {
+			color       : $button-ghost-primary-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-ghost-primary-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-ghost-primary-border-color;
+			}
+		}
+
+		&.cy-button--danger {
+			color       : $button-ghost-danger-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-ghost-danger-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-ghost-danger-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			background  : transparent;
+			color       : $button-ghost-disabled-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-ghost-disabled-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-ghost-disabled-color;
+			}
+		}
+	}
+
+	&--outline {
+		color       : $button-default-outline-color;
+		background  : $button-ghost-color;
+		/* #ifdef MP-ALIPAY */
+		border-color: $button-default-outline-border-color;
+		/* #endif */
+
+		&::after {
+			border-color: $button-default-outline-border-color;
+		}
+
+		&.cy-button--hover {
+			/* #ifdef MP-ALIPAY */
+			background  : $button-default-outline-active-bg-color;
+			border-color: $button-default-outline-active-border-color;
+			/* #endif */
+
+			&::after {
+				background  : $button-default-outline-active-bg-color;
+				border-color: $button-default-outline-active-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			color       : $button-default-outline-disabled-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-default-outline-disabled-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-default-outline-disabled-color;
+			}
+		}
+
+		&.cy-button--primary {
+			color       : $button-primary-outline-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-primary-outline-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-primary-outline-border-color;
+			}
+
+			&.cy-button--hover {
+				color       : $button-primary-outline-active-border-color;
+				/* #ifdef MP-ALIPAY */
+				background  : $button-primary-outline-active-bg-color;
+				border-color: $button-primary-outline-active-border-color;
+				/* #endif */
+
+				&::after {
+					background  : $button-primary-outline-active-bg-color;
+					border-color: $button-primary-outline-active-border-color;
+				}
+			}
+
+			&.cy-button--disabled {
+				background  : transparent;
+				color       : $button-primary-outline-disabled-color;
+				/* #ifdef MP-ALIPAY */
+				border-color: $button-primary-outline-disabled-color;
+				/* #endif */
+
+				&::after {
+					border-color: $button-primary-outline-disabled-color;
+				}
+			}
+		}
+
+		&.cy-button--danger {
+			color       : $button-danger-outline-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-danger-outline-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-danger-outline-border-color;
+			}
+
+			&.cy-button--hover {
+				color       : $button-danger-outline-active-border-color;
+				/* #ifdef MP-ALIPAY */
+				background  : $button-danger-outline-active-bg-color;
+				border-color: $button-danger-outline-active-border-color;
+				/* #endif */
+
+				&::after {
+					background  : $button-danger-outline-active-bg-color;
+					border-color: $button-danger-outline-active-border-color;
+				}
+			}
+
+			&.cy-button--disabled {
+				background  : transparent;
+				color       : $button-danger-outline-disabled-color;
+				/* #ifdef MP-ALIPAY */
+				border-color: $button-danger-outline-disabled-color;
+				/* #endif */
+
+				&::after {
+					border-color: $button-danger-outline-disabled-color;
+				}
+			}
+		}
+
+		&.cy-button--light {
+			color       : $button-light-outline-color;
+			background  : $button-light-outline-bg-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-light-outline-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-light-outline-border-color;
+			}
+
+			&.cy-button--hover {
+				color       : $button-light-outline-active-border-color;
+				/* #ifdef MP-ALIPAY */
+				background  : $button-light-outline-active-bg-color;
+				border-color: $button-light-outline-active-border-color;
+				/* #endif */
+
+				&::after {
+					background  : $button-light-outline-active-bg-color;
+					border-color: $button-light-outline-active-border-color;
+				}
+			}
+
+			&.cy-button--disabled {
+				background  : transparent;
+				color       : $button-light-outline-disabled-color;
+				/* #ifdef MP-ALIPAY */
+				border-color: $button-light-outline-disabled-color;
+				/* #endif */
+
+				&::after {
+					border-color: $button-light-outline-disabled-color;
+				}
+			}
+		}
+	}
+
+	&--dashed {
+		background  : transparent;
+		border-style: dashed;
+
+		&.cy-button--primary {
+			color       : $button-primary-dashed-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-primary-dashed-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-primary-dashed-border-color;
+			}
+		}
+
+		&.cy-button--disabled {
+			background  : transparent;
+			color       : $button-primary-dashed-disabled-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-primary-dashed-disabled-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-primary-dashed-disabled-color;
+			}
+		}
+
+		&.cy-button--danger {
+			color       : $button-danger-dashed-color;
+			/* #ifdef MP-ALIPAY */
+			border-color: $button-danger-dashed-border-color;
+			/* #endif */
+
+			&::after {
+				border-color: $button-danger-dashed-border-color;
+			}
+
+			&.cy-button--disabled {
+				background  : transparent;
+				color       : $button-danger-dashed-disabled-color;
+				/* #ifdef MP-ALIPAY */
+				border-color: $button-danger-dashed-disabled-color;
+				/* #endif */
+
+				&::after {
+					border-color: $button-danger-dashed-disabled-color;
+				}
+			}
+		}
+	}
+
+	&--round {
+		&.cy-button--size-large {
+			border-radius: calc(#{$button-large-height} / 2);
+
+			&::after {
+				border-radius: $button-large-height;
+			}
+		}
+
+		&.cy-button--size-medium {
+			border-radius: calc(#{$button-medium-height} / 2);
+
+			&::after {
+				border-radius: $button-medium-height;
+			}
+		}
+
+
+		&.cy-button--size-small {
+			border-radius: calc(#{$button-small-height} / 2);
+
+			&::after {
+				border-radius: $button-small-height;
+			}
+		}
+
+		&.cy-button--size-extra-small {
+			border-radius: calc(#{$button-extra-small-height} / 2);
+
+			&::after {
+				border-radius: $button-extra-small-height;
+			}
+		}
+	}
+
+	&--square {
+		padding: 0;
+
+		&.cy-button--size-large {
+			width: $button-large-height;
+		}
+
+		&.cy-button--size-medium {
+			width: $button-medium-height;
+		}
+
+		&.cy-button--size-small {
+			width: $button-small-height;
+		}
+
+		&.cy-button--size-extra-small {
+			width: $button-extra-small-height;
+		}
+	}
+
+	&--circle {
+		padding      : 0;
+		border-radius: 50%;
+
+		&::after {
+			border-radius: 50%;
+		}
+
+		&.cy-button--size-large {
+			width: $button-large-height;
+		}
+
+		&.cy-button--size-medium {
+			width: $button-medium-height;
+		}
+
+		&.cy-button--size-small {
+			width: $button-small-height;
+		}
+
+		&.cy-button--size-extra-small {
+			width: $button-extra-small-height;
+		}
+	}
+
+	&--block {
+		display: flex;
+		width  : 100%;
+	}
+
+	&--disabled {
+		cursor: not-allowed;
+	}
+
+	&__icon {
+		border-radius: $button-icon-border-radius;
+		font-weight  : normal;
+	}
+
+	&.cy-button--hover::after {
+		z-index: -1;
+	}
+}
+
+.cy-button__loading+.cy-button__content:not(:empty),
+.cy-button__icon+.cy-button__content:not(:empty) {
+	margin-left: 8rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Fab 悬浮按钮",
+  "usingComponents": {
+    "cy-fab": "/components/fab/fab"
+  }
+}

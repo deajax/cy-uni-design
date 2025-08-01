@@ -1,0 +1,70 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/divider/divider.vue?vue&type=style&index=0&lang=scss& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-divider {
+  display: flex;
+  color: var(--cy-divider-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-divider-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  border-style: var(--cy-divider-content-line-style, solid);
+  border-width: 0;
+}
+.cy-divider::before, .cy-divider::after {
+  content: "";
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  border: inherit;
+  border-color: inherit;
+  border-style: inherit;
+}
+.cy-divider--horizontal {
+  align-items: center;
+  margin-top: var(--cy-divider-horizontal-space, 24rpx);
+  margin-bottom: var(--cy-divider-horizontal-space, 24rpx);
+}
+.cy-divider--horizontal::before, .cy-divider--horizontal::after {
+  border-top-width: 1px;
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.cy-divider--horizontal .cy-divider__content:not(:empty) {
+  margin: 0 var(--cy-divider-horizontal-space, 24rpx);
+}
+.cy-divider--vertical {
+  flex-direction: column;
+  height: 1em;
+  margin: 0 var(--cy-divider-vertical-space, 16rpx);
+}
+.cy-divider--vertical::before, .cy-divider--vertical::after {
+  border-left-width: 1px;
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-divider--vertical-center {
+  align-items: center;
+}
+.cy-divider--dashed {
+  border-style: dashed;
+}
+.cy-divider__content {
+  font-size: var(--cy-divider-content-font-size, 24rpx);
+  line-height: var(--cy-divider-content-line-height, 40rpx);
+  color: var(--cy-divider-content-color, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4)));
+}
+.cy-divider--left::before, .cy-divider--right::after {
+  max-width: 48rpx;
+}

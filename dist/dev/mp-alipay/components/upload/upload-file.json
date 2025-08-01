@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "styleIsolation": "shared",
+  "usingComponents": {
+    "cy-cell": "/components/cell/cell",
+    "cy-icon": "/components/icon/icon",
+    "cy-divider": "/components/divider/divider"
+  }
+}

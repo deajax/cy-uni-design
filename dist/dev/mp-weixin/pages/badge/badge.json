@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "Badge 徽标",
+  "usingComponents": {
+    "cy-badge": "/components/badge/badge",
+    "cy-icon": "/components/icon/icon",
+    "cy-button": "/components/button/button",
+    "cy-cell": "/components/cell/cell"
+  }
+}

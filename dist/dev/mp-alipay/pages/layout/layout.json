@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "layout",
+  "usingComponents": {
+    "cy-row": "/components/row/row",
+    "cy-col": "/components/col/col"
+  }
+}

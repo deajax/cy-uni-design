@@ -1,0 +1,77 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/price/price.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-price {
+  display: inline-flex;
+  align-items: center;
+  color: var(--cy-price-color, var(--cy-text-color-primary, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9))));
+  font-size: var(--cy-price-font-size, 40rpx);
+  line-height: 1;
+}
+.cy-price__prefix-icon {
+  display: flex;
+  align-items: center;
+}
+.cy-price__cny-icon::before {
+  content: "¥";
+  font-weight: 600;
+  font-size: var(--cy-price-icon-size, 0.7em);
+  height: var(--cy-price-icon-size, 0.7em);
+  vertical-align: 2rpx;
+}
+.cy-price__content {
+  font-family: "TCloudNumber";
+}
+.cy-price--default {
+  color: var(--cy-price-color, var(--cy-text-color-primary, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9))));
+}
+.cy-price--primary {
+  color: var(--cy-price-color-primary, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-price--success {
+  color: var(--cy-price-color-success, var(--cy-success-color, var(--cy-success-color-5, #22c55e)));
+}
+.cy-price--warning {
+  color: var(--cy-price-color-warning, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+}
+.cy-price--danger {
+  color: var(--cy-price-color-danger, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-price--small {
+  font-size: var(--cy-price-font-size, 32rpx);
+}
+.cy-price--small .cy-price__cny-icon {
+  font-size: var(--cy-price-font-size, 32rpx);
+}
+.cy-price--medium {
+  font-size: var(--cy-price-font-size, 40rpx);
+}
+.cy-price--medium .cy-price__cny-icon {
+  font-size: var(--cy-price-font-size, 40rpx);
+}
+.cy-price--large {
+  font-size: var(--cy-price-font-size, 48rpx);
+}
+.cy-price--large .cy-price__cny-icon {
+  font-size: var(--cy-price-font-size, 48rpx);
+}
+.cy-price--extra-large {
+  font-size: var(--cy-price-font-size, 56rpx);
+}
+.cy-price--extra-large .cy-price__cny-icon {
+  font-size: var(--cy-price-font-size, 56rpx);
+}

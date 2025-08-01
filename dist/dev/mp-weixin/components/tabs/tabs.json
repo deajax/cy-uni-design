@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cy-icon": "/components/icon/icon",
+    "cy-badge": "/components/badge/badge"
+  },
+  "component": true
+}

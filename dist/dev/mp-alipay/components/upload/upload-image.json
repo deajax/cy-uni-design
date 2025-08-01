@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "styleIsolation": "shared",
+  "usingComponents": {
+    "cy-row": "/components/row/row",
+    "cy-col": "/components/col/col",
+    "cy-icon": "/components/icon/icon",
+    "cy-loading": "/components/loading/loading"
+  }
+}

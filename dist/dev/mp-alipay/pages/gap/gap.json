@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "gap",
+  "usingComponents": {
+    "cy-gap": "/components/gap/gap",
+    "cy-tag": "/components/tag/tag",
+    "cy-button": "/components/button/button"
+  }
+}

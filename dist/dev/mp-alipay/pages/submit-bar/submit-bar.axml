@@ -1,0 +1,1 @@
+<view class="submit-bar"><cy-submit-bar vue-id="f8d34dd4-1" onVueInit="__l" vue-slots="{{['left','description']}}"><block slot="left">solt</block><block slot="description">共3件商品，已优惠¥1.00</block></cy-submit-bar></view>

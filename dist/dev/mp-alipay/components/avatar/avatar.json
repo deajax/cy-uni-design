@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cy-badge": "/components/badge/badge",
+    "cy-icon": "/components/icon/icon"
+  },
+  "component": true,
+  "styleIsolation": "shared"
+}

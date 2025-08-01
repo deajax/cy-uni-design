@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Dialog 对话框",
+  "usingComponents": {
+    "cy-button": "/components/button/button",
+    "cy-dialog": "/components/dialog/dialog"
+  }
+}

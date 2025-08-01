@@ -1,0 +1,130 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/avatar-group/avatar-group.vue?vue&type=style&index=0&lang=scss& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: var(--cy-avatar-bg-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+  color: var(--cy-avatar-content-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-avatar__wrapper {
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+  margin-left: var(--cy-avatar-margin-left, 0);
+}
+.cy-avatar--large {
+  width: var(--cy-avatar-large-width, 128rpx);
+  height: var(--cy-avatar-large-width, 128rpx);
+  font-size: var(--cy-avatar-text-large-font-size, 48rpx);
+}
+.cy-avatar--large .cy-avatar__icon {
+  font-size: var(--cy-avatar-icon-large-font-size, 64rpx);
+}
+.cy-avatar--large.cy-avatar--border {
+  border-width: var(--cy-avatar-border-width-large, 8rpx);
+}
+.cy-avatar--medium {
+  width: var(--cy-avatar-medium-width, 96rpx);
+  height: var(--cy-avatar-medium-width, 96rpx);
+  font-size: var(--cy-avatar-text-medium-font-size, var(--cy-font-size-m, 32rpx));
+}
+.cy-avatar--medium .cy-avatar__icon {
+  font-size: var(--cy-avatar-icon-medium-font-size, 48rpx);
+}
+.cy-avatar--medium.cy-avatar--border {
+  border-width: var(--cy-avatar-border-width-medium, 6rpx);
+}
+.cy-avatar--small {
+  width: var(--cy-avatar-small-width, 80rpx);
+  height: var(--cy-avatar-small-width, 80rpx);
+  font-size: var(--cy-avatar-text-small-font-size, var(--cy-font-size-s, 24rpx));
+}
+.cy-avatar--small .cy-avatar__icon {
+  font-size: var(--cy-avatar-icon-small-font-size, 40rpx);
+}
+.cy-avatar--small.cy-avatar--border {
+  border-width: var(--cy-avatar-border-width-small, 4rpx);
+}
+.cy-avatar .cy-image, .cy-avatar__image {
+  width: 100%;
+  height: 100%;
+}
+.cy-avatar--circle {
+  border-radius: var(--cy-avatar-circle-border-radius, var(--cy-radius-circle, 50%));
+  overflow: hidden;
+}
+.cy-avatar--round {
+  border-radius: var(--cy-avatar-round-border-radius, var(--cy-radius-default, 12rpx));
+  overflow: hidden;
+}
+.cy-avatar__text, .cy-avatar__icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cy-avatar__text:empty, .cy-avatar__icon:empty {
+  width: 0;
+  height: 0;
+}
+.cy-avatar--border {
+  border-color: var(--cy-avatar-border-color, #fff);
+  border-style: solid;
+}
+.cy-avatar-group {
+  display: inline-flex;
+  align-items: center;
+}
+.cy-avatar-group-offset-left-up-small {
+  padding-left: var(--cy-avatar-group-padding-left-small, 8px);
+  --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-small, -8px);
+}
+.cy-avatar-group-offset-left-up-medium {
+  padding-left: var(--cy-avatar-group-padding-left-medium, 16px);
+  --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-medium, -16px);
+}
+.cy-avatar-group-offset-left-up-large {
+  padding-left: var(--cy-avatar-group-padding-left-large, 32px);
+  --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-large, -32px);
+}
+.cy-avatar-group-offset-right-up-small {
+  padding-left: var(--cy-avatar-group-padding-left-small, 8px);
+  --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-small, -8px);
+}
+.cy-avatar-group-offset-right-up-medium {
+  padding-left: var(--cy-avatar-group-padding-left-medium, 16px);
+  --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-medium, -16px);
+}
+.cy-avatar-group-offset-right-up-large {
+  padding-left: var(--cy-avatar-group-padding-left-large, 32px);
+  --cy-avatar-margin-left: var(--cy-avatar-group-margin-left-large, -32px);
+}
+.cy-avatar-group__collapse--slot {
+  float: left;
+}
+.cy-avatar-group__collapse--slot:not(:empty) + .cy-avatar-group__collapse--default {
+  display: none;
+  float: left;
+}
+.cy-avatar-group__collapse--slot:empty + .cy-avatar-group__collapse--default {
+  display: block;
+  float: left;
+}

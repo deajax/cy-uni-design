@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Navbar 导航栏",
+  "transparentTitle": "always",
+  "titlePenetrate": "YES",
+  "backgroundImageColor": "",
+  "usingComponents": {
+    "cy-navbar": "/components/navbar/navbar"
+  }
+}

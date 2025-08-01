@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "avatar",
+  "usingComponents": {
+    "cy-avatar": "/components/avatar/avatar",
+    "cy-avatar-group": "/components/avatar-group/avatar-group"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Stepper 步进器",
+  "usingComponents": {
+    "cy-stepper": "/components/stepper/stepper"
+  }
+}

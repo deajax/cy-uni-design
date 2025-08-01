@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "card",
+  "usingComponents": {
+    "cy-card": "/components/card/card",
+    "cy-icon": "/components/icon/icon"
+  }
+}

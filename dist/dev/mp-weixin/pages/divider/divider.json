@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Divider 分割线",
+  "usingComponents": {
+    "cy-divider": "/components/divider/divider"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Radio 单选框",
+  "usingComponents": {
+    "cy-radio": "/components/radio/radio",
+    "cy-radio-group": "/components/radio-group/radio-group"
+  }
+}

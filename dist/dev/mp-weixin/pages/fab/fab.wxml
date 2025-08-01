@@ -1,0 +1,1 @@
+<view class="fab"><cy-fab vue-id="4bbd28a0-1" scrollTop="{{scrollTop}}" backtop="{{true}}" bind:__l="__l" vue-slots="{{['default']}}">solt</cy-fab><view><block wx:for="{{300}}" wx:for-item="i" wx:for-index="__i0__" wx:key="*this"><view>{{i}}</view></block></view></view>

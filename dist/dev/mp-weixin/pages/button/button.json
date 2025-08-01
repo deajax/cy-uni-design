@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Button 按钮",
+  "usingComponents": {
+    "cy-button": "/components/button/button"
+  }
+}

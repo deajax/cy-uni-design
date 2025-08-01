@@ -1,0 +1,19 @@
+.cy-col {
+    display   : block;
+    box-sizing: border-box;
+    min-height: 1px;
+}
+
+@function getSize($size) {
+    @return 0.04166666666 * $size * 100 * 1%;
+}
+
+@for $i from 0 through 24 {
+    .cy-col--#{$i} {
+        width: getSize($i);
+    }
+
+    .cy-col--offset-#{$i} {
+        margin-left: getSize($i);
+    }
+}

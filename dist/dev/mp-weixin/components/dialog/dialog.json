@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cy-popup": "/components/popup/popup",
+    "cy-button": "/components/button/button"
+  },
+  "component": true
+}

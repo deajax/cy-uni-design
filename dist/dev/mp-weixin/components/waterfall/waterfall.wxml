@@ -1,0 +1,1 @@
+<view class="{{['cy-waterfall',customClass]}}" style="{{'columns:'+(columns)+';'+('gap:'+(gap+'rpx')+';')}}"><slot></slot></view>

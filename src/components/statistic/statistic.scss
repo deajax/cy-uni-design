@@ -1,0 +1,60 @@
+@import '../common/variables.scss';
+
+$statistic-title-color: var(--cy-statistic-title-color, $font-gray-3);
+$statistic-title-font-size: var(--cy-statistic-title-font-size, $font-size-base);
+
+$statistic-content-color: var(--cy-statistic-content-color, $font-gray-1);
+$statistic-content-font-size: var(--cy-statistic-content-font-size, 48rpx);
+
+.cy-statistic {
+    box-sizing: border-box;
+
+    &--center {
+        text-align: center;
+
+        .cy-statistic__title {
+            justify-content: center;
+        }
+    }
+
+    &--left {
+        text-align: left;
+        
+        .cy-statistic__title {
+            justify-content: flex-start;
+        }
+    }
+
+    &--right {
+        text-align: right;
+
+        .cy-statistic__title {
+            justify-content: flex-end;
+        }
+    }
+
+    &__title {
+        color: $statistic-title-color;
+        font-size: $statistic-title-font-size;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    &__content {
+        color: $statistic-content-color;
+        font-size: $statistic-content-font-size;
+
+        &-prefix {
+            display: inline-block;
+        }
+        &-value {
+            display: inline-block;
+            direction: ltr;
+        }
+        &-suffix {
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "WaterFall 瀑布流",
+  "usingComponents": {
+    "cy-waterfall": "/components/waterfall/waterfall",
+    "cy-waterfall-item": "/components/waterfall-item/waterfall-item"
+  }
+}

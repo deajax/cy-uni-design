@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cy-icon": "/components/icon/icon",
+    "cy-text": "/components/text/text"
+  },
+  "component": true,
+  "styleIsolation": "shared"
+}

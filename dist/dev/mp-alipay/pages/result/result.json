@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "result",
+  "usingComponents": {
+    "cy-result": "/components/result/result",
+    "cy-button": "/components/button/button"
+  }
+}

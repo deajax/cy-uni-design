@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Tabs 选项卡",
+  "usingComponents": {
+    "cy-tabs": "/components/tabs/tabs",
+    "cy-tab-panel": "/components/tab-panel/tab-panel"
+  }
+}

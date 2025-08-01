@@ -1,0 +1,77 @@
+@import '../common/variables.scss';
+
+$progress-content-font-size: var(--cy-progress-content-font-size, $font-size-xs);
+$progress-inner-color: var(--cy-progress-inner-color, #fff);
+$progress-content-color: var(--cy-progress-content-color, $text-color-secondary);
+
+$progress-bg-primary: var(--cy-progress-bg-primary, $brand-color-light);
+$progress-bg-success: var(--cy-progress-bg-success, $success-color-light);
+$progress-bg-error: var(--cy-progress-bg-error, $error-color-light);
+$progress-bg-warning: var(--cy-progress-bg-warning, $warning-color-light);
+
+$progress-active-primary: var(--cy-progress-active-primary, $brand-color);
+$progress-active-success: var(--cy-progress-active-success, $success-color);
+$progress-active-error: var(--cy-progress-active-error, $error-color);
+$progress-active-warning: var(--cy-progress-active-warning, $warning-color);
+
+.cy-progress {
+    display: flex;
+    align-items: center;
+    
+    &__bar {
+        flex: 1;
+    }
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        color: $progress-inner-color;
+        border-radius: inherit;
+    }
+    
+    &__content {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        color: $progress-content-color;
+        line-height: 1;
+        padding-left: 16rpx;
+        font-size: $progress-content-font-size;
+    }
+}
+
+.cy-progress {
+    &--primary {
+        .cy-progress__bar {
+            background: $progress-bg-primary;
+        }
+        .cy-progress__inner {
+            background: $progress-active-primary;
+        }
+    }
+    &--success {
+        .cy-progress__bar {
+            background: $progress-bg-success;
+        }
+        .cy-progress__inner {
+            background: $progress-active-success
+        }
+    }
+    &--error {
+        .cy-progress__bar {
+            background: $progress-bg-error;
+        }
+        .cy-progress__inner {
+            background: $progress-active-error;
+        }
+    }
+    &--warning {
+        .cy-progress__bar {
+            background: $progress-bg-warning;
+        }
+        .cy-progress__inner {
+            background: $progress-active-warning;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@import '../common/variables.scss';
+
+// size
+$dialog-width: var(--cy-dialog-width, 622rpx);
+$dialog-body-max-height: var(--cy-dialog-body-max-height, 912rpx);
+
+// color
+$dialog-title-font-size: var(--cy-dialog-title-font-size, 36rpx);
+$dialog-title-color: var(--cy-dialog-title-color, $text-color-primary);
+$dialog-title-line-height: var(--cy-dialog-title-line-height, 52rpx);
+$dialog-margin-bottom: var(--cy-dialog-margin-bottom, 32rpx);
+
+$dialog-content-font-size: var(--cy-dialog-content-font-size, 32rpx);
+$dialog-content-color: var(--cy-dialog-content-color, $text-color-secondary);
+$dialog-content-line-height: var(--cy-dialog-content-line-height, 48rpx);
+
+.cy-dialog {
+    overflow: hidden;
+    width: $dialog-width;
+    border-radius: $radius-default;
+    background-color: $bg-color-container;
+
+    &__content {
+        padding-top: $spacer-4;
+        padding-right: $spacer-3;
+        padding-bottom: 0;
+        padding-left: $spacer-3;
+        max-height: $dialog-body-max-height;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: $font-size-m;
+    }
+
+    &__header {
+        text-align: center;
+        font-weight: bold;
+        font-size: $dialog-title-font-size;
+        line-height: $dialog-title-line-height;
+        color: $dialog-title-color;
+        margin-bottom: $dialog-margin-bottom;
+    }
+
+    &__header + &__body {
+        margin-top: 16rpx;
+    }
+
+    &__body {
+        overflow-y: scroll;
+        text-align: center;
+        -webkit-overflow-scrolling: touch;
+        font-size: $dialog-content-font-size;
+        color: $dialog-content-color;
+        line-height: $dialog-content-line-height;
+
+        &-text {
+            word-wrap: break-word;
+        }
+
+        &--left {
+            text-align: left;
+        }
+
+        &--right {
+            text-align: right;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        padding: 48rpx;
+
+        &--column {
+            flex-flow: column-reverse;
+
+            .#{$prefix}-dialog__button {
+                width: 100%;
+            }
+        }
+
+        &--full {
+            padding: 64rpx 0 0;
+        }
+    }
+
+    &__button {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &--horizontal + &--horizontal {
+            margin-left: 24rpx;
+        }
+
+        &--vertical + &--vertical {
+            margin-bottom: 16rpx;
+        }
+
+        &--text {
+            flex: 1;
+            --cy-button-border-radius: 0;
+            --cy-button-medium-height: 112rpx;
+            border-radius: 0;
+
+            &:before {
+                content: ' ';
+                position: absolute;
+                box-sizing: border-box;
+                top: 0;
+                left: 0;
+                border-top: 1px solid $border-level-1-color;
+                border-left: 1px solid $border-level-1-color;
+                transform: scale(0.5);
+                transform-origin: 0 0;
+                width: 200%;
+                height: 200%;
+                border-radius: 0;
+            }
+        }
+    }
+}

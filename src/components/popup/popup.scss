@@ -1,0 +1,74 @@
+@import '../common/variables.scss';
+@import '../common/mixins/_hairline';
+
+.cy-popup {
+	position: fixed;
+	/* #ifndef APP-NVUE */
+	z-index: 11500;
+	/* #endif */
+
+	&.top,
+	&.left,
+	&.right {
+		/* #ifdef H5 */
+		top: var(--window-top);
+		/* #endif */
+		/* #ifndef H5 */
+		top: 0;
+		/* #endif */
+	}
+
+	&__content {
+		display: block;
+		position: relative;
+		max-height: 100vh;
+
+		&.left,
+		&.right {
+			/* #ifdef H5 */
+			padding-top: var(--window-top);
+			/* #endif */
+			/* #ifndef H5 */
+			padding-top: 0;
+			/* #endif */
+			flex: 1;
+		}
+
+		&.center {
+			border-radius: $radius-default;
+			// background-color: #fff;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 24rpx;
+		line-height: 1;
+	}
+
+	&__title {
+		position: relative;
+		line-height: 96rpx;
+		font-size: 32rpx;
+		font-weight: 600;
+		text-align: center;
+
+		&::after {
+			@extend .hairline-bottom;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.fixforpc-z-index {
+	/* #ifndef APP-NVUE */
+	z-index: 999;
+	/* #endif */
+}
+
+.fixforpc-top {
+	top: 0;
+}

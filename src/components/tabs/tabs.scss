@@ -1,0 +1,471 @@
+@import '../common/variables.scss';
+@import '../common/mixins/hairline';
+
+$tabs-height: var(--cy-tabs-height, $spacer-5);
+$tabs-background: var(--cy-tabs-background, $white-color);
+
+$tabs-nav-card-margin: var(--cy-tabs-nav-card-margin, 16rpx 32rpx);
+$tabs-nav-card-radius: var(--cy-tabs-nav-card-radius, $radius-default);
+$tabs-nav-card-border-color: var(--cy-tabs-nav-card-border-color, $brand-color);
+$tabs-nav-card-color-active: var(--cy-tabs-nav-card-color-active, $font-white-1);
+$tabs-nav-card-background-active: var(--cy-tabs-nav-card-background-active, $brand-color);
+
+$tab-item-font-size: var(--cy-tab-item-font-size, 32rpx);
+$tab-item-color: var(--cy-tab-item-color, $font-gray-1);
+$tab-item-color-active: var(--cy-tab-item-color-active, $brand-color);
+$tab-item-color-disabled: var(--cy-tab-item-color-disabled, $font-gray-3);
+$tab-item-card-color: var(--cy-tab-item-color-card, $brand-color);
+$tab-item-button-color-active: var(--cy-tab-item-button-color-active, #fff);
+
+$tabs-bar-width: var(--cy-tabs-bar-width, 48rpx);
+$tabs-bar-height: var(--cy-tabs-bar-height, 6rpx);
+$tabs-bar-radius: var(--cy-tabs-bar-radius, 6rpx);
+$tabs-bar-background-color: var(--cy-tabs-bar-background-color, $brand-color);
+$tabs-bar-width-vertical: var(--cy-tabs-bar-width-vertical, 6rpx);
+$tabs-bar-height-vertical: var(--cy-tabs-bar-height-vertical, 32rpx);
+
+$tabs-bar-button-background-color: var(--cy-tabs-bar-button-background-color, $brand-color);
+$tabs-bar-button-light-background-color: var(--cy-tabs-bar-button-light-background-color, $brand-color-light);
+$tabs-bar-line-button-border-color: var(--cy-tabs-bar-line-button-border-color, $brand-color);
+
+.cy-tabs {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	// 标签栏垂直方位下的根容器样式
+	&.is-vertical {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: flex-end;
+		flex: 1;
+
+		// 垂直时标签栏scroll-view的子项垂直排列
+		.cy-tabs__scroll {
+			flex-direction: column;
+		}
+	}
+
+	&.is-cancel-tonch {
+		touch-action: none;
+	}
+
+	// 区域滚动下的滚动导航
+	&.is-areaScroll.is-scrollNav {
+		display: flex;
+		height: 100vh;
+		flex-direction: column;
+
+		// 标签栏不收缩
+		.cy-tabs__wrap {
+			flex-shrink: 0;
+		}
+
+		.cy-tabs__track,
+		.cy-tabs__content-scrollview {
+			height: 100%;
+		}
+	}
+
+	// 区域滚动下的侧边栏导航
+	&.is-areaScroll.is-sidebarNav {
+		display: flex;
+		height: 100vh;
+		flex-direction: row;
+
+		.cy-tabs__scroll {
+			height: 100%;
+		}
+
+		// 标签栏不收缩
+		.cy-tabs__wrap {
+			flex-shrink: 0;
+		}
+
+		.cy-tabs__track,
+		.cy-tabs__content-scrollview {
+			height: 100%;
+		}
+	}
+}
+
+// 依赖元素
+.cy-tabs__depend {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1px; //必须保证有高度，否则observer无效
+	width: 100%;
+}
+
+// 透明标签栏所需的依赖元素
+.cy-tabs__depend--transparent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1px; //必须保证有高度，否则observer无效
+	width: 1px;
+}
+
+// 模拟标签栏吸顶时设置offset时距屏幕顶部的元素
+.cy-tabs__depend--offset {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	height: 1px;
+}
+
+// 标签栏占位元素
+.cy-tabs__placeholder {
+	position: relative;
+}
+
+// 标签垂直展示且吸顶时，标签栏占位元素不伸缩
+.cy-tabs.is-fixed.is-vertical .cy-tabs__placeholder {
+	flex-shrink: 0;
+}
+
+// 导航区域包裹层
+.cy-tabs__wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	visibility: visible;
+	background: $tabs-background;
+	height: $tabs-height;
+
+	&.is-bordered {
+		position: relative;
+
+		&::after {
+			@extend .hairline-bottom;
+		}
+	}
+
+	&.is-card {
+		background: transparent;
+	}
+
+	// 标签栏垂直展示时包裹层样式
+	&.is-vertical {
+		width: 100px;
+		display: flex;
+		flex-direction: column;
+		flex-shrink: 0;
+		height: 100%;
+	}
+
+	// 粘性定位布局下的导航区域包裹层
+	&.is-fixed {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 99;
+	}
+
+	// 标签垂直展示且吸顶时，给定bottom，否则scroll-view不会滚动
+	&.is-fixed.is-vertical {
+		bottom: 0;
+	}
+
+	// 透明的导航区域包裹层
+	&.is-transparent {
+		background: transparent;
+	}
+
+	// 标签栏水平时按钮风格的包裹层
+	&.is-button:not(.is-vertical),
+	&.is-line-button:not(.is-vertical) {
+		padding: 0 16rpx;
+	}
+}
+
+// scroll-view组件样式
+.cy-tabs__scroll {
+	position: relative;
+	width: 100%;
+	white-space: nowrap; // 使用横向滚动时，需要给<scroll-view>添加white-space: nowrap;样式
+	flex-direction: row;
+}
+
+// 条件编译不放在样式中，vue3无效
+
+// H5、APP端去滚动条
+// 小程序端会报：Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.
+/* #ifdef H5 || APP */
+.cy-tabs__scroll ::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	height: 0;
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+/* #endif */
+
+// IOS 13 以下的系统，当滚动区域设置了-webkit-overflow-scrolling: touch;时（必须设置，否者几乎无法滚动），::-webkit-scrollbar 相关属性会失效，iOS 13 已经修复了此Bug。
+// 小程序端: 去除 scroll-view 组件的滚动条
+/* #ifndef H5 || APP  */
+::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	height: 0;
+	-webkit-appearance: none;
+	background: transparent;
+	color: transparent;
+}
+
+/* #endif */
+
+// 导航区域
+.cy-tabs__nav {
+	position: relative;
+	box-sizing: border-box;
+	user-select: none;
+	flex: 1;
+	display: flex;
+
+	&.is-shrink {
+		display: inline-flex;
+	}
+
+	// 卡片风格
+	&.is-card {
+		overflow: hidden;
+		margin: $tabs-nav-card-margin;
+		border-radius: $tabs-nav-card-radius;
+		box-sizing: border-box;
+		border: 2rpx solid $tabs-nav-card-border-color;
+
+		.cy-tab.is-active {
+			color: $tabs-nav-card-color-active;
+			background: $tabs-nav-card-background-active;
+		}
+	}
+
+	// 标签栏垂直时导航区域样式
+	&.is-vertical {
+		flex-direction: column;
+		height: auto;
+
+		.cy-tab {
+			flex: unset;
+		}
+	}
+
+	// 标签左侧、右侧的补充区域
+	&-left,
+	&-right {
+		position: relative;
+		display: inline-flex;
+		white-space: nowrap;
+	}
+}
+
+// 导航标签
+.cy-tab {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	height: $tabs-height;
+	font-size: $tab-item-font-size;
+	color: $tab-item-color;
+	text-align: center;
+	padding: 0 8rpx;
+	flex: 1;
+	cursor: pointer;
+	// webkit的css扩展：1、-webkit-tap-highlight-color:这个属性是用于设定元素在移动设备（如Adnroid、iOS）上被触发点击事件时，响应的背景框的颜色。有事件监听的元素被点击的时候会被高亮显示，比如我的android上表现为一个蓝框加上半透明的背景
+	-webkit-tap-highlight-color: transparent;
+	// transition-duration: 0.2s;
+	// transition-property: background;
+	flex-shrink: 0;
+	z-index: 2;
+	transition: all 300ms ease;
+
+	// 选中状态
+	&.is-active {
+		color: $tab-item-color-active;
+		font-weight: 600;
+	}
+
+	// 禁用状态
+	&.is-disabled {
+		color: $tab-item-color-disabled !important;
+		cursor: not-allowed;
+	}
+
+	// 收缩布局
+	&.is-shrink {
+		flex: none;
+		padding: 0 32rpx;
+	}
+
+	//卡片风格
+	&.is-card {
+		height: 64rpx;
+		line-height: 64rpx;
+		color: $tab-item-card-color;
+	}
+
+	&.is-button {
+		&.is-active {
+			color: $tab-item-button-color-active;
+		}
+	}
+}
+
+// 标题区域
+.cy-tab__title {
+	display: flex;
+	align-items: center;
+	height: inherit;
+
+	.cy-badge {
+		&__count {
+			transform: translate(0%, -50%);
+		}
+	}
+}
+
+// 标题区域垂直排列
+.cy-tab__title--top,
+.cy-tab__title--bottom {
+	flex-direction: column;
+}
+
+// 标题文字
+.cy-tab__text {
+	position: relative;
+	display: block;
+	// line-height: 1.2;
+	order: 2;
+	white-space: nowrap; //字节会设置white-space:normal
+}
+
+// 标签垂直展示时，未达到文字超出隐藏的条件时
+.cy-tabs__nav.is-vertical .cy-tab__text:not(.cy-tabs__ellipsis) {
+	white-space: normal;
+}
+
+// 使用order排序
+.cy-tab__text--left,
+.cy-tab__text--top {
+	order: 0;
+}
+
+// 标题图标/图片包裹层
+.cy-tab__icons {
+	display: flex;
+	align-items: center;
+	order: 1;
+	z-index: 1;
+}
+
+//标题图片
+.cy-tab__image {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+// 底部条滑块
+.cy-tabs__bar {
+	position: absolute;
+	display: inline-flex;
+	left: 0;
+	z-index: 1;
+	width: $tabs-bar-width;
+	height: $tabs-bar-height;
+	border-radius: $tabs-bar-radius;
+	background-color: $tabs-bar-background-color;
+	box-sizing: border-box;
+
+	// line风格的滑块
+	&.is-line {
+		z-index: 2; //z-index与y-tab一样,避免被遮挡
+
+		// 标签水平展示时
+		&:not(.is-vertical) {
+			bottom: 2rpx;
+			width: $tabs-bar-width;
+			height: $tabs-bar-height;
+			border-radius: $tabs-bar-radius;
+		}
+
+		// 标签垂直展示时
+		&.is-vertical {
+			top: 0;
+			left: 4rpx;
+			width: $tabs-bar-width-vertical;
+			height: $tabs-bar-height-vertical;
+			border-radius: $tabs-bar-width-vertical;
+		}
+	}
+
+	// button、line-button风格的滑块
+	&.is-button,
+	&.is-button-light,
+	&.is-line-button {
+		justify-content: center;
+		align-items: center;
+		border-radius: 56rpx;
+
+		// 标签水平展示时
+		&:not(.is-vertical) {
+			height: calc(100% - 16rpx);
+			bottom: 8rpx;
+		}
+
+		// 标签垂直展示时
+		&.is-vertical {
+			left: 4rpx;
+			width: calc(100% - 16rpx);
+			height: calc(100% - 16rpx);
+		}
+	}
+
+	&.is-button-light {
+		background-color: $tabs-bar-button-light-background-color;
+	}
+
+	&.is-button {
+		background-color: $tabs-bar-button-background-color;
+	}
+
+	// 线性按钮风格的滑块
+	&.is-line-button {
+		background-color: transparent;
+		border: 2rpx solid $tabs-bar-line-button-border-color;
+	}
+}
+
+// 标签内容
+.cy-tabs__content {
+	display: block;
+	position: relative;
+	overflow: hidden; //会导致uni-data-select无法撑开显示下拉选项,最好给pane中的内容设置一个高度(如果包裹select的父元素都没有设置relative，则不会裁剪absolute属性的元素)
+
+	// 标签栏垂直展示，内容减去标签栏默认宽度
+	&.is-vertical {
+		width: 100%;
+	}
+}
+
+// 标签内容的滑动轨道容器
+.cy-tabs__track {
+	position: relative;
+	display: flex;
+	width: 100%;
+	will-change: transform;
+
+	// 滚动导航模式下内容卡片垂直排列
+	&.is-scrollspy {
+		flex-direction: column;
+	}
+}

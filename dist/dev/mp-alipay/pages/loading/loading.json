@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Loading 加载",
+  "usingComponents": {
+    "cy-loading": "/components/loading/loading",
+    "cy-empty": "/components/empty/empty"
+  }
+}

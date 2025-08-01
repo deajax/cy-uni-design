@@ -1,0 +1,160 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/card/card.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.hairline-base, .cy-hairline-right::after, .cy-hairline-left::after, .cy-hairline-bottom::after, .cy-hairline-top::after, .cy-hairline-surround::after, .hairline-right, .cy-card__action view:not(:last-child)::after, .hairline-left, .hairline-bottom, .cy-card__header::after, .hairline-top, .cy-card__action::before, .hairline-surround {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+}
+.hairline-surround {
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.hairline-top, .cy-card__action::before {
+  right: 0;
+  left: 0;
+  top: 0;
+  border-top: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.hairline-bottom, .cy-card__header::after {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.hairline-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.hairline-right, .cy-card__action view:not(:last-child)::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-hairline-surround {
+  position: relative;
+}
+.cy-hairline-surround::after {
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.cy-hairline-top {
+  position: relative;
+}
+.cy-hairline-top::after {
+  right: 0;
+  left: 0;
+  top: 0;
+  border-top: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.cy-hairline-bottom {
+  position: relative;
+}
+.cy-hairline-bottom::after {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.cy-hairline-left {
+  position: relative;
+}
+.cy-hairline-left::after {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-hairline-right {
+  position: relative;
+}
+.cy-hairline-right::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid var(--cy-gray-color-3, #e8e8e8);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+}
+.cy-card {
+  background-color: var(--cy-white-color, #fff);
+}
+.cy-card--card {
+  margin-left: var(--cy-card-margin-left-space, var(--cy-spacer-2, 32rpx));
+  margin-right: var(--cy-card-margin-right-space, var(--cy-spacer-2, 32rpx));
+  border-radius: var(--cy-radius-default, 12rpx);
+}
+.cy-card__header {
+  position: relative;
+  padding: 0 var(--cy-card-header-padding-space, var(--cy-spacer-2, 32rpx));
+  display: flex;
+  height: var(--cy-card-header-height, var(--cy-spacer-5, 96rpx));
+  line-height: var(--cy-card-header-height, var(--cy-spacer-5, 96rpx));
+}
+.cy-card__header::after {
+  left: var(--cy-card-header-border-left-space, var(--cy-spacer-2, 32rpx));
+  right: var(--cy-card-header-border-right-space, 0);
+}
+.cy-card__title {
+  flex: 1;
+  font-weight: 600;
+}
+.cy-card__extra {
+  color: var(--cy-font-gray-2, rgba(0, 0, 0, 0.6));
+}
+.cy-card__content {
+  padding: var(--cy-card-content-padding-space, var(--cy-spacer-2, 32rpx));
+}
+.cy-card__action {
+  position: relative;
+  display: flex;
+}
+.cy-card__action view {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  line-height: var(--cy-card-header-height, var(--cy-spacer-5, 96rpx));
+  font-size: var(--cy-card-action-font-size, var(--cy-font-size-m, 32rpx));
+}

@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Sticky 吸顶",
+  "usingComponents": {
+    "cy-sticky": "/components/sticky/sticky",
+    "cy-button": "/components/button/button"
+  }
+}

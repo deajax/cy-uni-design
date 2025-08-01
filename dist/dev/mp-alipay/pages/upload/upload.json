@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Upload 上传",
+  "usingComponents": {
+    "cy-upload": "/components/upload/upload",
+    "cy-icon": "/components/icon/icon",
+    "cy-button": "/components/button/button"
+  }
+}

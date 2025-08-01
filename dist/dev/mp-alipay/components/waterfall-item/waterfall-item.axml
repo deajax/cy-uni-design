@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['handleTap',['$event']]]]]}}" class="{{(('cy-waterfall-item')+' '+customClass)}}" onTap="__e"><slot></slot></view>

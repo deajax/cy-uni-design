@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Empty 空状态",
+  "usingComponents": {
+    "cy-empty": "/components/empty/empty",
+    "cy-loading": "/components/loading/loading"
+  }
+}

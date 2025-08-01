@@ -1,0 +1,1 @@
+<view class="{{(('cy-fab')+' '+customClass)}}" style="{{(customStyle)}}"><slot></slot><block a:if="{{backtop&&show}}"><cy-button vue-id="1db61b70-1" custom-class="{{'cy-fab--backtop '+customClassBacktop}}" icon="rocket-line" shape="circle" data-event-opts="{{[['^click',[['toTop']]]]}}" onClick="__e" onVueInit="__l"></cy-button></block></view>

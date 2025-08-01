@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['bindclick',['$event']]]]]}}" class="{{(('cy-icon')+' '+customClass)}}" style="{{$root.s0}}" onTap="__e"><text class="{{(('cy-icon-base')+' '+(prefix?prefix+' '+name:'ri-'+name))}}"></text><slot></slot></view>

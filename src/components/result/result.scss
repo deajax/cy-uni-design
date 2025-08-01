@@ -1,0 +1,68 @@
+@import '../common/variables.scss';
+
+$result-padding            : var(--cy-result-padding, $spacer-4 $spacer-2);
+$result-icon-size          : var(--cy-result-icon-size, 112rpx);
+$result-icon-margin-bottom : var(--cy-result-icon-margin-bottom, $spacer-1);
+
+$result-success-color: var(--cy-result-success-color, $success-color);
+$result-info-color   : var(--cy-result-info-color, $primary-color);
+$result-warning-color: var(--cy-result-warning-color, $warning-color);
+$result-error-color  : var(--cy-result-error-color, $error-color);
+
+$result-title-size         : var(--cy-result-title-size, $font-size-l);
+$result-title-margin-block : var(--cy-result-title-margin-block, 8rpx);
+
+$result-description-size  : var(--cy-result-description-size, $font-size-base);
+$result-description-color : var(--cy-result-description-color, $font-gray-3);
+
+$result-extra-margin-top : var(--cy-result-extra-margin-top, $spacer-3);
+
+.cy-result {
+    padding   : $result-padding;
+    text-align: center;
+
+    &--icon {
+        font-size    : $result-icon-size;
+        line-height  : 1;
+        margin-bottom: $result-icon-margin-bottom;
+    }
+
+    &--success {
+        .cy-result--icon {
+            color: $result-success-color;
+        }
+    }
+
+    &--info {
+        .cy-result--icon {
+            color: $result-info-color;
+        }
+    }
+
+    &--warning {
+        .cy-result--icon {
+            color: $result-warning-color;
+        }
+    }
+
+    &--error {
+        .cy-result--icon {
+            color: $result-error-color;
+        }
+    }
+
+    &--title {
+        font-size   : $result-title-size;
+        font-weight : 700;
+        margin-block: $result-title-margin-block;
+    }
+
+    &--description {
+        font-size: $result-description-size;
+        color    : $result-description-color;
+    }
+
+    &--extra {
+        margin-top: $result-extra-margin-top;
+    }
+}

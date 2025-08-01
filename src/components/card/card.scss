@@ -1,0 +1,69 @@
+@import '../common/variables.scss';
+@import '../common/mixins/_hairline';
+
+$card-margin-left-space        : var(--cy-card-margin-left-space, $spacer-2);
+$card-margin-right-space       : var(--cy-card-margin-right-space, $spacer-2);
+$card-header-padding-space     : var(--cy-card-header-padding-space, $spacer-2);
+$card-header-height            : var(--cy-card-header-height, $spacer-5);
+$card-content-padding-space    : var(--cy-card-content-padding-space, $spacer-2);
+$card-header-border-left-space : var(--cy-card-header-border-left-space, $spacer-2);
+$card-header-border-right-space: var(--cy-card-header-border-right-space, 0);
+$card-action-font-size         : var(--cy-card-action-font-size, $font-size-m);
+
+.cy-card {
+    background-color: $white-color;
+
+    &--card {
+        margin-left  : $card-margin-left-space;
+        margin-right : $card-margin-right-space;
+        border-radius: $radius-default;
+    }
+
+    &__header {
+        position   : relative;
+        padding    : 0 $card-header-padding-space;
+        display    : flex;
+        height     : $card-header-height;
+        line-height: $card-header-height;
+
+        &::after {
+            @extend .hairline-bottom;
+            left : $card-header-border-left-space;
+            right: $card-header-border-right-space;
+        }
+    }
+
+    &__title {
+        flex       : 1;
+        font-weight: 600;
+    }
+
+    &__extra {
+        color: $font-gray-2;
+    }
+
+    &__content {
+        padding: $card-content-padding-space;
+    }
+
+    &__action {
+        position: relative;
+        display : flex;
+
+        view {
+            position   : relative;
+            flex       : 1;
+            text-align : center;
+            line-height: $card-header-height;
+            font-size  : $card-action-font-size;
+
+            &:not(:last-child)::after {
+                @extend .hairline-right;
+            }
+        }
+
+        &::before {
+            @extend .hairline-top;
+        }
+    }
+}

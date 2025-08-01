@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cy-transition": "/components/transition/transition",
+    "cy-icon": "/components/icon/icon"
+  },
+  "component": true
+}

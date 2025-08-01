@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "SubmitBar 提交订单栏",
+  "usingComponents": {
+    "cy-submit-bar": "/components/submit-bar/submit-bar"
+  }
+}

@@ -1,0 +1,231 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/tag/tag.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-tag {
+  display: var(--cy-tag-display, inline-flex);
+  align-items: center;
+  border: 2rpx solid transparent;
+  box-sizing: border-box;
+  border-radius: var(--cy-tag-square-border-radius, 8rpx);
+  font-size: var(--cy-tag-medium-font-size, var(--cy-font-size-s, 24rpx));
+  -webkit-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+}
+.cy-tag__text.ellipsis {
+  word-wrap: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cy-tag__icon, .cy-tag__icon-close {
+  display: flex;
+  align-items: center;
+}
+.cy-tag__icon-close {
+  color: var(--cy-tag-close-icon-color, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4)));
+}
+.cy-tag__icon:not(:empty) + .cy-tag__text:not(:empty), .cy-tag__text:not(:empty) + .cy-tag__icon-close:not(:empty) {
+  margin-left: 8rpx;
+}
+.cy-tag.cy-tag--closable.cy-tag--disabled {
+  cursor: not-allowed;
+  color: var(--cy-tag-disabled-color, var(--cy-font-gray-4, rgba(0, 0, 0, 0.2)));
+  background-color: var(--cy-tag-disabled-color, var(--cy-font-gray-4, rgba(0, 0, 0, 0.2)));
+  border-color: var(--cy-tag-disabled-border-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-tag.cy-tag--small {
+  height: var(--cy-tag-small-height, 40rpx);
+  line-height: var(--cy-tag-small-height, 40rpx);
+  padding: 0 var(--cy-tag-small-padding, 12rpx);
+  font-size: var(--cy-tag-small-font-size, var(--cy-font-size, 20rpx));
+}
+.cy-tag.cy-tag--small .cy-icon,
+.cy-tag.cy-tag--small .cy-icon-close {
+  font-size: var(--cy-tag-small-icon-size, 24rpx);
+}
+.cy-tag.cy-tag--small .cy-tag__icon:not(:empty) + .cy-tag__text:not(:empty),
+.cy-tag.cy-tag--small .cy-tag__text:not(:empty) + .cy-tag__icon-close:not(:empty) {
+  margin-left: 4rpx;
+}
+.cy-tag.cy-tag--medium {
+  height: var(--cy-tag-medium-height, 48rpx);
+  line-height: var(--cy-tag-medium-height, 48rpx);
+  padding: 0 var(--cy-tag-medium-padding, 14rpx);
+  font-size: var(--cy-tag-medium-font-size, var(--cy-font-size-s, 24rpx));
+}
+.cy-tag.cy-tag--medium .cy-icon,
+.cy-tag.cy-tag--medium .cy-icon-close {
+  font-size: var(--cy-tag-medium-icon-size, 28rpx);
+}
+.cy-tag.cy-tag--large {
+  height: var(--cy-tag-large-height, 56rpx);
+  line-height: var(--cy-tag-large-height, 56rpx);
+  padding: 0 var(--cy-tag-large-padding, 14rpx);
+  font-size: var(--cy-tag-large-font-size, var(--cy-font-size-base, 28rpx));
+}
+.cy-tag.cy-tag--large .cy-icon,
+.cy-tag.cy-tag--large .cy-icon-close {
+  font-size: var(--cy-tag-large-icon-size, 32rpx);
+}
+.cy-tag.cy-tag--extra-large {
+  height: var(--cy-tag-extra-large-height, 80rpx);
+  line-height: var(--cy-tag-extra-large-height, 80rpx);
+  padding: 0 var(--cy-tag-extra-large-padding, 32rpx);
+  font-size: var(--cy-tag-extra-large-font-size, var(--cy-font-size-base, 28rpx));
+}
+.cy-tag.cy-tag--extra-large .cy-icon,
+.cy-tag.cy-tag--extra-large .cy-icon-close {
+  font-size: var(--cy-tag-extra-large-icon-size, 32rpx);
+}
+.cy-tag.cy-tag--square {
+  border-radius: var(--cy-tag-square-border-radius, 8rpx);
+}
+.cy-tag.cy-tag--round {
+  border-radius: var(--cy-tag-round-border-radius, 999px);
+}
+.cy-tag.cy-tag--mark {
+  border-radius: 0 var(--cy-tag-mark-border-radius, var(--cy-tag-round-border-radius, 999px)) var(--cy-tag-mark-border-radius, var(--cy-tag-round-border-radius, 999px)) 0;
+}
+.cy-tag--dark.cy-tag--default {
+  color: var(--cy-font-white-1, rgb(255, 255, 255));
+  border-color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  background-color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-tag--dark.cy-tag--primary {
+  color: var(--cy-font-white-1, rgb(255, 255, 255));
+  border-color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background-color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-tag--dark.cy-tag--success {
+  color: var(--cy-font-white-1, rgb(255, 255, 255));
+  border-color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+  background-color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+}
+.cy-tag--dark.cy-tag--warning {
+  color: var(--cy-font-white-1, rgb(255, 255, 255));
+  border-color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+  background-color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+}
+.cy-tag--dark.cy-tag--danger {
+  color: var(--cy-font-white-1, rgb(255, 255, 255));
+  border-color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  background-color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-tag--dark.cy-tag--default {
+  color: var(--cy-tag-default-font-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+}
+.cy-tag--outline.cy-tag--default {
+  color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  background-color: var(--cy-tag-default-light-color, var(--cy-bg-color-secondarycontainer, var(--cy-gray-color-1, #f3f3f3)));
+}
+.cy-tag--outline.cy-tag--primary {
+  color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background-color: var(--cy-tag-primary-light-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-tag--outline.cy-tag--success {
+  color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+  border-color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+  background-color: var(--cy-tag-success-light-color, var(--cy-success-color-light, var(--cy-success-color-1, #f0fdf4)));
+}
+.cy-tag--outline.cy-tag--warning {
+  color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+  border-color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+  background-color: var(--cy-tag-warning-light-color, var(--cy-warning-color-light, var(--cy-warning-color-1, #fffbeb)));
+}
+.cy-tag--outline.cy-tag--danger {
+  color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  background-color: var(--cy-tag-danger-light-color, var(--cy-error-color-light, var(--cy-error-color-1, #fef2f2)));
+}
+.cy-tag--outline.cy-tag--default {
+  color: var(--cy-tag-default-font-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+}
+.cy-tag--outline.cy-tag--default {
+  background-color: var(--cy-tag-outline-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-tag--outline.cy-tag--primary {
+  background-color: var(--cy-tag-outline-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-tag--outline.cy-tag--success {
+  background-color: var(--cy-tag-outline-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-tag--outline.cy-tag--warning {
+  background-color: var(--cy-tag-outline-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-tag--outline.cy-tag--danger {
+  background-color: var(--cy-tag-outline-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-tag--light.cy-tag--default {
+  color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-tag-default-light-color, var(--cy-bg-color-secondarycontainer, var(--cy-gray-color-1, #f3f3f3)));
+  background-color: var(--cy-tag-default-light-color, var(--cy-bg-color-secondarycontainer, var(--cy-gray-color-1, #f3f3f3)));
+}
+.cy-tag--light.cy-tag--primary {
+  color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-color: var(--cy-tag-primary-light-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+  background-color: var(--cy-tag-primary-light-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-tag--light.cy-tag--success {
+  color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+  border-color: var(--cy-tag-success-light-color, var(--cy-success-color-light, var(--cy-success-color-1, #f0fdf4)));
+  background-color: var(--cy-tag-success-light-color, var(--cy-success-color-light, var(--cy-success-color-1, #f0fdf4)));
+}
+.cy-tag--light.cy-tag--warning {
+  color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+  border-color: var(--cy-tag-warning-light-color, var(--cy-warning-color-light, var(--cy-warning-color-1, #fffbeb)));
+  background-color: var(--cy-tag-warning-light-color, var(--cy-warning-color-light, var(--cy-warning-color-1, #fffbeb)));
+}
+.cy-tag--light.cy-tag--danger {
+  color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-color: var(--cy-tag-danger-light-color, var(--cy-error-color-light, var(--cy-error-color-1, #fef2f2)));
+  background-color: var(--cy-tag-danger-light-color, var(--cy-error-color-light, var(--cy-error-color-1, #fef2f2)));
+}
+.cy-tag--light.cy-tag--default {
+  color: var(--cy-tag-default-font-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+}
+.cy-tag--light-outline.cy-tag--default {
+  color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-tag-default-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  background-color: var(--cy-tag-default-light-color, var(--cy-bg-color-secondarycontainer, var(--cy-gray-color-1, #f3f3f3)));
+}
+.cy-tag--light-outline.cy-tag--primary {
+  color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-color: var(--cy-tag-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background-color: var(--cy-tag-primary-light-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-tag--light-outline.cy-tag--success {
+  color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+  border-color: var(--cy-tag-success-color, var(--cy-success-color-active, var(--cy-success-color-6, #16a34a)));
+  background-color: var(--cy-tag-success-light-color, var(--cy-success-color-light, var(--cy-success-color-1, #f0fdf4)));
+}
+.cy-tag--light-outline.cy-tag--warning {
+  color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+  border-color: var(--cy-tag-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+  background-color: var(--cy-tag-warning-light-color, var(--cy-warning-color-light, var(--cy-warning-color-1, #fffbeb)));
+}
+.cy-tag--light-outline.cy-tag--danger {
+  color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-color: var(--cy-tag-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  background-color: var(--cy-tag-danger-light-color, var(--cy-error-color-light, var(--cy-error-color-1, #fef2f2)));
+}
+.cy-tag--light-outline.cy-tag--default {
+  color: var(--cy-tag-default-font-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+  border-color: var(--cy-component-border, var(--cy-gray-color-4, #ddd));
+}

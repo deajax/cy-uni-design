@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cy-loading": "/components/loading/loading",
+    "cy-icon": "/components/icon/icon"
+  },
+  "component": true
+}

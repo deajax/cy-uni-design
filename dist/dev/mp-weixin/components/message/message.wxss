@@ -1,0 +1,85 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/message/message.vue?vue&type=style&index=0&lang=scss& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-message {
+  position: fixed;
+  top: 32rpx;
+  left: 32rpx;
+  right: 32rpx;
+  transition: opacity 0.3s, top 0.4s, -webkit-transform 0.4s;
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+  transition: opacity 0.3s, transform 0.4s, top 0.4s, -webkit-transform 0.4s;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 96rpx;
+  align-items: center;
+  z-index: 15000;
+  padding: 24rpx 32rpx;
+  box-sizing: border-box;
+  border-radius: var(--cy-message-border-radius, var(--cy-radius-default, 12rpx));
+  line-height: 1;
+  background-color: var(--cy-message-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+  box-shadow: var(--cy-message-box-shadow, var(--cy-shadow-4, 0 2px 8px 0 rgba(0, 0, 0, 0.06)));
+}
+.cy-message__text {
+  display: inline-block;
+  color: var(--cy-message-content-font-color, var(--cy-text-color-primary, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9))));
+  font-size: var(--cy-font-size-base, 28rpx);
+  line-height: 44rpx;
+}
+.cy-message__text-wrap {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.cy-message__text-nowrap {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.cy-message--info {
+  color: var(--cy-message-info-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-message--success {
+  color: var(--cy-message-success-color, var(--cy-success-color, var(--cy-success-color-5, #22c55e)));
+}
+.cy-message--warning {
+  color: var(--cy-message-warning-color, var(--cy-warning-color, var(--cy-warning-color-5, #f59e0b)));
+}
+.cy-message--error {
+  color: var(--cy-message-error-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-message__icon--left, .cy-message__icon--right {
+  font-size: 44rpx;
+}
+.cy-message__icon--left:not(:empty) {
+  margin-right: var(--cy-spacer, 16rpx);
+}
+.cy-message__icon--right {
+  color: var(--cy-message-close-icon-color, var(--cy-text-color-placeholder, var(--cy-font-gray-3, rgba(0, 0, 0, 0.4))));
+}
+.cy-message__icon--right:not(:empty), .cy-message__link {
+  flex: 0 0 auto;
+  margin-left: var(--cy-spacer, 16rpx);
+}
+.cy-message__link .cy-text__content {
+  white-space: nowrap;
+}
+.cy-message__fade {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}

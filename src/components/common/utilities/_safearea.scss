@@ -1,0 +1,15 @@
+page {
+    --safe-area-inset-top   : env(safe-area-inset-top, 80rpx);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom, 68rpx);
+    --safe-area-inset-left  : env(safe-area-inset-left);
+    --safe-area-inset-right : env(safe-area-inset-right);
+}
+
+// 历遍生成4个方向的底部安全区
+@each $d in top,
+bottom {
+    .cy-safe-area-#{$d} {
+        padding-#{$d}: constant(safe-area-inset-#{$d}) !important;
+        padding-#{$d}: env(safe-area-inset-#{$d}) !important;
+    }
+}

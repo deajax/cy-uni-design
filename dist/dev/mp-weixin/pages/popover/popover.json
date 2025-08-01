@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "popover",
+  "usingComponents": {
+    "cy-popover": "/components/popover/popover",
+    "cy-button": "/components/button/button",
+    "cy-row": "/components/row/row",
+    "cy-col": "/components/col/col",
+    "cy-cell": "/components/cell/cell"
+  }
+}

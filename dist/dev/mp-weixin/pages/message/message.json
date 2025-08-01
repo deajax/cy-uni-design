@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "message",
+  "usingComponents": {
+    "cy-message": "/components/message/message"
+  }
+}

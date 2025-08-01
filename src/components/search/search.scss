@@ -1,0 +1,63 @@
+@import '../common/variables.scss';
+
+$search-padding           : var(--cy-search-padding, 20rpx 32rpx);
+$search-background        : var(--cy-search-background, $white-color);
+$search-content-background: var(--cy-search-content-background, $gray-color-1);
+$search-content-radius    : var(--cy-search-content-radius, $radius-default);
+$search-content-padding   : var(--cy-search-content-padding, 0 0 0 24rpx);
+$search-input-height      : var(--cy-search-input-height, 48rpx);
+$search-input-padding     : var(--cy-search-input-padding, 16rpx 0);
+$search-clearable-padding : var(--cy-search-clearable-padding, $spacer-1);
+
+.cy-search {
+    display    : flex;
+    align-items: center;
+    position   : relative;
+    background : $search-background;
+    padding    : $search-padding;
+
+    &__content {
+        position     : relative;
+        flex         : 1;
+        width        : 100%;
+        box-sizing   : border-box;
+        display      : flex;
+        align-items  : center;
+        background   : $search-content-background;
+        border-radius: $search-content-radius;
+        padding      : $search-content-padding;
+        min-height   : 80rpx;
+
+        &--icon {
+            margin-right: 12rpx;
+        }
+
+        &--input {
+            display    : block;
+            flex       : 1;
+            width      : 100%;
+            height     : $search-input-height;
+            line-height: $search-input-height;
+            padding    : $search-input-padding;
+            font-size  : 32rpx;
+            background : none;
+        }
+
+        &--clearable {
+            flex: 0 0 auto;
+            padding : $search-clearable-padding;
+            
+            &-hover {
+                opacity: .5;
+            }
+        }
+    }
+
+    &__action {
+        padding-left: 32rpx;
+    }
+
+    &--round {
+        border-radius: 80rpx;
+    }
+}

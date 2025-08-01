@@ -1,0 +1,49 @@
+@import '../common/variables.scss';
+
+$goods-action-content-padding       : var(--cy-goods-action-content-padding, 12rpx);
+$goods-action-actions-padding       : var(--cy-goods-action-actions-padding, 0 $spacer);
+$goods-action-description-font-size : var(--cy-goods-action-description-font-size, $font-size);
+$goods-action-description-color     : var(--cy-goods-action-description-color, $font-gray-2);
+$goods-action-placeholder-size      : var(--cy-goods-action-placeholder-size, 104rpx);
+
+.cy-goods-action {
+    position: relative;
+
+    &--fixed {
+        position  : fixed;
+        z-index   : 1190;
+        right     : 0;
+        bottom    : 0;
+        left      : 0;
+        width     : 100%;
+        box-sizing: border-box;
+        padding   : $spacer-2;
+    }
+
+    &__content {
+        background   : #fff;
+        border-radius: 96rpx;
+        box-shadow   : $shadow-3;
+        display      : flex;
+        align-items  : center;
+        box-sizing   : border-box;
+        padding      : $goods-action-content-padding;
+
+        &-icon {
+            display    : flex;
+            align-items: center;
+            padding    : $goods-action-actions-padding;
+        }
+
+        &-button {
+            flex       : 1;
+            display    : flex;
+            align-items: center;
+            column-gap : 8rpx;
+        }
+    }
+
+    &__placeholder {
+        height: calc(#{$goods-action-placeholder-size} + env(safe-area-inset-bottom, 68rpx) + #{$spacer-2});
+    }
+}

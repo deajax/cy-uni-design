@@ -1,0 +1,98 @@
+@import '../common/variables.scss';
+
+$price-color        : var(--cy-price-color, $text-color-primary);
+$price-color-primary: var(--cy-price-color-primary, $brand-color);
+$price-color-success: var(--cy-price-color-success, $success-color);
+$price-color-warning: var(--cy-price-color-warning, $warning-color);
+$price-color-danger : var(--cy-price-color-danger, $error-color);
+$price-icon-size    : var(--cy-price-icon-size, 0.7em);
+$price-icon-content : var(--cy-price-icon-content, '¥');
+
+$price-font-size-small      : var(--cy-price-font-size, 32rpx);
+$price-font-size            : var(--cy-price-font-size, 40rpx);
+$price-font-size-large      : var(--cy-price-font-size, 48rpx);
+$price-font-size-extra-large: var(--cy-price-font-size, 56rpx);
+
+$price-decimal-font-size-small      : var(--cy-price-font-size, 32rpx);
+$price-decimal-font-size            : var(--cy-price-font-size, 40rpx);
+$price-decimal-font-size-large      : var(--cy-price-font-size, 48rpx);
+$price-decimal-font-size-extra-large: var(--cy-price-font-size, 56rpx);
+
+.cy-price {
+	display    : inline-flex;
+	align-items: center;
+	color      : $price-color;
+	font-size  : $price-font-size;
+	line-height: 1;
+
+	&__prefix-icon {
+		display    : flex;
+		align-items: center;
+	}
+
+	&__cny-icon {
+		&::before {
+			content       : $price-icon-content;
+			font-weight   : 600;
+			font-size     : $price-icon-size;
+			height        : $price-icon-size;
+			vertical-align: 2rpx;
+		}
+	}
+
+	&__content {
+		font-family: 'TCloudNumber';
+	}
+
+	&--default {
+		color: $price-color;
+	}
+
+	&--primary {
+		color: $price-color-primary;
+	}
+
+	&--success {
+		color: $price-color-success;
+	}
+
+	&--warning {
+		color: $price-color-warning;
+	}
+
+	&--danger {
+		color: $price-color-danger;
+	}
+
+	&--small {
+		font-size: $price-font-size-small;
+
+		.cy-price__cny-icon {
+			font-size: $price-decimal-font-size-small;
+		}
+	}
+
+	&--medium {
+		font-size: $price-font-size;
+
+		.cy-price__cny-icon {
+			font-size: $price-decimal-font-size;
+		}
+	}
+
+	&--large {
+		font-size: $price-font-size-large;
+
+		.cy-price__cny-icon {
+			font-size: $price-decimal-font-size-large;
+		}
+	}
+
+	&--extra-large {
+		font-size: $price-font-size-extra-large;
+
+		.cy-price__cny-icon {
+			font-size: $price-decimal-font-size-extra-large;
+		}
+	}
+}

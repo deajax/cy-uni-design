@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Chengyi Design",
+  "usingComponents": {
+    "cy-cell-group": "/components/cell-group/cell-group",
+    "cy-cell": "/components/cell/cell"
+  }
+}

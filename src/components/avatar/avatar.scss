@@ -1,0 +1,118 @@
+@import '../common/variables.scss';
+
+$avatar-bg-color     : var(--cy-avatar-bg-color, $brand-color-light-active);
+$avatar-content-color: var(--cy-avatar-content-color, $brand-color);
+$avatar-small-width  : var(--cy-avatar-small-width, 80rpx);
+$avatar-medium-width : var(--cy-avatar-medium-width, 96rpx);
+$avatar-large-width  : var(--cy-avatar-large-width, 128rpx);
+
+$avatar-text-small-font-size : var(--cy-avatar-text-small-font-size, $font-size-s);
+$avatar-text-medium-font-size: var(--cy-avatar-text-medium-font-size, $font-size-m);
+$avatar-text-large-font-size : var(--cy-avatar-text-large-font-size, 48rpx);
+
+$avatar-icon-small-font-size : var(--cy-avatar-icon-small-font-size, 40rpx);
+$avatar-icon-medium-font-size: var(--cy-avatar-icon-medium-font-size, 48rpx);
+$avatar-icon-large-font-size : var(--cy-avatar-icon-large-font-size, 64rpx);
+
+$avatar-border-width-small  : var(--cy-avatar-border-width-small, 4rpx);
+$avatar-border-width-medium : var(--cy-avatar-border-width-medium, 6rpx);
+$avatar-border-width-large  : var(--cy-avatar-border-width-large, 8rpx);
+$avatar-border-color        : var(--cy-avatar-border-color, #fff);
+$avatar-circle-border-radius: var(--cy-avatar-circle-border-radius, $radius-circle);
+$avatar-round-border-radius : var(--cy-avatar-round-border-radius, $radius-default);
+
+$avatar-margin-left: var(--cy-avatar-margin-left, 0);
+
+.cy-avatar {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    box-sizing      : border-box;
+    background-color: $avatar-bg-color;
+    color           : $avatar-content-color;
+
+    &__wrapper {
+        display       : inline-flex;
+        position      : relative;
+        vertical-align: top;
+        margin-left   : $avatar-margin-left;
+    }
+
+    &--large {
+        width    : $avatar-large-width;
+        height   : $avatar-large-width;
+        font-size: $avatar-text-large-font-size;
+
+        .cy-avatar__icon {
+            font-size: $avatar-icon-large-font-size;
+        }
+
+        &.cy-avatar--border {
+            border-width: $avatar-border-width-large;
+        }
+    }
+
+    &--medium {
+        width    : $avatar-medium-width;
+        height   : $avatar-medium-width;
+        font-size: $avatar-text-medium-font-size;
+
+        .cy-avatar__icon {
+            font-size: $avatar-icon-medium-font-size;
+        }
+
+        &.cy-avatar--border {
+            border-width: $avatar-border-width-medium;
+        }
+    }
+
+    &--small {
+        width    : $avatar-small-width;
+        height   : $avatar-small-width;
+        font-size: $avatar-text-small-font-size;
+
+        .cy-avatar__icon {
+            font-size: $avatar-icon-small-font-size;
+        }
+
+        &.cy-avatar--border {
+            border-width: $avatar-border-width-small;
+        }
+    }
+
+    .cy-image,
+    &__image {
+        width : 100%;
+        height: 100%;
+    }
+
+    &--circle {
+        border-radius: $avatar-circle-border-radius;
+        overflow     : hidden;
+    }
+
+    &--round {
+        border-radius: $avatar-round-border-radius;
+        overflow     : hidden;
+    }
+
+    &__text,
+    &__icon {
+        width          : 100%;
+        height         : 100%;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        &:empty {
+            width : 0;
+            height: 0;
+        }
+    }
+
+    // 头像边框
+    &--border {
+        border-color: $avatar-border-color;
+        border-style: solid;
+    }
+}

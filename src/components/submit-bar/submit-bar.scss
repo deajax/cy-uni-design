@@ -1,0 +1,65 @@
+@import '../common/variables.scss';
+
+$submit-bar-content-padding      : var(--cy-submit-bar-content-padding, 12rpx);
+$submit-bar-currency-padding     : var(--cy-submit-bar-currency-padding, 0 $spacer-1);
+$submit-bar-description-font-size: var(--cy-submit-bar-description-font-size, $font-size);
+$submit-bar-description-color    : var(--cy-submit-bar-description-color, $font-gray-2);
+$submit-bar-placeholder-size     : var(--cy-submit-bar-placeholder-size, 104rpx);
+$submit-bar-content-background   : var(--cy-submit-bar-content-background, #fff);
+
+.cy-submit-bar {
+    position: relative;
+
+    &--fixed {
+        position  : fixed;
+        right     : 0;
+        bottom    : 0;
+        left      : 0;
+        width     : 100%;
+        box-sizing: border-box;
+        padding   : $spacer-2;
+    }
+
+    &__content {
+        background   : $submit-bar-content-background;
+        border-radius: 96rpx;
+        box-shadow   : $shadow-3;
+        display      : flex;
+        align-items  : center;
+        box-sizing   : border-box;
+        padding      : $submit-bar-content-padding;
+
+        &-actions {
+            flex       : 1;
+            display    : flex;
+            align-items: center;
+        }
+
+        &-currency {
+            flex           : 1;
+            box-sizing     : border-box;
+            padding        : $submit-bar-currency-padding;
+            display        : flex;
+            flex-direction : column;
+            align-items    : flex-end;
+            justify-content: center;
+        }
+
+        &-description {
+            font-size: $submit-bar-description-font-size;
+            color    : $submit-bar-description-color;
+        }
+
+        &-button {
+            flex: 0 1 auto;
+
+            &--primary {
+                min-width: 240rpx;
+            }
+        }
+    }
+
+    &__placeholder {
+        height: calc(#{$submit-bar-placeholder-size} + env(safe-area-inset-bottom, 68rpx) + #{$spacer-2});
+    }
+}

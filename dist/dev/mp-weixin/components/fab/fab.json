@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cy-button": "/components/button/button"
+  },
+  "component": true
+}

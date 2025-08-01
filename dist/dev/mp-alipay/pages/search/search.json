@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Search 搜索框",
+  "usingComponents": {
+    "cy-search": "/components/search/search"
+  }
+}

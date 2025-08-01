@@ -1,0 +1,1 @@
+<view class="fab"><cy-fab vue-id="4bd128f4-1" scrollTop="{{scrollTop}}" backtop="{{true}}" onVueInit="__l" vue-slots="{{['default']}}">solt</cy-fab><view><view a:for="{{300}}" a:for-item="i" a:for-index="__i0__" a:key="*this">{{i}}</view></view></view>

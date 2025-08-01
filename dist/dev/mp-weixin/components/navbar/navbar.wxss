@@ -1,0 +1,96 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/navbar/navbar.vue?vue&type=style&index=0&lang=scss& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-navbar {
+  position: relative;
+}
+.cy-navbar--fixed .cy-navbar__content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5001;
+}
+.cy-navbar--visible {
+  display: "";
+}
+.cy-navbar--visible-animation {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.cy-navbar--hide-animation {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.cy-navbar--hide {
+  display: none;
+}
+.cy-navbar__placeholder {
+  height: var(--cy-navbar-height, 44px);
+  position: relative;
+  visibility: hidden;
+}
+.cy-navbar__content {
+  position: relative;
+  z-index: 1;
+  height: var(--cy-navbar-height, 44px);
+  width: calc(100% - var(--cy-navbar-right, 190rpx));
+  padding-right: var(--cy-navbar-right, 190rpx);
+  color: var(--cy-navbar-color, var(--cy-text-color-primary, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9))));
+  background: var(--cy-navbar-bg-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+  display: flex;
+  align-items: center;
+}
+.cy-navbar__left {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-left: var(--cy-spacer-1, 24rpx);
+}
+.cy-navbar__left-arrow {
+  font-size: var(--cy-navbar-left-arrow-size, 48rpx);
+}
+.cy-navbar__center {
+  font-size: 36rpx;
+  text-align: center;
+  position: absolute;
+  left: var(--cy-navbar-right, 190rpx);
+  width: calc(100% - var(--cy-navbar-right, 190rpx) * 2);
+  height: var(--cy-navbar-height, 44px);
+  line-height: var(--cy-navbar-height, 44px);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cy-navbar__center:empty {
+  display: none;
+}
+.cy-navbar__center-title {
+  font-size: var(--cy-navbar-title-font-size, 36rpx);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: var(--cy-navbar-title-font-weight, 600);
+}
+.cy-navbar--dark .cy-navbar__content {
+  color: var(--cy-navbar-dark-color, var(--cy-white-color, #fff));
+  background: var(--cy-navbar-bg-dark-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}

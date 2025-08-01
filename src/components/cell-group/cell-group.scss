@@ -1,0 +1,60 @@
+@import '../common/mixins/_hairline';
+@import '../common/variables.scss';
+
+$cell-group-title-font-size: var(--cy-cell-group-title-font-size, 28rpx);
+$cell-group-title-line-height: var(--cy-cell-group-title-line-height, 88rpx);
+$cell-group-title-padding-left: var(--cy-cell-group-title-padding-left, 32rpx);
+$cell-group-title-color: var(--cy-cell-group-title-color, $font-gray-2);
+
+.cy-cell-group {
+    position: relative;
+
+    &__header {
+        display: flex;
+    }
+
+    &__title {
+        font-size: $cell-group-title-font-size;
+        color: $cell-group-title-color;
+        text-align: left;
+        line-height: $cell-group-title-line-height;
+        padding-left: $cell-group-title-padding-left;
+    }
+
+    &__extra {
+        text-align: right;
+        margin-left: auto;
+        line-height: $cell-group-title-line-height;
+        padding-right: $cell-group-title-padding-left;
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    .cy-cell:last-child::after {
+        display: none;
+    }
+    .cy-cell.cy-cell--force-border::after {
+        display: block !important;
+    }
+
+    &--bordered:not(.cy-cell-group--card) {
+        &::before {
+            @extend .hairline-top;
+            z-index: 1;
+        }
+
+        &::after {
+            @extend .hairline-bottom;
+            z-index: 1;
+        }
+    }
+
+    &--card {
+        margin: 0 32rpx;
+        border-radius: $radius-large;
+        overflow: hidden;
+        background-color: $white-color;
+    }
+}

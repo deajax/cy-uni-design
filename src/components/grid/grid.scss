@@ -1,0 +1,57 @@
+@import '../common/variables.scss';
+
+$grid-bg-color              : var(--cy-grid-bg-color, $bg-color-container);
+$grid-card-radius           : var(--cy-grid-card-radius, $radius-large);
+$grid-scroll-wrapper-padding: var(--cy-grid-scroll-wrapper-padding, 0);
+
+$grid-indicator-space : var(--cy-grid-indicator-space, 0 0 32rpx);
+$grid-indicator-width : var(--cy-grid-indicator-width, 48px);
+$grid-indicator-height: var(--cy-grid-indicator-height, 4px);
+$grid-indicator-radius: var(--cy-grid-indicator-radius, $radius-round);
+$grid-indicator-bg    : var(--cy-grid-indicator-bg, rgba(0, 0, 0, 0.1));
+
+$grid-indicator-bar-width : var(--cy-grid-indicator-bar-width, calc(#{$grid-indicator-width} / 2));
+$grid-indicator-bar-height: var(--cy-grid-indicator-bar-height, 100%);
+$grid-indicator-bar-bg    : var(--cy-grid-indicator-bar-bg, $brand-color);
+
+.#{$prefix}-grid {
+    position        : relative;
+    overflow        : hidden;
+    background-color: $grid-bg-color;
+
+    &__content {
+        width: auto;
+    }
+
+    &__scroll-wrapper {
+        width    : fit-content;
+        padding  : $grid-scroll-wrapper-padding;
+    }
+
+    &--card {
+        margin       : 0 32rpx;
+        border-radius: $grid-card-radius;
+        overflow     : hidden;
+    }
+
+    &__indicator {
+        display        : flex;
+        justify-content: center;
+        padding        : $grid-indicator-space;
+
+        &--line {
+            width        : $grid-indicator-width;
+            height       : $grid-indicator-height;
+            border-radius: $grid-indicator-radius;
+            background   : $grid-indicator-bg;
+            overflow     : hidden;
+        }
+
+        &--line-bar {
+            width        : $grid-indicator-bar-width;
+            height       : $grid-indicator-bar-height;
+            border-radius: inherit;
+            background   : $grid-indicator-bar-bg;
+        }
+    }
+}

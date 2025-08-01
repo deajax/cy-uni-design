@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Grid 宫格",
+  "usingComponents": {
+    "cy-grid": "/components/grid/grid",
+    "cy-grid-item": "/components/grid-item/grid-item"
+  }
+}

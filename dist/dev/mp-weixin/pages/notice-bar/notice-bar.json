@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "NoticeBar 公告栏",
+  "usingComponents": {
+    "cy-notice-bar": "/components/notice-bar/notice-bar",
+    "cy-icon": "/components/icon/icon",
+    "cy-text": "/components/text/text"
+  }
+}

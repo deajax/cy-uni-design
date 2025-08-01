@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Price 价格",
+  "usingComponents": {
+    "cy-price": "/components/price/price"
+  }
+}

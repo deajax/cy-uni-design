@@ -1,0 +1,33 @@
+@import '../common/variables.scss';
+
+
+.cy-tab__panel {
+    flex-shrink   : 0;
+    box-sizing    : border-box;
+    width         : 100%;
+    height        : 0;
+    position      : relative;
+    flex-direction: row;
+    display       : block;
+    visibility    : visible;
+    transform     : translate(0px, 0px) translateZ(0px);
+
+    &--wrap {
+        position: relative;
+    }
+
+    // 选中时
+    &.is-active {
+        height: auto;
+    }
+
+    // 滚动导航
+    &.is-scrollspy {
+        height: auto;
+    }
+}
+
+// 区域滚动下的标签内容scroll-view
+.cy-tabs__content-scrollview {
+    flex-direction: column;
+}

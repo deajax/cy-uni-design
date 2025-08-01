@@ -1,0 +1,26 @@
+@import '../common/variables.scss';
+
+$count-down-text-color            : var(--cy-count-down-text-color, $text-color-primary);
+$count-down-small-text-font-size  : var(--cy-count-down-small-text-font-size, $font-size-s);
+$count-down-medium-text-font-size : var(--cy-count-down-medium-text-font-size, $font-size-base);
+$count-down-large-text-font-size  : var(--cy-count-down-large-text-font-size, $font-size-m);
+
+.cy-count-down {
+    &__text {
+        font-family: 'TCloudNumber';
+        color      : $count-down-text-color;
+        line-height: 1;
+    }
+
+    &--small {
+        font-size: $count-down-small-text-font-size;
+    }
+
+    &--medium {
+        font-size: $count-down-medium-text-font-size;
+    }
+
+    &--large {
+        font-size: $count-down-large-text-font-size;
+    }
+}

@@ -1,0 +1,1 @@
+<view class="{{((((('cy-tab__panel')+' '+'data-v-e7910c44')+' '+uniquePaneClass)+' '+paneClass)+' '+customClass)}}" style="{{$root.s0}}" data-index="{{index}}"><block a:if="{{rendered?true:active}}"><view class="cy-tab__panel--wrap data-v-e7910c44"><slot></slot></view></block></view>

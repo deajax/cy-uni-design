@@ -1,0 +1,1 @@
+<view class="cy-sticky" style="{{(style)}}"><slot></slot></view>

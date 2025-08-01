@@ -1,0 +1,473 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/button/button.vue?vue&type=style&index=0&lang=scss& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  transition: all 0.3s;
+  touch-action: manipulation;
+  border-radius: var(--cy-button-border-radius, var(--cy-radius-default, 12rpx));
+  outline: none;
+  font-family: PingFang SC, Microsoft YaHei, Arial Regular;
+  font-weight: var(--cy-button-font-weight, 600);
+  vertical-align: top;
+  margin: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  /* stylelint-disable-next-line */
+  -webkit-appearance: none;
+}
+.cy-button::after {
+  border-radius: calc(var(--cy-button-border-radius, var(--cy-radius-default, 12rpx)) * 2);
+}
+.cy-button--size-extra-small {
+  font-size: var(--cy-button-extra-small-font-size, var(--cy-font-size-base, 28rpx));
+  padding-left: var(--cy-button-extra-small-padding-horizontal, 16rpx);
+  padding-right: var(--cy-button-extra-small-padding-horizontal, 16rpx);
+  height: var(--cy-button-extra-small-height, 48rpx);
+  line-height: var(--cy-button-extra-small-height, 48rpx);
+}
+.cy-button--size-extra-small .cy-button__icon {
+  font-size: var(--cy-button-extra-small-icon-font-size, 32rpx);
+}
+.cy-button--size-small {
+  font-size: var(--cy-button-small-font-size, var(--cy-font-size-base, 28rpx));
+  padding-left: var(--cy-button-small-padding-horizontal, 24rpx);
+  padding-right: var(--cy-button-small-padding-horizontal, 24rpx);
+  height: var(--cy-button-small-height, 64rpx);
+  line-height: var(--cy-button-small-height, 64rpx);
+}
+.cy-button--size-small .cy-button__icon {
+  font-size: var(--cy-button-small-icon-font-size, 32rpx);
+}
+.cy-button--size-medium {
+  font-size: var(--cy-button-medium-font-size, var(--cy-font-size-m, 32rpx));
+  padding-left: var(--cy-button-medium-padding-horizontal, 32rpx);
+  padding-right: var(--cy-button-medium-padding-horizontal, 32rpx);
+  height: var(--cy-button-medium-height, 80rpx);
+  line-height: var(--cy-button-medium-height, 80rpx);
+}
+.cy-button--size-medium .cy-button__icon {
+  font-size: var(--cy-button-medium-icon-font-size, 36rpx);
+}
+.cy-button--size-large {
+  font-size: var(--cy-button-large-font-size, var(--cy-font-size-m, 32rpx));
+  padding-left: var(--cy-button-large-padding-horizontal, 40rpx);
+  padding-right: var(--cy-button-large-padding-horizontal, 40rpx);
+  height: var(--cy-button-large-height, 96rpx);
+  line-height: var(--cy-button-large-height, 96rpx);
+}
+.cy-button--size-large .cy-button__icon {
+  font-size: var(--cy-button-large-icon-font-size, 40rpx);
+}
+.cy-button--default {
+  color: var(--cy-button-default-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+  background-color: var(--cy-button-default-bg-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-default-border-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-button--default::after {
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-default-border-color, var(--cy-bg-color-component, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-button--default.cy-button--hover {
+  z-index: 0;
+  background-color: var(--cy-button-default-active-bg-color, var(--cy-bg-color-component-active, var(--cy-gray-color-6, #a6a6a6)));
+  border-color: var(--cy-button-default-active-border-color, var(--cy-bg-color-component-active, var(--cy-gray-color-6, #a6a6a6)));
+}
+.cy-button--default.cy-button--hover::after {
+  background-color: var(--cy-button-default-active-bg-color, var(--cy-bg-color-component-active, var(--cy-gray-color-6, #a6a6a6)));
+  border-color: var(--cy-button-default-active-border-color, var(--cy-bg-color-component-active, var(--cy-gray-color-6, #a6a6a6)));
+}
+.cy-button--default.cy-button--disabled {
+  color: var(--cy-button-default-disabled-color, var(--cy-font-gray-4, rgba(0, 0, 0, 0.2)));
+  background-color: var(--cy-button-default-disabled-bg, var(--cy-bg-color-component-disabled, var(--cy-gray-color-2, #eee)));
+  border-color: var(--cy-button-default-disabled-border-color, var(--cy-bg-color-component-disabled, var(--cy-gray-color-2, #eee)));
+}
+.cy-button--default.cy-button--disabled::after {
+  border-color: var(--cy-button-default-disabled-border-color, var(--cy-bg-color-component-disabled, var(--cy-gray-color-2, #eee)));
+}
+.cy-button--primary {
+  color: var(--cy-button-primary-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+  background-color: var(--cy-button-primary-bg-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-primary-border-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-button--primary::after {
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-primary-border-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-button--primary.cy-button--hover {
+  z-index: 0;
+  background-color: var(--cy-button-primary-active-bg-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+  border-color: var(--cy-button-primary-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-button--primary.cy-button--hover::after {
+  background-color: var(--cy-button-primary-active-bg-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+  border-color: var(--cy-button-primary-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-button--primary.cy-button--disabled {
+  color: var(--cy-button-primary-disabled-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+  background-color: var(--cy-button-primary-disabled-bg, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+  border-color: var(--cy-button-primary-disabled-border-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--primary.cy-button--disabled::after {
+  border-color: var(--cy-button-primary-disabled-border-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--light {
+  color: var(--cy-button-light-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background-color: var(--cy-button-light-bg-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-light-border-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-button--light::after {
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-light-border-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-button--light.cy-button--hover {
+  z-index: 0;
+  background-color: var(--cy-button-light-active-bg-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+  border-color: var(--cy-button-light-active-border-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+}
+.cy-button--light.cy-button--hover::after {
+  background-color: var(--cy-button-light-active-bg-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+  border-color: var(--cy-button-light-active-border-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+}
+.cy-button--light.cy-button--disabled {
+  color: var(--cy-button-light-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+  background-color: var(--cy-button-light-disabled-bg, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+  border-color: var(--cy-button-light-disabled-border-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-button--light.cy-button--disabled::after {
+  border-color: var(--cy-button-light-disabled-border-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+}
+.cy-button--danger {
+  color: var(--cy-button-danger-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+  background-color: var(--cy-button-danger-bg-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-danger-border-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-button--danger::after {
+  border-width: var(--cy-button-border-width, 3rpx);
+  border-color: var(--cy-button-danger-border-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-button--danger.cy-button--hover {
+  z-index: 0;
+  background-color: var(--cy-button-danger-active-bg-color, var(--cy-error-color-7, #dc2626));
+  border-color: var(--cy-button-danger-active-border-color, var(--cy-error-color-7, #dc2626));
+}
+.cy-button--danger.cy-button--hover::after {
+  background-color: var(--cy-button-danger-active-bg-color, var(--cy-error-color-7, #dc2626));
+  border-color: var(--cy-button-danger-active-border-color, var(--cy-error-color-7, #dc2626));
+}
+.cy-button--danger.cy-button--disabled {
+  color: var(--cy-button-danger-disabled-color, var(--cy-font-white-1, rgb(255, 255, 255)));
+  background-color: var(--cy-button-danger-disabled-bg, var(--cy-error-color-3, #fecaca));
+  border-color: var(--cy-button-danger-disabled-border-color, var(--cy-error-color-3, #fecaca));
+}
+.cy-button--danger.cy-button--disabled::after {
+  border-color: var(--cy-button-danger-disabled-border-color, var(--cy-error-color-3, #fecaca));
+}
+.cy-button--text {
+  color: var(--cy-button-default-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+  background: none;
+  border: 0;
+}
+.cy-button--text::after {
+  border: 0;
+}
+.cy-button--text.cy-button--hover::after {
+  background-color: var(--cy-button-default-text-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-button--text.cy-button--primary {
+  color: var(--cy-button-primary-text-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background: none;
+}
+.cy-button--text.cy-button--primary.cy-button--hover::after {
+  background-color: var(--cy-button-primary-text-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-button--text.cy-button--primary.cy-button--disabled {
+  color: var(--cy-button-primary-text-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+  background: none;
+}
+.cy-button--text.cy-button--danger {
+  color: var(--cy-button-danger-text-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  background: none;
+}
+.cy-button--text.cy-button--danger.cy-button--hover::after {
+  background-color: var(--cy-button-danger-text-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-button--text.cy-button--danger.cy-button--disabled {
+  color: var(--cy-button-danger-text-disabled-color, var(--cy-button-danger-disabled-color, var(--cy-font-white-1, rgb(255, 255, 255))));
+  background: none;
+}
+.cy-button--text.cy-button--light {
+  color: var(--cy-button-light-text-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background: none;
+}
+.cy-button--text.cy-button--light.cy-button--hover::after {
+  background-color: var(--cy-button-light-text-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+}
+.cy-button--text.cy-button--light.cy-button--disabled {
+  color: var(--cy-button-default-disabled-color, var(--cy-font-gray-4, rgba(0, 0, 0, 0.2)));
+}
+.cy-button--ghost {
+  background-color: transparent;
+  color: var(--cy-button-ghost-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+  border-color: var(--cy-button-ghost-border-color, var(--cy-button-ghost-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255)))));
+}
+.cy-button--ghost::after {
+  border-color: var(--cy-button-ghost-border-color, var(--cy-button-ghost-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255)))));
+}
+.cy-button--ghost.cy-button--hover::after {
+  background: none;
+}
+.cy-button--ghost.cy-button--primary {
+  color: var(--cy-button-ghost-primary-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-color: var(--cy-button-ghost-primary-border-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-button--ghost.cy-button--primary::after {
+  border-color: var(--cy-button-ghost-primary-border-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+}
+.cy-button--ghost.cy-button--danger {
+  color: var(--cy-button-ghost-danger-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-color: var(--cy-button-ghost-danger-border-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-button--ghost.cy-button--danger::after {
+  border-color: var(--cy-button-ghost-danger-border-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+}
+.cy-button--ghost.cy-button--disabled {
+  background-color: transparent;
+  color: var(--cy-button-ghost-disabled-color, rgba(255, 255, 255, 0.35));
+  border-color: var(--cy-button-ghost-disabled-color, rgba(255, 255, 255, 0.35));
+}
+.cy-button--ghost.cy-button--disabled::after {
+  border-color: var(--cy-button-ghost-disabled-color, rgba(255, 255, 255, 0.35));
+}
+.cy-button--outline {
+  color: var(--cy-button-default-outline-color, var(--cy-font-gray-1, rgba(0, 0, 0, 0.9)));
+  background-color: var(--cy-button-ghost-color, var(--cy-bg-color-container, var(--cy-font-white-1, rgb(255, 255, 255))));
+  border-color: var(--cy-button-default-outline-border-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-button--outline::after {
+  border-color: var(--cy-button-default-outline-border-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-button--outline.cy-button--hover {
+  background-color: var(--cy-button-default-outline-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-button-default-outline-active-border-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-button--outline.cy-button--hover::after {
+  background-color: var(--cy-button-default-outline-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-button-default-outline-active-border-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-button--outline.cy-button--disabled {
+  color: var(--cy-button-default-outline-disabled-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+  border-color: var(--cy-button-default-outline-disabled-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-button--outline.cy-button--disabled::after {
+  border-color: var(--cy-button-default-outline-disabled-color, var(--cy-component-border, var(--cy-gray-color-4, #ddd)));
+}
+.cy-button--outline.cy-button--primary {
+  color: var(--cy-button-primary-outline-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-color: var(--cy-button-primary-outline-border-color, var(--cy-button-primary-outline-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb))));
+}
+.cy-button--outline.cy-button--primary::after {
+  border-color: var(--cy-button-primary-outline-border-color, var(--cy-button-primary-outline-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb))));
+}
+.cy-button--outline.cy-button--primary.cy-button--hover {
+  color: var(--cy-button-primary-outline-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+  background-color: var(--cy-button-primary-outline-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-button-primary-outline-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-button--outline.cy-button--primary.cy-button--hover::after {
+  background-color: var(--cy-button-primary-outline-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-button-primary-outline-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-button--outline.cy-button--primary.cy-button--disabled {
+  background-color: transparent;
+  color: var(--cy-button-primary-outline-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+  border-color: var(--cy-button-primary-outline-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--outline.cy-button--primary.cy-button--disabled::after {
+  border-color: var(--cy-button-primary-outline-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--outline.cy-button--danger {
+  color: var(--cy-button-danger-outline-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-color: var(--cy-button-danger-outline-border-color, var(--cy-button-danger-outline-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444))));
+}
+.cy-button--outline.cy-button--danger::after {
+  border-color: var(--cy-button-danger-outline-border-color, var(--cy-button-danger-outline-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444))));
+}
+.cy-button--outline.cy-button--danger.cy-button--hover {
+  color: var(--cy-button-danger-outline-active-border-color, var(--cy-error-color-7, #dc2626));
+  background-color: var(--cy-button-danger-outline-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-button-danger-outline-active-border-color, var(--cy-error-color-7, #dc2626));
+}
+.cy-button--outline.cy-button--danger.cy-button--hover::after {
+  background-color: var(--cy-button-danger-outline-active-bg-color, var(--cy-bg-color-container-active, var(--cy-gray-color-3, #e8e8e8)));
+  border-color: var(--cy-button-danger-outline-active-border-color, var(--cy-error-color-7, #dc2626));
+}
+.cy-button--outline.cy-button--danger.cy-button--disabled {
+  background-color: transparent;
+  color: var(--cy-button-danger-outline-disabled-color, var(--cy-error-color-3, #fecaca));
+  border-color: var(--cy-button-danger-outline-disabled-color, var(--cy-error-color-3, #fecaca));
+}
+.cy-button--outline.cy-button--danger.cy-button--disabled::after {
+  border-color: var(--cy-button-danger-outline-disabled-color, var(--cy-error-color-3, #fecaca));
+}
+.cy-button--outline.cy-button--light {
+  color: var(--cy-button-light-outline-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  background-color: var(--cy-button-light-outline-bg-color, var(--cy-brand-color-light, var(--cy-primary-color-1, #dbeafe)));
+  border-color: var(--cy-button-light-outline-border-color, var(--cy-button-light-outline-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb))));
+}
+.cy-button--outline.cy-button--light::after {
+  border-color: var(--cy-button-light-outline-border-color, var(--cy-button-light-outline-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb))));
+}
+.cy-button--outline.cy-button--light.cy-button--hover {
+  color: var(--cy-button-light-outline-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+  background-color: var(--cy-button-light-outline-active-bg-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+  border-color: var(--cy-button-light-outline-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-button--outline.cy-button--light.cy-button--hover::after {
+  background-color: var(--cy-button-light-outline-active-bg-color, var(--cy-brand-color-light-active, var(--cy-primary-color-2, #bfdbfe)));
+  border-color: var(--cy-button-light-outline-active-border-color, var(--cy-brand-color-active, var(--cy-primary-color-7, #1d4ed8)));
+}
+.cy-button--outline.cy-button--light.cy-button--disabled {
+  background-color: transparent;
+  color: var(--cy-button-light-outline-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+  border-color: var(--cy-button-light-outline-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--outline.cy-button--light.cy-button--disabled::after {
+  border-color: var(--cy-button-light-outline-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--dashed {
+  background-color: transparent;
+  border-style: dashed;
+}
+.cy-button--dashed.cy-button--primary {
+  color: var(--cy-button-primary-dashed-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-color: var(--cy-button-primary-dashed-border-color, var(--cy-button-primary-dashed-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb))));
+}
+.cy-button--dashed.cy-button--primary::after {
+  border-color: var(--cy-button-primary-dashed-border-color, var(--cy-button-primary-dashed-color, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb))));
+}
+.cy-button--dashed.cy-button--disabled {
+  background-color: transparent;
+  color: var(--cy-button-primary-dashed-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+  border-color: var(--cy-button-primary-dashed-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--dashed.cy-button--disabled::after {
+  border-color: var(--cy-button-primary-dashed-disabled-color, var(--cy-brand-color-disabled, var(--cy-primary-color-3, #93c5fd)));
+}
+.cy-button--dashed.cy-button--danger {
+  color: var(--cy-button-danger-dashed-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444)));
+  border-color: var(--cy-button-danger-dashed-border-color, var(--cy-button-danger-dashed-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444))));
+}
+.cy-button--dashed.cy-button--danger::after {
+  border-color: var(--cy-button-danger-dashed-border-color, var(--cy-button-danger-dashed-color, var(--cy-error-color, var(--cy-error-color-6, #ef4444))));
+}
+.cy-button--dashed.cy-button--danger.cy-button--disabled {
+  background-color: transparent;
+  color: var(--cy-button-danger-dashed-disabled-color, var(--cy-button-danger-disabled-color, var(--cy-font-white-1, rgb(255, 255, 255))));
+  border-color: var(--cy-button-danger-dashed-disabled-color, var(--cy-button-danger-disabled-color, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-button--dashed.cy-button--danger.cy-button--disabled::after {
+  border-color: var(--cy-button-danger-dashed-disabled-color, var(--cy-button-danger-disabled-color, var(--cy-font-white-1, rgb(255, 255, 255))));
+}
+.cy-button--round.cy-button--size-large {
+  border-radius: calc(var(--cy-button-large-height, 96rpx) / 2);
+}
+.cy-button--round.cy-button--size-large::after {
+  border-radius: var(--cy-button-large-height, 96rpx);
+}
+.cy-button--round.cy-button--size-medium {
+  border-radius: calc(var(--cy-button-medium-height, 80rpx) / 2);
+}
+.cy-button--round.cy-button--size-medium::after {
+  border-radius: var(--cy-button-medium-height, 80rpx);
+}
+.cy-button--round.cy-button--size-small {
+  border-radius: calc(var(--cy-button-small-height, 64rpx) / 2);
+}
+.cy-button--round.cy-button--size-small::after {
+  border-radius: var(--cy-button-small-height, 64rpx);
+}
+.cy-button--round.cy-button--size-extra-small {
+  border-radius: calc(var(--cy-button-extra-small-height, 48rpx) / 2);
+}
+.cy-button--round.cy-button--size-extra-small::after {
+  border-radius: var(--cy-button-extra-small-height, 48rpx);
+}
+.cy-button--square {
+  padding: 0;
+}
+.cy-button--square.cy-button--size-large {
+  width: var(--cy-button-large-height, 96rpx);
+}
+.cy-button--square.cy-button--size-medium {
+  width: var(--cy-button-medium-height, 80rpx);
+}
+.cy-button--square.cy-button--size-small {
+  width: var(--cy-button-small-height, 64rpx);
+}
+.cy-button--square.cy-button--size-extra-small {
+  width: var(--cy-button-extra-small-height, 48rpx);
+}
+.cy-button--circle {
+  padding: 0;
+  border-radius: 50%;
+}
+.cy-button--circle::after {
+  border-radius: 50%;
+}
+.cy-button--circle.cy-button--size-large {
+  width: var(--cy-button-large-height, 96rpx);
+}
+.cy-button--circle.cy-button--size-medium {
+  width: var(--cy-button-medium-height, 80rpx);
+}
+.cy-button--circle.cy-button--size-small {
+  width: var(--cy-button-small-height, 64rpx);
+}
+.cy-button--circle.cy-button--size-extra-small {
+  width: var(--cy-button-extra-small-height, 48rpx);
+}
+.cy-button--block {
+  display: flex;
+  width: 100%;
+}
+.cy-button--disabled {
+  cursor: not-allowed;
+}
+.cy-button__icon {
+  border-radius: var(--cy-button-icon-border-radius, 8rpx);
+  font-weight: normal;
+}
+.cy-button.cy-button--hover::after {
+  z-index: -1;
+}
+.cy-button__loading + .cy-button__content:not(:empty),
+.cy-button__icon + .cy-button__content:not(:empty) {
+  margin-left: 8rpx;
+}

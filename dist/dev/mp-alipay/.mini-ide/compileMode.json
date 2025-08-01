@@ -1,0 +1,10 @@
+{
+  "modes": [
+    {
+      "title": "Navbar 导航栏",
+      "page": "pages/navbar/navbar",
+      "launchMode": "common",
+      "pageQuery": "__id__=1"
+    }
+  ]
+}

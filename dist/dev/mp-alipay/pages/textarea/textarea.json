@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "textarea",
+  "usingComponents": {
+    "cy-textarea": "/components/textarea/textarea"
+  }
+}

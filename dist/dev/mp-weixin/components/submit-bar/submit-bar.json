@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cy-price": "/components/price/price",
+    "cy-button": "/components/button/button"
+  },
+  "component": true
+}

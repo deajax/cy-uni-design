@@ -1,0 +1,94 @@
+.hairline-base {
+    position      : absolute;
+    z-index       : var(--hairline-z-index, 1);
+    box-sizing    : border-box;
+    content       : ' ';
+    pointer-events: none;
+}
+
+.hairline-surround {
+    @extend .hairline-base;
+    top      : -50%;
+    right    : -50%;
+    bottom   : -50%;
+    left     : -50%;
+    border   : 1px solid var(--cy-gray-color-3, #e8e8e8);
+    transform: scale(0.5);
+}
+
+.hairline-top {
+    @extend .hairline-base;
+    right     : 0;
+    left      : 0;
+    top       : 0;
+    border-top: 1px solid var(--cy-gray-color-3, #e8e8e8);
+    transform : scaleY(0.5);
+}
+
+.hairline-bottom {
+    @extend .hairline-base;
+    right        : 0;
+    left         : 0;
+    bottom       : 0;
+    border-bottom: 1px solid var(--cy-gray-color-3, #e8e8e8);
+    transform    : scaleY(0.5);
+}
+
+.hairline-left {
+    @extend .hairline-base;
+    top        : 0;
+    bottom     : 0;
+    left       : 0;
+    border-left: 1px solid var(--cy-gray-color-3, #e8e8e8);
+    transform  : scaleX(0.5);
+}
+
+.hairline-right {
+    @extend .hairline-base;
+    top         : 0;
+    bottom      : 0;
+    right       : 0;
+    border-right: 1px solid var(--cy-gray-color-3, #e8e8e8);
+    transform   : scaleX(0.5);
+}
+
+// 样式
+.cy-hairline-surround {
+    position: relative;
+
+    &::after {
+        @extend .hairline-surround;
+    }
+}
+
+.cy-hairline-top {
+    position: relative;
+
+    &::after {
+        @extend .hairline-top;
+    }
+}
+
+.cy-hairline-bottom {
+    position: relative;
+
+    &::after {
+        @extend .hairline-bottom;
+    }
+}
+
+.cy-hairline-left {
+    position: relative;
+
+    &::after {
+        @extend .hairline-left;
+    }
+}
+
+.cy-hairline-right {
+    position: relative;
+
+    &::after {
+        @extend .hairline-right;
+    }
+}

@@ -1,0 +1,47 @@
+@import '../common/variables.scss';
+
+$description-padding           : var(--cy-description-padding, 0 $spacer-2);
+$description-margin            : var(--cy-description-margin, $spacer);
+$description-label-color       : var(--cy-description-label-color, $font-gray-3);
+$description-label-margin-right: var(--cy-description-label-margin-right, $spacer);
+$description-small-font-size   : var(--cy-description-small-font-size, $font-size-s);
+$description-middle-font-size  : var(--cy-description-middle-font-size, $font-size-base);
+$description-large-font-size   : var(--cy-description-large-font-size, $font-size-m);
+
+.cy-description {
+    display    : flex;
+    align-items: center;
+    padding    : $description-padding;
+
+    &:not(:last-child) {
+        margin-bottom: $description-margin;
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+    }
+
+    &__label {
+        flex        : 0 0 auto;
+        color       : $description-label-color;
+        margin-right: $description-label-margin-right;
+    }
+
+    &__content {
+        flex: auto;
+    }
+}
+
+.cy-description {
+    &--small {
+        font-size: $description-small-font-size;
+    }
+
+    &--middle {
+        font-size: $description-middle-font-size;
+    }
+
+    &--large {
+        font-size: $description-large-font-size;
+    }
+}

@@ -1,0 +1,45 @@
+@mixin anim($animName) {
+	@at-root {
+		.#{$animName} {
+
+			&-enter,
+			&-leave-to {
+				@content;
+			}
+
+			&-enter-active,
+			&-leave-active {
+				transition: all .3s ease;
+			}
+		}
+	}
+}
+
+@include anim(fade) {
+	opacity: 0;
+}
+
+@include anim(slide-top) {
+	opacity: 0;
+	transform: translateY(-100%);
+}
+
+@include anim(slide-bottom) {
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+@include anim(slide-right) {
+	opacity: 0;
+	transform: translateX(100%);
+}
+
+@include anim(slide-left) {
+	opacity: 0;
+	transform: translateX(-100%);
+}
+
+@include anim(zoom) {
+	opacity: 0;
+	transform: scale(.6) translate3d(-50%, -50%, 0) !important;
+}

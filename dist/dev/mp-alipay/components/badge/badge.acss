@@ -1,0 +1,67 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[1]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[3]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[4]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js??clonedRuleSet-22[0].rules[0].use[5]!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!./src/components/badge/badge.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cy-badge {
+  position: relative;
+}
+.cy-badge__count {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.cy-badge__count-dot {
+  background: var(--cy-badge-background, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  border-radius: calc(var(--cy-badge-basic-height, 32rpx) / 2);
+  width: var(--cy-badge-dot-size, 16rpx);
+  height: var(--cy-badge-dot-size, 16rpx);
+  box-shadow: 0 0 0 1px #fff;
+}
+.cy-badge__count-text {
+  background: var(--cy-badge-background, var(--cy-brand-color, var(--cy-primary-color-6, #2563eb)));
+  color: var(--cy-white-color, #fff);
+  font-weight: var(--cy-badge-font-weight, 600);
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px #fff;
+}
+.cy-badge__count.cy-badge--empty {
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+.cy-badge--medium .cy-badge__count-text {
+  font-size: var(--cy-badge-font-size, var(--cy-font-size-xs, var(--cy-font-size, 20rpx)));
+  height: var(--cy-badge-basic-height, 32rpx);
+  line-height: calc(var(--cy-badge-basic-height, 32rpx) + 2rpx);
+  min-width: var(--cy-badge-basic-width, 32rpx);
+  padding: 0 var(--cy-badge-basic-padding, 8rpx);
+  border-radius: calc(var(--cy-badge-basic-height, 32rpx) / 2);
+}
+.cy-badge--large .cy-badge__count-text {
+  font-size: var(--cy-badge-font-size, var(--cy-font-size-s, 24rpx));
+  height: var(--cy-badge-basic-height, 40rpx);
+  line-height: var(--cy-badge-basic-height, 40rpx);
+  min-width: var(--cy-badge-basic-width, 40rpx);
+  padding: 0 var(--cy-badge-basic-padding, 10rpx);
+  border-radius: calc(var(--cy-badge-basic-height, 40rpx) / 2);
+}
