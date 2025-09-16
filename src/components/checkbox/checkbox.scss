@@ -22,6 +22,7 @@ $checkbox-tag-active-color          : var(--cy-checkbox-tag-active-color, $brand
 
 .cy-checkbox {
     display       : inline-flex;
+    align-items   : center;
     vertical-align: middle;
     position      : relative;
     font-size     : $checkbox-font-size;

@@ -43,6 +43,8 @@ $text-content-large-font-size  : var(--cy-text-content-large-font-size, 32rpx);
 $text-content-large-line-height: var(--cy-text-content-large-line-height, 48rpx);
 $text-icon-large-font-size     : var(--cy-text-icon-large-font-size, 36rpx);
 
+$text-content-font-weight: var(--cy-text-content-font-weight, normal);
+
 .cy-text {
     &--small {
         .cy-text__content {
@@ -208,6 +210,10 @@ $text-icon-large-font-size     : var(--cy-text-icon-large-font-size, 36rpx);
     display    : inline-flex;
     align-items: center;
     box-sizing : content-box;
+    
+    &__content {
+        font-weight: $text-content-font-weight;
+    }
 }
 
 .cy-text--underline::after {

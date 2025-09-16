@@ -5,10 +5,10 @@
 		  :disabled="disabled"
           :open-type="openType"
 		  @click="handleTap">
-		<cy-badge :count="badge" v-if="badge && badge > 0">
-			<cy-icon :name="icon" size="40" :custom-class="customClassIcon" />
+		<cy-badge :count="badge" v-if="badge && badge > 0" >
+			<cy-icon :name="icon" size="44" :custom-class="customClassIcon" />
 		</cy-badge>
-		<cy-icon v-else :name="icon" size="40" :custom-class="customClassIcon" />
+		<cy-icon v-else :name="icon" size="44" :custom-class="customClassIcon" />
 		<text>{{ text }}</text>
 		<slot />
 	</button>

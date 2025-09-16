@@ -1,7 +1,7 @@
 <template>
 	<view :class="['cy-submit-bar', customClass]">
 		<view class="cy-submit-bar--fixed"
-			:style="[safeAreaInsetBottom ? statusBarBottom == 0 ? { paddingBottom: '16px' } : { paddingBottom: statusBarBottom + 'px' } : '']">
+			:style="[safeAreaInsetBottom ? statusBarBottom == 0 ? { paddingBottom: '16px' } : { paddingBottom: statusBarBottom + 'px' } : '', zIndex ? { zIndex: zIndex } : '']">
 			<slot name="custom" v-if="$slots.custom" />
 			<view :class="['cy-submit-bar__content', customClassContent]" v-else>
 				<view :class="['cy-submit-bar__content-actions', customClassActions]">
@@ -9,7 +9,10 @@
 						<slot name="left" />
 					</view>
 					<view :class="['cy-submit-bar__content-currency', customClassCurrency]">
-						<cy-price :value="price" :custom-class="customClassPrice" v-if="price" />
+                        <view :class="['cy-submit-bar__content-price', customClassDescription]" v-if="$slots.price || price">
+                            <slot name="price"></slot>
+                            <cy-price :value="price" :custom-class="customClassPrice" />
+                        </view>
 						<view :class="['cy-submit-bar__content-description', customClassDescription]"
 							v-if="$slots.description || description">
 							{{ description }}
@@ -35,7 +38,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="cy-submit-bar__placeholder"></view>
+		<view v-if="placeholder" class="cy-submit-bar__placeholder"></view>
 	</view>
 </template>
 
@@ -54,6 +57,10 @@ export default {
 			type: Boolean,
 			default: true,
 		},
+        placeholder: {
+			type: Boolean,
+			default: true,
+		},
 		price: {
 			type: [Number, String, Boolean],
 			default: '0',
@@ -69,6 +76,10 @@ export default {
 		description: {
 			type: String,
 			default: '',
+		},
+		zIndex: {
+			type: [Number, String],
+			default: '5001',
 		},
 
 		// externalClasses

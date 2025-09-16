@@ -45,8 +45,8 @@ export default {
 | 名称  | 类型            | 默认值  | 说明     | 必传 |
 | ----- | --------------- | ------- | -------- | ---- |
 | value | String / Number | -       | 价格数值 | Y    |
-| theme | String          | default | 主题     | N    |
-| size  | String          | medium  | 尺寸     | N    |
+| theme | String          | default | 主题，可选primary/warning/danger/success/white     | N    |
+| size  | String          | medium  | 尺寸，可选small/medium/large/extra-large    | N    |
 
 ### 插槽
 

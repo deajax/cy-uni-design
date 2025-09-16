@@ -55,9 +55,11 @@ export default {
             if (this.layout == 'vertical') {
                 this.rowGap = this.gutter;
             } else {
-                if (this.gutter.length > 0) {
+                if (Array.isArray(this.gutter)) {
                     this.columnGap = this.gutter[0];
                     this.rowGap = this.gutter[1];
+                } else {
+                    this.columnGap = this.gutter;
                 }
             }
         }

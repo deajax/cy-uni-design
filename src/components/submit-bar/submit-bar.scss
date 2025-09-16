@@ -1,5 +1,6 @@
 @import '../common/variables.scss';
 
+$submit-bar-zindex               : var(--cy-submit-bar-z-index, 5001);
 $submit-bar-content-padding      : var(--cy-submit-bar-content-padding, 12rpx);
 $submit-bar-currency-padding     : var(--cy-submit-bar-currency-padding, 0 $spacer-1);
 $submit-bar-description-font-size: var(--cy-submit-bar-description-font-size, $font-size);
@@ -12,6 +13,7 @@ $submit-bar-content-background   : var(--cy-submit-bar-content-background, #fff)
 
     &--fixed {
         position  : fixed;
+        z-index   : $submit-bar-zindex;
         right     : 0;
         bottom    : 0;
         left      : 0;
@@ -43,6 +45,11 @@ $submit-bar-content-background   : var(--cy-submit-bar-content-background, #fff)
             flex-direction : column;
             align-items    : flex-end;
             justify-content: center;
+        }
+
+        &-price {
+            display    : flex;
+            align-items: center;
         }
 
         &-description {

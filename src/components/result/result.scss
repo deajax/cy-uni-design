@@ -22,9 +22,11 @@ $result-extra-margin-top : var(--cy-result-extra-margin-top, $spacer-3);
     text-align: center;
 
     &--icon {
-        font-size    : $result-icon-size;
-        line-height  : 1;
-        margin-bottom: $result-icon-margin-bottom;
+        font-size      : $result-icon-size;
+        line-height    : 1;
+        margin-bottom  : $result-icon-margin-bottom;
+        display        : flex;
+        justify-content: center;
     }
 
     &--success {

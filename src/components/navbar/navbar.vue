@@ -1,128 +1,191 @@
 <template>
-	<view :class="['cy-navbar', setClass, { 'cy-navbar--fixed': fixed }, { 'cy-navbar--dark': dark }, customClass]">
-		<view class="cy-navbar__placeholder" :style="setBarStyle" v-if="fixed"></view>
-		<view :class="['cy-navbar__content', customClassContent]" :style="setBarStyle">
-			<view :class="['cy-navbar__left', customClassLeft]">
-				<view class="cy-navbar__btn" v-if="leftArrow" @click="handleBack">
-					<cy-icon custom-class="cy-navbar__lefcy-arrow" :name="leftIcon" size="56" />
+	<view
+		:class="[
+			'cy-navbar',
+			setClass,
+			{ 'cy-navbar--fixed': fixed },
+			{ 'cy-navbar--dark': dark },
+			{ 'cy-navbar--transparent': transparent },
+			customClass,
+		]"
+	>
+		<view
+			class="cy-navbar__placeholder"
+			:style="setBarStyle"
+			v-if="fixed && placeholder"
+		></view>
+		<view :class="['cy-navbar__wrapper', customClassWrapper]" :style="combinedStyle">
+			<view :class="['cy-navbar__content', customClassContent]">
+				<view :class="['cy-navbar__left', customClassLeft]">
+					<view class="cy-navbar__btn" v-if="leftArrow" @click="handleBack">
+						<cy-icon
+							custom-class="cy-navbar__lefcy-arrow"
+							:name="leftIcon"
+							size="56"
+						/>
+					</view>
+					<slot name="left" />
 				</view>
-				<slot name="left" />
+				<view
+					:class="['cy-navbar__center', customClassCenter]"
+					v-if="title || $slots.title"
+				>
+					<view :class="['cy-navbar__center-title', customClassTitle]">{{
+						title
+					}}</view>
+					<slot name="title" />
+				</view>
+				<slot></slot>
 			</view>
-			<view :class="['cy-navbar__center', customClassCenter]" v-if="title || $slots.title">
-				<view :class="['cy-navbar__center-title', customClassTitle]">{{ title }}</view>
-				<slot name="title" />
-			</view>
+			<slot name="extra"></slot>
 		</view>
 	</view>
 </template>
 
 <script>
-export default {
-	name: "navbar",
-	externalClasses: ['custom-class', 'custom-class-content', 'custom-class-left', 'custom-class-center', 'custom-class-title'],
-	options: {
-		styleIsolation: 'shared',
-		addGlobalClass: true,
-		virtualHost: true,
-		externalClasses: true
-	},
-	props: {
-		title: String,
-		fixed: {
-			type: Boolean,
-			default: true
+	export default {
+		name: "navbar",
+		externalClasses: [
+			"custom-class",
+			"custom-class-content",
+			"custom-class-left",
+			"custom-class-center",
+			"custom-class-title",
+		],
+		options: {
+			styleIsolation: "shared",
+			addGlobalClass: true,
+			virtualHost: true,
+			externalClasses: true,
 		},
-		leftArrow: Boolean,
-		leftIcon: {
-			type: String,
-			default: 'arrow-left-s-line'
-		},
-		visible: {
-			type: Boolean,
-			default: true
-		},
-		dark: {
-			type: Boolean,
-			default: false
-		},
+		props: {
+			title: String,
+			fixed: {
+				type: Boolean,
+				default: true,
+			},
+			leftArrow: Boolean,
+			leftIcon: {
+				type: String,
+				default: "arrow-left-s-line",
+			},
+			visible: {
+				type: Boolean,
+				default: true,
+			},
+			dark: {
+				type: Boolean,
+				default: false,
+			},
+			transparent: {
+				type: Boolean,
+				default: false,
+			},
+			background: {
+				type: String,
+			},
+			placeholder: {
+				type: Boolean,
+				default: true,
+			},
 
-		// externalClasses
-		customClass: {
-			type: [String, Array],
-			default: ''
+			// externalClasses
+			customClass: {
+				type: [String, Array],
+				default: "",
+			},
+			customClassContent: {
+				type: [String, Array],
+				default: "",
+			},
+			customClassLeft: {
+				type: [String, Array],
+				default: "",
+			},
+			customClassCenter: {
+				type: [String, Array],
+				default: "",
+			},
+			customClassTitle: {
+				type: [String, Array],
+				default: "",
+			},
 		},
-		customClassContent: {
-			type: [String, Array],
-			default: ''
+		data() {
+			return {
+				statusBarHeight: 20,
+				titleBarHeight: 44,
+			};
 		},
-		customClassLeft: {
-			type: [String, Array],
-			default: ''
+		computed: {
+			setBarStyle() {
+				// #ifdef MP-ALIPAY
+				return this.fixed
+					? `padding-top: ${this.statusBarHeight}px; height: ${this.titleBarHeight}px`
+					: `height: ${this.titleBarHeight}px`;
+				// #endif
+				// #ifdef MP-WEIXIN
+				return this.fixed ? `padding-top: ${this.statusBarHeight}px` : "";
+				// #endif
+			},
+			setBackground() {
+				if (this.background) {
+					return `background: ${this.background}`;
+				}
+				return "";
+			},
+			combinedStyle() {
+				// 合并两个样式属性
+				if (this.setBarStyle && this.setBackground) {
+					return this.setBarStyle + "; " + this.setBackground;
+				} else if (this.setBarStyle) {
+					return this.setBarStyle;
+				} else if (this.setBackground) {
+					return this.setBackground;
+				}
+				return "";
+			},
+			setClass() {
+				if (this.visible) {
+					return "cy-navbar--visible cy-navbar--visible-animation";
+				} else {
+					return "cy-navbar--hide cy-navbar--hide-animation";
+				}
+			},
 		},
-		customClassCenter: {
-			type: [String, Array],
-			default: ''
+		methods: {
+			handleBack(event) {
+				const that = this;
+				that.$emit("go-back", event);
+				uni.navigateBack({
+					delta: 1,
+					success(e) {
+						that.$emit("success", e);
+					},
+					fail(e) {
+						that.$emit("fail", e);
+					},
+					complete(e) {
+						that.$emit("complete", e);
+					},
+				});
+			},
 		},
-		customClassTitle: {
-			type: [String, Array],
-			default: ''
-		},
-	},
-	data() {
-		return {
-			statusBarHeight: 20,
-			titleBarHeight: 44,
-		}
-	},
-	computed: {
-		setBarStyle() {
-			// #ifdef MP-ALIPAY
-			return this.fixed ? `padding-top: ${this.statusBarHeight}px; height: ${this.titleBarHeight}px` : `height: ${this.titleBarHeight}px`;
-			// #endif
-			// #ifdef MP-WEIXIN
-			return this.fixed ? `padding-top: ${this.statusBarHeight}px` : '';
-			// #endif
-		},
-		setClass() {
-			if (this.visible) {
-				return 'cy-navbar--visible cy-navbar--visible-animation'
-			} else {
-				return 'cy-navbar--hide cy-navbar--hide-animation'
-			}
-		},
-	},
-	methods: {
-		handleBack(event) {
-            const that = this;
-			that.$emit('go-back', event);
-			uni.navigateBack({
-				delta: 1,
-				success(e) {
-					that.$emit('success', e);
+		mounted() {},
+		watch: {},
+		onReady() {
+			uni.getSystemInfo({
+				success: (info) => {
+					console.log(info);
+
+					this.statusBarHeight = info.statusBarHeight;
+					this.titleBarHeight = info.titleBarHeight;
 				},
-				fail(e) {
-					that.$emit('fail', e);
-				},
-				complete(e) {
-					that.$emit('complete', e);
-				},
-			})
+			});
 		},
-	},
-	mounted() {
-	},
-	watch: {},
-	onReady() {
-		uni.getSystemInfo({
-			success: (info) => {
-				this.statusBarHeight = info.statusBarHeight;
-				this.titleBarHeight = info.titleBarHeight;
-			}
-		});
-	}
-} 
+	};
 </script>
 
 <style lang="scss">
-@import './navbar.scss';
+	@import "./navbar.scss";
 </style>

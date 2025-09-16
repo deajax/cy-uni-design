@@ -2,33 +2,34 @@
 
 $prefix: cy;
 
-$navbar-color            : var(--cy-navbar-color, $text-color-primary);
-$navbar-dark-color       : var(--cy-navbar-dark-color, $white-color);
-$navbar-bg-color         : var(--cy-navbar-bg-color, $bg-color-container);
-$navbar-bg-dark-color    : var(--cy-navbar-bg-dark-color, $brand-color);
-$navbar-height           : var(--cy-navbar-height, 44px);
-$navbar-right            : var(--cy-navbar-right, 190rpx); // 默认右上角胶囊按钮宽度，组件会在初始化时尝试自动获取胶囊按钮宽度并覆写该值
-$navbar-padding-top      : var(--cy-navbar-padding-top, 40rpx); // 导航栏顶部间距，组件会在初始化时尝试取右侧系统胶囊位置进行覆盖
-$navbar-title-font-size  : var(--cy-navbar-title-font-size, 36rpx);
+$navbar-color: var(--cy-navbar-color, $text-color-primary);
+$navbar-dark-color: var(--cy-navbar-dark-color, $white-color);
+$navbar-bg-color: var(--cy-navbar-bg-color, $bg-color-container);
+$navbar-bg-dark-color: var(--cy-navbar-bg-dark-color, $brand-color);
+$navbar-height: var(--cy-navbar-height, 44px);
+$navbar-placeholder-height: var(--cy-navbar-placeholder-height-height, $navbar-height);
+$navbar-right: var(--cy-navbar-right, 190rpx); // 默认右上角胶囊按钮宽度，组件会在初始化时尝试自动获取胶囊按钮宽度并覆写该值
+$navbar-padding-top: var(--cy-navbar-padding-top, 40rpx); // 导航栏顶部间距，组件会在初始化时尝试取右侧系统胶囊位置进行覆盖
+$navbar-title-font-size: var(--cy-navbar-title-font-size, 36rpx);
 $navbar-title-font-weight: var(--cy-navbar-title-font-weight, 600);
-$navbar-left-arrow-size  : var(--cy-navbar-left-arrow-size, 48rpx);
+$navbar-left-arrow-size: var(--cy-navbar-left-arrow-size, 48rpx);
 
 // capsule
-$navbar-capsule-border-color : var(--cy-navbar-capsule-border-color, $border-color);
+$navbar-capsule-border-color: var(--cy-navbar-capsule-border-color, $border-color);
 $navbar-capsule-border-radius: var(--cy-navbar-capsule-border-radius, 32rpx);
-$navbar-capsule-width        : var(--cy-navbar-capsule-width, 176rpx);
-$navbar-capsule-height       : var(--cy-navbar-capsule-height, 64rpx);
+$navbar-capsule-width: var(--cy-navbar-capsule-width, 176rpx);
+$navbar-capsule-height: var(--cy-navbar-capsule-height, 64rpx);
 // var(--capsule-height)
 
 .#{$prefix}-navbar {
     position: relative;
 
     &--fixed {
-        .#{$prefix}-navbar__content {
+        .#{$prefix}-navbar__wrapper {
             position: fixed;
-            top     : 0;
-            left    : 0;
-            z-index : 5001;
+            top: 0;
+            left: 0;
+            z-index: 5001;
         }
     }
 
@@ -37,13 +38,13 @@ $navbar-capsule-height       : var(--cy-navbar-capsule-height, 64rpx);
     }
 
     &--visible-animation {
-        opacity   : 1;
+        opacity: 1;
         transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
     &--hide-animation {
-        opacity   : 0;
+        opacity: 0;
         transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
@@ -53,30 +54,37 @@ $navbar-capsule-height       : var(--cy-navbar-capsule-height, 64rpx);
     }
 
     &__placeholder {
-        height     : $navbar-height;
+        height: $navbar-placeholder-height;
         // padding-top: $navbar-padding-top;
-        position   : relative;
-        visibility : hidden;
+        position: relative;
+        visibility: hidden;
+        box-sizing: content-box;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        background: $navbar-bg-color;
     }
 
     &__content {
-        position     : relative;
-        z-index      : 1;
-        height       : $navbar-height;
-        width        : calc(100% - #{$navbar-right});
+        position: relative;
+        box-sizing: content-box;
+        z-index: 1;
+        height: $navbar-height;
+        width: calc(100% - #{$navbar-right});
         // padding-top  : $navbar-padding-top;
         padding-right: $navbar-right;
-        color        : $navbar-color;
-        background   : $navbar-bg-color;
-        display      : flex;
-        align-items  : center;
+        color: $navbar-color;
+        display: flex;
+        align-items: center;
     }
 
     &__left {
-        position   : relative;
-        box-sizing : border-box;
+        position: relative;
+        box-sizing: border-box;
         // width: $navbar-right;
-        display    : flex;
+        display: flex;
         align-items: center;
         margin-left: $spacer-1;
 
@@ -86,36 +94,49 @@ $navbar-capsule-height       : var(--cy-navbar-capsule-height, 64rpx);
     }
 
     &__center {
-        font-size      : 36rpx;
-        text-align     : center;
-        position       : absolute;
-        left           : $navbar-right;
-        width          : calc(100% - #{$navbar-right} * 2);
-        height         : $navbar-height;
-        line-height    : $navbar-height;
-        flex           : 1;
-        display        : flex;
-        align-items    : center;
+        font-size: 36rpx;
+        text-align: center;
+        position: absolute;
+        left: $navbar-right;
+        width: calc(100% - #{$navbar-right} * 2);
+        height: $navbar-height;
+        line-height: $navbar-height;
+        flex: 1;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        overflow       : hidden;
+        overflow: hidden;
 
         &:empty {
             display: none;
         }
 
         &-title {
-            font-size    : $navbar-title-font-size;
+            font-size: $navbar-title-font-size;
             text-overflow: ellipsis;
-            white-space  : nowrap;
-            overflow     : hidden;
-            font-weight  : $navbar-title-font-weight;
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: $navbar-title-font-weight;
+        }
+    }
+
+    &--dark {
+        .cy-navbar {
+            &__wrapper {
+                background: $navbar-bg-dark-color;
+            }
+            
+            &__content {
+                color: $navbar-dark-color;
+            }
         }
     }
     
-    &--dark {
-        .cy-navbar__content {
-            color     : $navbar-dark-color;
-            background: $navbar-bg-dark-color;
+    &--transparent {
+        .cy-navbar {
+            &__wrapper {
+                background: transparent;
+            }
         }
     }
 }

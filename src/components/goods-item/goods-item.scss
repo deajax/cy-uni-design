@@ -13,7 +13,7 @@ $goods-item-vertical-round: var(--cy-goods-item-vertical-round, $radius-default)
 $goods-item-vertical-content-padding: var(--cy-goods-item-vertical-content-padding, $spacer-1);
 $goods-item-vertical-title-font-size: var(--cy-goods-item-vertical-title-font-size, $font-size-base);
 $goods-item-vertical-image-round: var(--cy-goods-item-vertical-image-round, 0);
-$goods-item-title-font-size: var(--cy-goods-item-title-font-size, $font-size-m);
+$goods-item-title-font-size: var(--cy-goods-item-title-font-size, $font-size-base);
 $goods-item-description-font-size: var(--cy-goods-item-description-font-size, $font-size-s);
 $goods-item-description-color: var(--cy-goods-item-description-color, $font-gray-3);
 $goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, $font-size-s);
@@ -21,7 +21,6 @@ $goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, 
 .cy-goods-item {
     position: relative;
     display: flex;
-    align-items: flex-start;
     background: $goods-item-background;
     overflow: $goods-item-overflow;
 
@@ -61,6 +60,15 @@ $goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, 
 
                 &::after {
                     border-radius: calc(#{$goods-item-horizontal-image-round} * 2);
+                }
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+
+                &--note {
+                    margin-top: auto;
                 }
             }
         }
@@ -163,13 +171,19 @@ $goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, 
     &__sellout {
         position: absolute;
         z-index: 2;
-        top: 0;
-        left: 0;
-        transform: scale(0.5);
-        width: 100%;
-        height: 100%;
-        background: url(https://cy-static-resources.oss-cn-beijing.aliyuncs.com/miniProgram/unmanned/sellout.png) no-repeat center;
-        background-size: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(black, .65);
+        font-size: 24rpx;
+        color: white;
+        padding: 8rpx 16rpx;
+        border-radius: 80rpx;
+        white-space: nowrap;
+        
+        + .cy-goods-item__image-image {
+            opacity: .35;
+        }
     }
 
     // content
@@ -208,6 +222,8 @@ $goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, 
         overflow: hidden;
         display: flex;
         align-items: center;
+        padding-top: 2rpx;
+        padding-bottom: 2rpx;
 
         &--unit {
             display: inline-flex;
@@ -232,11 +248,12 @@ $goods-item-origin-price-font-size: var(--cy-goods-item-origin-price-font-size, 
         font-size: $font-size-s;
         color: $gray-color-6;
         text-decoration: line-through;
-        line-height: 32rpx;
+        line-height: 28rpx;
     }
 
     &__action {
         margin-left: auto;
+        --cy-button-extra-small-height: 44rpx;
     }
 
     .u-number-box__plus,

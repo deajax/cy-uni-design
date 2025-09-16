@@ -1,0 +1,19 @@
+@import '../common/variables.scss';
+
+.cy-unit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 1em;
+        background: currentColor;
+        margin-inline: 8rpx;
+        transform: rotate(25deg);
+        opacity: 0.65;
+    }
+}

@@ -5,6 +5,7 @@ $price-color-primary: var(--cy-price-color-primary, $brand-color);
 $price-color-success: var(--cy-price-color-success, $success-color);
 $price-color-warning: var(--cy-price-color-warning, $warning-color);
 $price-color-danger : var(--cy-price-color-danger, $error-color);
+$price-color-white : var(--cy-price-color-white, $white-color);
 $price-icon-size    : var(--cy-price-icon-size, 0.7em);
 $price-icon-content : var(--cy-price-icon-content, '¥');
 
@@ -62,6 +63,10 @@ $price-decimal-font-size-extra-large: var(--cy-price-font-size, 56rpx);
 
 	&--danger {
 		color: $price-color-danger;
+	}
+
+	&--white {
+		color: $price-color-white;
 	}
 
 	&--small {

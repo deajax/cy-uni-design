@@ -10,8 +10,12 @@
 */
 @font-face {
   font-family: "remixicon";
-  src: url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff2") format("woff2"),
-  url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.woff") format("woff");
+  src: url('https://cy-static-resources.oss-cn-beijing.aliyuncs.com/retailshop/icon/remixicon@4.6.0/remixicon.eot?t=1734404658139');
+  src: url('https://cy-static-resources.oss-cn-beijing.aliyuncs.com/retailshop/icon/remixicon@4.6.0/remixicon.eot?t=1734404658139#iefix') format('embedded-opentype'),
+  url("https://cy-static-resources.oss-cn-beijing.aliyuncs.com/retailshop/icon/remixicon@4.6.0/remixicon.woff2?t=1734404658139") format("woff2"),
+  url("https://cy-static-resources.oss-cn-beijing.aliyuncs.com/retailshop/icon/remixicon@4.6.0/remixicon.woff?t=1734404658139") format("woff"),
+  url('https://cy-static-resources.oss-cn-beijing.aliyuncs.com/retailshop/icon/remixicon@4.6.0/remixicon.ttf?t=1734404658139') format('truetype'),
+  url('https://cy-static-resources.oss-cn-beijing.aliyuncs.com/retailshop/icon/remixicon@4.6.0/remixicon.svg?t=1734404658139#remixicon') format('svg');
   font-display: swap;
 }
 
@@ -3097,3 +3101,4 @@
 .ri-no-credit-card-line:before { content: "\f5f0"; }
 .ri-service-bell-fill:before { content: "\f5f1"; }
 .ri-service-bell-line:before { content: "\f5f2"; }
+

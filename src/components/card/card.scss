@@ -17,14 +17,15 @@ $card-action-font-size         : var(--cy-card-action-font-size, $font-size-m);
         margin-left  : $card-margin-left-space;
         margin-right : $card-margin-right-space;
         border-radius: $radius-default;
+        overflow     : hidden;
     }
 
     &__header {
         position   : relative;
         padding    : 0 $card-header-padding-space;
         display    : flex;
+        align-items: center;
         height     : $card-header-height;
-        line-height: $card-header-height;
 
         &::after {
             @extend .hairline-bottom;
@@ -39,7 +40,8 @@ $card-action-font-size         : var(--cy-card-action-font-size, $font-size-m);
     }
 
     &__extra {
-        color: $font-gray-2;
+        color  : $font-gray-2;
+        display: flex;
     }
 
     &__content {

@@ -1,5 +1,5 @@
 <template>
-	<view :class="['cy-input', `cy-input--layout-${layout}`, customClass, setClass]" :style="style">
+	<view :class="['cy-input', `cy-input--layout-${layout}`, customClass, setClass]" :style="style" @tap="handleTap">
 		<view :class="['cy-input__wrap--prefix', customClassPrefix]">
 			<view :class="['cy-input__icon--prefix', customClassPrefixIcon]" v-if="prefixIcon || $slots['prefix-icon']"
 				  @click="onPrefixClick">
@@ -352,6 +352,11 @@ export default {
 		onSuffixClick(e) {
 			this.$emit("suffix-click", e);
 		},
+        handleTap(event) {
+            if (this.disabled) return;
+            this.$emit('click', event);
+            this.stop && this.preventEvent(event);
+        }
 	},
 	watch: {
 		keyword(e) {

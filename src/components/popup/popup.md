@@ -17,11 +17,11 @@
 ```js
 export default {
   methods: {
-		showTop() {
-      this.$refs.top.open('top')
+    showTop() {
+      this.$refs.top.open("top");
     },
-	},
-}
+  },
+};
 ```
 
 #### 带标题和关闭按钮
@@ -52,35 +52,33 @@ export default {
 ```js
 export default {
   data() {
-		return {
-			placement: 'top | right | bottom | left',
-		}
-	},
+    return {
+      placement: "top | right | bottom | left",
+    };
+  },
   methods: {
-		onClick() {
-      this.$refs.show.open()
+    onClick() {
+      this.$refs.show.open();
     },
-	},
-}
+  },
+};
 ```
-
-
 
 ## API
 
 ### 声明
 
-| 名称                  | 类型           | 默认值              | 说明                                                   | 必传 |
-| --------------------- | -------------- | ------------------- | ------------------------------------------------------ | ---- |
-| ref                   | Boolean        | false               | 通过`ref`调用`open()`和`close()`控制弹出层的打开和关闭 | N    |
-| title                 | String         | -                   | 顶部标题                                               | N    |
-| close-btn             | Boolean / Slot | -                   | 是否显示关闭按钮                                       | N    |
-| type                  | String         | bottom              | 浮层出现位置。可选项：top/left/right/bottom/center     | N    |
-| is-mask-click         | Boolean        | true                | 点击遮罩层是否关闭                                     | N    |
-| background-color      | String         | #fff                | 主窗口背景色                                           |      |
-| mask-background-color | String         | rgba(0, 0, 0, 0.55) | 蒙版颜色                                               |      |
-| safeArea              | Boolean        | true                | 是否适配底部安全区                                     |      |
-| radius                | String         | -                   | 设置圆角(左上、右上、右下和左下)                       |      |
+| 名称                  | 类型           | 默认值              | 说明                                                         | 必传 |
+| --------------------- | -------------- | ------------------- | ------------------------------------------------------------ | ---- |
+| ref                   | Boolean        | false               | 通过`ref`调用`open()`和`close()`控制弹出层的打开和关闭       | N    |
+| title                 | String         | -                   | 顶部标题                                                     | N    |
+| close-btn             | Boolean / Slot | -                   | 是否显示关闭按钮                                             | N    |
+| type                  | String         | bottom              | 浮层出现位置。可选项：top/left/right/bottom/center           | N    |
+| is-mask-click         | Boolean        | true                | 点击遮罩层是否关闭                                           | N    |
+| background-color      | String         | #fff                | 主窗口背景色                                                 |      |
+| mask-background-color | String         | rgba(0, 0, 0, 0.55) | 蒙版颜色                                                     |      |
+| safeArea              | Boolean        | true                | 是否适配底部安全区                                           |      |
+| radius                | String         | -                   | 设置圆角(左上、右上、右下和左下)，如：radius="16px 16px 0 0" |      |
 
 ### 插槽
 
@@ -100,10 +98,10 @@ export default {
 
 ### 事件
 
-| 名称        | 描述                 | **返回值**                          |
-| ----------- | -------------------- | ----------------------------------- |
-| @change     | 组件状态发生变化触发 | e={show: true｜false,type:当前模式} |
-| @mask-click | 点击遮罩层触发       | -                                   |
+| 名称        | 描述                 | **返回值**                            |
+| ----------- | -------------------- | ------------------------------------- |
+| @change     | 组件状态发生变化触发 | e={show: true ｜ false,type:当前模式} |
+| @mask-click | 点击遮罩层触发       | -                                     |
 
 ### 外部样式类
 

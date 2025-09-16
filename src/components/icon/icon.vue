@@ -1,7 +1,7 @@
 <template>
     <view :class="['cy-icon', customClass]" :style="[color ? iconColor : '', size ? fontSize : '', customStyle]"
         @click="bindclick">
-        <text class="cy-icon-base" :class="prefix ? prefix + ' ' + name : 'ri-' + name"></text>
+        <view class="cy-icon-base" :class="prefix ? prefix + ' ' + name : 'ri-' + name"></view>
         <slot />
     </view>
 </template>

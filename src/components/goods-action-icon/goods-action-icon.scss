@@ -14,6 +14,7 @@ $goods-action-icon-font-size: var(--cy-goods-action-icon-font-size, $font-size);
     line-height: 1.5;
     background : none;
     overflow   : visible;
+    white-space: nowrap;
 
     &::after {
         display: none;
@@ -33,5 +34,9 @@ $goods-action-icon-font-size: var(--cy-goods-action-icon-font-size, $font-size);
 
     &--disabled {
         background: none !important
+    }
+
+    .cy-badge__count {
+        transform: translate(calc(-50% - 8rpx), calc(-50% + 12rpx));
     }
 }

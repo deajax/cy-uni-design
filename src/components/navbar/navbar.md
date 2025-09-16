@@ -47,9 +47,12 @@
 | 名称       | 类型          | 默认值 | 说明                       | 必传 |
 | :--------- | :------------ | :----- | :------------------------- | :--- |
 | fixed      | Boolean       | true   | 是否固定在顶部             | N    |
-| left-arrow | Boolean       | false  | `0.26.0`。是否展示左侧箭头 | N    |
+| left-arrow | Boolean       | false  | 是否展示左侧箭头 | N    |
 | title      | String / Slot | -      | 页面标题                   | N    |
 | visible    | Boolean       | true   | 是否显示                   | N    |
+| dark    | Boolean       | true   | 深色导航条                   | N    |
+| transparent    | Boolean       | true   | 背景色是否透明                   | N    |
+| background    | String       | -   | 自定义背景颜色                   | N    |
 
 ### 插槽
 
